@@ -1,3 +1,7 @@
+# Projectvoorstel Programming Integration
+
+## Beschrijving
+
 # Projectvoorstel Mobile Development
 
 ## Online strategie
@@ -50,8 +54,12 @@ Ik bekijk nog of ik gebruik kan maken van TheMealDB API. Misschien ook integrati
 maar niet zeker of deze bruikbaar is.
 
 
-## Mobile Features
- - Xamarin Essentials:  - Camera: Foto maken
-			- Open Browser: om alle aangemaakte recepten te bekijken in een browser
+## API-Controllers
 
- - Native Speech To Text: Indien de gebruiker liever de bereiding inspreekt dan intypt (want alles via een smartphone typen kan vervelend worden)
+UserController: Gebruikers registreren en inloggen.
+ReceiptController: CRUD voor recepten. Toevoegen, bekijken, aanpassen en verwijderen.
+
+
+## Policies
+Gebruikers: volledige CRUD voor hun eigen recepten. Recepten van andere gebruikers kunnen ze enkel bekijken.
+Admins: volledige CRUD voor alle recepten.

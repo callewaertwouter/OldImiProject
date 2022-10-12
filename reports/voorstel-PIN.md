@@ -50,8 +50,11 @@ Ik bekijk nog of ik gebruik kan maken van TheMealDB API. Misschien ook integrati
 maar niet zeker of deze bruikbaar is.
 
 
-## Mobile Features
- - Xamarin Essentials:  - Camera: Foto maken
-			- Open Browser: om alle aangemaakte recepten te bekijken in een browser
+## CRUD-opdracht
 
- - Native Speech To Text: Indien de gebruiker liever de bereiding inspreekt dan intypt (want alles via een smartphone typen kan vervelend worden)
+In de Open Browser voor alle recepten heeft de administrator volledige CRUD voor alle recepten. De gebruiker heeft ook volledige CRUD over zijn/haar eigen recepten.
+
+
+## Concepts
+
+Een kleine food-quiz met enkele vragen.
