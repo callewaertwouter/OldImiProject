@@ -1,26 +1,55 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Imi.Project.Api.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace Imi.Project.Api
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+var builder = WebApplication.CreateBuilder(args);
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
-}
+builder.Services.AddDbContext<AppDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("ImiDb")));
+
+//// Leaving underneath in comments to see if Program works with just the above
+
+//builder.Services.AddCors();
+
+//builder.Services.AddControllers();
+
+//var app = builder.Build();
+
+//// Configure the HTTP request pipeline.
+//if (app.Environment.IsDevelopment())
+//{
+//    app.UseSwagger();
+//    app.UseSwaggerUI();
+
+//    app.UseCors(builder => builder.AllowAnyOrigin()
+//        .AllowAnyHeader()
+//        .AllowAnyMethod());
+//}
+
+//app.UseHttpsRedirection();
+
+//app.UseAuthorization();
+
+//app.MapControllers();
+
+//app.Run();
+
+
+//// Leaving this in comments because this is new to me
+
+//namespace Imi.Project.Api
+//{
+//    public class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            CreateHostBuilder(args).Build().Run();
+//        }
+
+//        public static IHostBuilder CreateHostBuilder(string[] args) =>
+//            Host.CreateDefaultBuilder(args)
+//                .ConfigureWebHostDefaults(webBuilder =>
+//                {
+//                    webBuilder.UseStartup<Startup>();
+//                });
+//    }
+//}
