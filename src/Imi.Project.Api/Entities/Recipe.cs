@@ -2,7 +2,7 @@
 
 namespace Imi.Project.Api.Entities
 {
-    public class Recipes : BaseEntity
+    public class Recipe : BaseEntity
     {
         [Required]
         public string Title { get; set; }

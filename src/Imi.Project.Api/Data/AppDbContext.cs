@@ -5,10 +5,10 @@ namespace Imi.Project.Api.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<Users> Users { get; set; }
-        public DbSet<UnitsOfMeasure> UnitsOfMeasure { get; set; }
-        public DbSet<Ingedrients> Ingedrients { get; set; }
-        public DbSet<Recipes> Recipes { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<UnitOfMeasure> UnitsOfMeasure { get; set; }
+        public DbSet<Ingedrient> Ingedrients { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
