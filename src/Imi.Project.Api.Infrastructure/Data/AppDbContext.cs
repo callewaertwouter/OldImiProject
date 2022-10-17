@@ -1,4 +1,5 @@
 ﻿using Imi.Project.Api.Core.Entities;
+using Imi.Project.Api.Infrastructure.Data.Seeding;
 using Microsoft.EntityFrameworkCore;
 
 namespace Imi.Project.Api.Infrastructure.Data
@@ -18,7 +19,10 @@ namespace Imi.Project.Api.Infrastructure.Data
         {
             base.OnModelCreating(modelBuilder);
 
-
+            UnitOfMeasureSeeder.Seed(modelBuilder);
+            IngedrientSeeder.Seed(modelBuilder);
+            RecipeSeeder.Seed(modelBuilder);
+            UserSeeder.Seed(modelBuilder);
         }
     }
 }
