@@ -1,6 +1,6 @@
 ﻿namespace Imi.Project.Api.Entities
 {
-    public class Ingedrients
+    public class Ingedrients : BaseEntity
     {
         public string Name { get; set; }
 
