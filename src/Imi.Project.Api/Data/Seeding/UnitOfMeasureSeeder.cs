@@ -12,7 +12,12 @@ namespace Imi.Project.Api.Data.Seeding
                 new UnitOfMeasure { MeasureUnit = "liter" },
                 new UnitOfMeasure { MeasureUnit = "blik(ken)" },
                 new UnitOfMeasure { MeasureUnit = "tak(ken)" },
-                new UnitOfMeasure { MeasureUnit = "blaadje(s)" }
+                new UnitOfMeasure { MeasureUnit = "blaadje(s)" },
+                new UnitOfMeasure { MeasureUnit = "deciliter" },
+                new UnitOfMeasure { MeasureUnit = "centiliter" },
+                new UnitOfMeasure { MeasureUnit = "bakje(s)" },
+                new UnitOfMeasure { MeasureUnit = "vrij naar keuze" },
+                new UnitOfMeasure { MeasureUnit = "geen" }
                 );
         }
     }
