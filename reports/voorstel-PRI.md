@@ -1,33 +1,5 @@
 # Projectvoorstel Programming Integration
 
-## Beschrijving
-
-# Projectvoorstel Mobile Development
-
-## Online strategie
-
-Kruis minstens **1 strategie** aan met
-
-- [X] Online CRUD operaties met eigen REST API
-- [ ] Online CRUD operaties met eenBackend Service
-- [ ] Online Fetch, Offline CRUD
-- [ ] Offline CRUD, Online Push
-- [ ] Andere, namelijk: 
-
-
-## Mobile features
-
-Kruis minstens **2 mobile features** aan:
-
-- [X] Xamarin Essentials
-- [ ] Push notifications
-- [ ] 2D Graphics
-- [ ] Authentication en Authorization
-- [ ] Native Communication
-- [X] Native Speech to Text
-- [ ] Cross-platform Native Plugin
-- [ ] Andere, namelijk: 
-
 
 ## Beschrijving
 
