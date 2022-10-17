@@ -6,32 +6,30 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("ImiDb")));
 
-//// Leaving underneath in comments to see if Program works with just the above
+builder.Services.AddCors();
 
-//builder.Services.AddCors();
+builder.Services.AddControllers();
 
-//builder.Services.AddControllers();
+var app = builder.Build();
 
-//var app = builder.Build();
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    //app.UseSwagger();
+    //app.UseSwaggerUI();
 
-//// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger();
-//    app.UseSwaggerUI();
+    app.UseCors(builder => builder.AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod());
+}
 
-//    app.UseCors(builder => builder.AllowAnyOrigin()
-//        .AllowAnyHeader()
-//        .AllowAnyMethod());
-//}
+app.UseHttpsRedirection();
 
-//app.UseHttpsRedirection();
+app.UseAuthorization();
 
-//app.UseAuthorization();
+app.MapControllers();
 
-//app.MapControllers();
-
-//app.Run();
+app.Run();
 
 
 //// Leaving this in comments because this is new to me
