@@ -7,8 +7,6 @@ namespace Imi.Project.Api.Entities
         [Required]
         public string Title { get; set; }
 
-        public string CreatedBy { get; set; }
-
         //TODO Props to add: List of ingedriënts, description and which user made it
     }
 }
