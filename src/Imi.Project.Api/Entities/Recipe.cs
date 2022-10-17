@@ -7,6 +7,6 @@ namespace Imi.Project.Api.Entities
         [Required]
         public string Title { get; set; }
 
-        // Props to add: List of ingedriënts, description and which user made it
+        //TODO Props to add: List of ingedriënts, description and which user made it
     }
 }

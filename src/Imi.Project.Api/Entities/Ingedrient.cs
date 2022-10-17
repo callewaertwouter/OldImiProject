@@ -4,6 +4,6 @@
     {
         public string Name { get; set; }
 
-        //TODO: Add prop for unit of measure (gram, liter, etc.)
+        //TODO Add prop for unit of measure (gram, liter, etc.)
     }
 }
