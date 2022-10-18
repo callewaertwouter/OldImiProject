@@ -18,7 +18,8 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                 new UnitOfMeasure { Id = Guid.Parse("00000000-0000-0000-0000-000000000007"), MeasureUnit = "centiliter" },
                 new UnitOfMeasure { Id = Guid.Parse("00000000-0000-0000-0000-000000000008"), MeasureUnit = "bakje(s)" },
                 new UnitOfMeasure { Id = Guid.Parse("00000000-0000-0000-0000-000000000009"), MeasureUnit = "vrij naar keuze" },
-                new UnitOfMeasure { Id = Guid.Parse("00000000-0000-0000-0000-000000000010"), MeasureUnit = "geen" }
+                new UnitOfMeasure { Id = Guid.Parse("00000000-0000-0000-0000-000000000010"), MeasureUnit = "geen" },
+                new UnitOfMeasure { Id = Guid.Parse("00000000-0000-0000-0000-000000000010"), MeasureUnit = " " }
                 );
         }
     }
