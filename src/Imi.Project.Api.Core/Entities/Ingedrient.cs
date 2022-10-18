@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Imi.Project.Api.Core.Entities
 {
@@ -7,6 +9,7 @@ namespace Imi.Project.Api.Core.Entities
         [Required]
         public string Name { get; set; }
 
-        //TODO Add prop for unit of measure (gram, liter, etc.)
+        public Guid UnitOfMeasureId { get; set; }
+        public UnitOfMeasure UnitOfMeasure { get; set; }
     }
 }
