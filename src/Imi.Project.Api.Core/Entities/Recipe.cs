@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Imi.Project.Api.Core.Entities
 {
@@ -6,7 +8,12 @@ namespace Imi.Project.Api.Core.Entities
     {
         [Required]
         public string Title { get; set; }
+        [Required]
+        public string Description { get; set; }
 
-        //TODO Props to add: List of ingedriënts, description and which user made it
+        // Many recipes will use many ingedriënts
+        public ICollection<Ingedrient> ListOfIngedrients { get; set; }
+
+        //TODO Prop to add: Which user made it (CreatedBy)
     }
 }
