@@ -12,7 +12,7 @@ namespace Imi.Project.Api.Core.Entities
         public string Description { get; set; }
 
         // Many recipes will use many ingedriënts
-        public ICollection<Ingedrient> ListOfIngedrients { get; set; }
+        public ICollection<RecipeIngedrient> ListOfIngedrients { get; set; }
 
         //TODO Prop to add: Which user made it (CreatedBy)
     }
