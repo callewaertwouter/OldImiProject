@@ -8,6 +8,7 @@ namespace Imi.Project.Api.Core.Entities
     {
         [Required]
         public string Title { get; set; }
+        [Required]
         public string Description { get; set; }
 
         // Many recipes will use many ingedriënts
