@@ -1,6 +1,6 @@
+using Imi.Project.Api.Core.Infrastructure;
 using Imi.Project.Api.Infrastructure.Data;
 using Imi.Project.Api.Infrastructure.Repositories;
-using Imi.Project.Api.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
