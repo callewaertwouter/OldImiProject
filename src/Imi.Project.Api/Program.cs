@@ -1,4 +1,6 @@
 using Imi.Project.Api.Infrastructure.Data;
+using Imi.Project.Api.Infrastructure.Repositories;
+using Imi.Project.Api.Infrastructure.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,9 +8,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("ImiDb")));
 
+builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
+builder.Services.AddScoped<IIngedrientRepository, IngedrientRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUnitOfMeasureRepository, UnitOfMeasureRepository>();
+
 builder.Services.AddCors();
 
 builder.Services.AddControllers();
+builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
