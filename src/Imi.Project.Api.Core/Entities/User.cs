@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Imi.Project.Api.Core.Entities
 {
@@ -9,6 +10,6 @@ namespace Imi.Project.Api.Core.Entities
 
         // Not setting a password for now since it's just a simple login functionality and only meant to show users keeping created recipes in database.
 
-        //TODO Add list of recipes that each user may have
+        public ICollection<Recipe> CreatedRecipes { get; set; }
     }
 }
