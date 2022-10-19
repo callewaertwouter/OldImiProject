@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Imi.Project.Api.Infrastructure.Repositories.Interfaces
+namespace Imi.Project.Api.Core.Infrastructure
 {
     public interface IUnitOfMeasureRepository
     {

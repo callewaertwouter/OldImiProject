@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Imi.Project.Api.Infrastructure.Repositories.Interfaces
+namespace Imi.Project.Api.Core.Infrastructure
 {
     public interface IUserRepository : IBaseRepository<User>
     {
