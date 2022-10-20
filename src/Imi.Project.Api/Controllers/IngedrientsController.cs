@@ -76,5 +76,27 @@ namespace Imi.Project.Api.Controllers
 
             return Ok();
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Update(IngedrientRequestDto ingedrientDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+
+            var ingedrientEntity = await _ingedrientRepository.GetByIdAsync(ingedrientDto.Id);
+
+            if (ingedrientEntity == null)
+            {
+                return NotFound($"No ingedrient with an id of {ingedrientDto.Id}");
+            }
+
+            ingedrientEntity.Name = ingedrientDto.Name;
+
+            await _ingedrientRepository.UpdateAsync(ingedrientEntity);
+
+            return Ok();
+        }
     }
 }
