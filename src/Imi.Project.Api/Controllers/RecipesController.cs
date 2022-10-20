@@ -1,4 +1,5 @@
-﻿using Imi.Project.Api.Core.DTOs.Recipe;
+﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
+using Imi.Project.Api.Core.DTOs.Recipe;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
@@ -66,6 +67,28 @@ namespace Imi.Project.Api.Controllers
             };
 
             await _recipeRepository.AddAsync(recipeEntity);
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update(RecipeRequestDto recipeDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+
+            var recipeEntity = await _recipeRepository.GetByIdAsync(recipeDto.Id);
+
+            if (recipeEntity == null)
+            {
+                return NotFound($"No recipe with an id of {recipeDto.Id}");
+            }
+
+            recipeEntity.Title = recipeDto.Title;
+
+            await _recipeRepository.UpdateAsync(recipeEntity);
 
             return Ok();
         }
