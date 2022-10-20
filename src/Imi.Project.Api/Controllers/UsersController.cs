@@ -1,6 +1,8 @@
-﻿using Imi.Project.Api.Core.DTOs.User;
+﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
+using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
+using Imi.Project.Api.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Imi.Project.Api.Controllers
@@ -67,6 +69,28 @@ namespace Imi.Project.Api.Controllers
             };
 
             await _userRepository.AddAsync(userEntity);
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Update(UserRequestDto userDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+
+            var userEntity = await _userRepository.GetByIdAsync(userDto.Id);
+
+            if (userEntity == null)
+            {
+                return NotFound($"No user with an id of {userDto.Id}");
+            }
+
+            userEntity.Email = userDto.Email;
+
+            await _userRepository.UpdateAsync(userEntity);
 
             return Ok();
         }
