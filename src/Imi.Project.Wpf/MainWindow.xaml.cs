@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Imi.Project.Api.Core.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,12 @@ namespace Imi.Project.Wpf
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IRecipeService _recipeService;
+
+        public MainWindow(IRecipeService recipeService)
         {
+            _recipeService = recipeService;
+
             InitializeComponent();
         }
 
