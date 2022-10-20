@@ -6,18 +6,14 @@
         mc:Ignorable="d"
         Title="IMI Project - Recepten" Height="472" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="293*"/>
-            <ColumnDefinition Width="107*"/>
-        </Grid.ColumnDefinitions>
-        <Label Content="IMI Project - Recepten" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22"/>
-        <DataGrid Grid.Column="0" x:Name="dgRecipes" AutoGenerateColumns="False" SelectionChanged="dgRecipes_SelectionChanged" Margin="10,73,271,48">
+        <Label Content="IMI Project - Recepten" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Height="39" Width="240"/>
+        <DataGrid Grid.Column="0" x:Name="dgRecipes" AutoGenerateColumns="False" SelectionChanged="dgRecipes_SelectionChanged" Margin="10,73,521,48">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="auto"></DataGridTextColumn>
                 <DataGridTextColumn Header="Titel" Binding="{Binding Title}" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid x:Name="grdRecipeDetails" Margin="320,73,36,48">
+        <Grid x:Name="grdRecipeDetails" Margin="284,73,250,48">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -43,6 +39,6 @@
             <TextBox x:Name="txtSearchInput" Grid.Row="1" Height="30"></TextBox>
             <Button x:Name="btnSearch" Grid.Row="2" Content="Zoek recept" Height="35" Click="btnSearch_Click"></Button>
         </Grid>
-        <Label x:Name="lblFeedback" Grid.Row="2" Grid.ColumnSpan="3" Margin="0,413,10,10"></Label>
+        <Label x:Name="lblFeedback" Grid.ColumnSpan="2" Margin="0,413,10,10"/>
     </Grid>
 </Window>
