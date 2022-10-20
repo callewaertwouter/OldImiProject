@@ -1,4 +1,5 @@
 ﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
+using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Imi.Project.Api.Core.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -56,6 +57,24 @@ namespace Imi.Project.Api.Controllers
             };
 
             return Ok(ingedrientDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(IngedrientRequestDto ingedrientDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+
+            var ingedrientEntity = new Ingedrient
+            {
+                Name = ingedrientDto.Name
+            };
+
+            await _ingedrientRepository.AddAsync(ingedrientEntity);
+
+            return Ok();
         }
     }
 }
