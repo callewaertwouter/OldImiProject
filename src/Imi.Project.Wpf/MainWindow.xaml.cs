@@ -1,4 +1,5 @@
 ﻿using Imi.Project.Api.Core.Services.Interfaces;
+using Imi.Project.Api.Core.Services.Models.RecipeService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,14 +31,27 @@ namespace Imi.Project.Wpf
             InitializeComponent();
         }
 
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void ShowErrorMessages(ViewRecipesResult result)
         {
+            StringBuilder errorMessages = new StringBuilder();
 
+            foreach (var error in result.ValidationResults)
+            {
+                errorMessages.Append(error.ErrorMessage);
+            }
+
+            lblFeedback.Content = errorMessages;
+            lblFeedback.Background = Brushes.OrangeRed;
         }
     }
 }
