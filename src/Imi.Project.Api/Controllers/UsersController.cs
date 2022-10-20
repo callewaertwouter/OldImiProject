@@ -1,5 +1,5 @@
-﻿using Imi.Project.Api.Core.DTOs.Recipe;
-using Imi.Project.Api.Core.DTOs.User;
+﻿using Imi.Project.Api.Core.DTOs.User;
+using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
@@ -51,6 +51,24 @@ namespace Imi.Project.Api.Controllers
             };
 
             return Ok(userDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(UserRequestDto userDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+
+            var userEntity = new User
+            {
+                Email = userDto.Email
+            };
+
+            await _userRepository.AddAsync(userEntity);
+
+            return Ok();
         }
     }
 }
