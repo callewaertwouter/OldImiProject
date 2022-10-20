@@ -1,4 +1,5 @@
-﻿using Imi.Project.Api.Core.Infrastructure;
+﻿using Imi.Project.Api.Core.DTOs.Recipe;
+using Imi.Project.Api.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Imi.Project.Api.Controllers
@@ -15,6 +16,21 @@ namespace Imi.Project.Api.Controllers
         {
             _recipeRepository = recipeRepository;
             _userRepository = userRepository;
+        }
+
+        //TODO Think about whether or showing ingedrients is necessary for a searchresult
+        [HttpGet]
+        public async Task<IActionResult> Search([FromQuery] string searchQuery)
+        {
+            var searchResults = await _recipeRepository.SearchAsync(searchQuery);
+
+            var searchResultsDto = searchResults.Select(s => new RecipeResponseDto
+            {
+                Id = s.Id,
+                Title = s.Title
+            });
+
+            return Ok(searchResultsDto);
         }
     }
 }
