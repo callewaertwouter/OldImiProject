@@ -51,6 +51,33 @@ namespace Imi.Project.Wpf
             }
         }
 
+        private async void dgRecipes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ClearFeedback();
+
+            if (dgRecipes.SelectedItem != null)
+            {
+                var selectedRecipe = (RecipeItemViewModel)dgRecipes.SelectedItem;
+
+                var result = await _recipeService.GetRecipeById(selectedRecipe.Id);
+
+                if (result.IsSuccess == false)
+                {
+                    ShowErrorMessages(result);
+                }
+                else
+                {
+                    foreach (var recipe in result.Recipes)
+                    {
+                        lblRecipeDetailId.Content = recipe.Id;
+                        lblRecipeDetailTitle.Content = recipe.Title;
+
+                        //TODO Add ingedrients to show
+                    }
+                }
+            }
+        }
+
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
 
@@ -67,6 +94,12 @@ namespace Imi.Project.Wpf
 
             lblFeedback.Content = errorMessages;
             lblFeedback.Background = Brushes.OrangeRed;
+        }
+
+        private void ClearFeedback()
+        {
+            lblFeedback.Content = string.Empty;
+            lblFeedback.Background = Brushes.White;
         }
     }
 }
