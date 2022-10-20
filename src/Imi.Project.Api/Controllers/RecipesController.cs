@@ -1,5 +1,5 @@
-﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
-using Imi.Project.Api.Core.DTOs.Recipe;
+﻿using Imi.Project.Api.Core.DTOs.Recipe;
+using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
@@ -50,6 +50,24 @@ namespace Imi.Project.Api.Controllers
             };
 
             return Ok(recipeDto);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(RecipeRequestDto recipeDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState.Values);
+            }
+
+            var recipeEntity = new Recipe
+            {
+                Title = recipeDto.Title
+            };
+
+            await _recipeRepository.AddAsync(recipeEntity);
+
+            return Ok();
         }
     }
 }
