@@ -69,7 +69,6 @@ namespace Imi.Project.Wpf
                 {
                     foreach (var recipe in result.Recipes)
                     {
-                        lblRecipeDetailId.Content = recipe.Id;
                         lblRecipeDetailTitle.Content = recipe.Title;
 
                         //TODO Add ingedrients to show

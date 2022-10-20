@@ -9,7 +9,6 @@
         <Label Content="IMI Project - Recepten" HorizontalAlignment="Left" Margin="280,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="22" Height="39" Width="240"/>
         <DataGrid Grid.Column="0" x:Name="dgRecipes" AutoGenerateColumns="False" SelectionChanged="dgRecipes_SelectionChanged" Margin="10,73,521,48">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="auto"></DataGridTextColumn>
                 <DataGridTextColumn Header="Titel" Binding="{Binding Title}" Width="*"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
@@ -21,11 +20,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Label Content="Details" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold" HorizontalAlignment="Center"></Label>
-            <Label Content="Id" Grid.Row="1" Grid.Column="0" FontWeight="Bold"></Label>
-            <Label Content="Titel" Grid.Row="2" Grid.Column="0" FontWeight="Bold"></Label>
+            <Label Content="Titel" Grid.Row="1" Grid.Column="0" FontWeight="Bold"></Label>
             <Label x:Name="lblRecipeDetailId" Grid.Row="1" Grid.Column="1"></Label>
             <Label x:Name="lblRecipeDetailTitle" Grid.Row="2" Grid.Column="1"></Label>
         </Grid>
