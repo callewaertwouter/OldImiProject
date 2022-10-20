@@ -24,5 +24,15 @@ namespace Imi.Project.Wpf
         {
             InitializeComponent();
         }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
