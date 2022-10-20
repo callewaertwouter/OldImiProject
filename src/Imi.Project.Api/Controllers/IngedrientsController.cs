@@ -98,5 +98,20 @@ namespace Imi.Project.Api.Controllers
 
             return Ok();
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var ingedrientEntity = await _ingedrientRepository.GetByIdAsync(id);
+
+            if (ingedrientEntity == null)
+            {
+                return NotFound($"No ingedrient with an id of {id}");
+            }
+
+            await _ingedrientRepository.DeleteAsync(ingedrientEntity);
+
+            return Ok();
+        }
     }
 }
