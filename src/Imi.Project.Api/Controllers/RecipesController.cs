@@ -92,5 +92,20 @@ namespace Imi.Project.Api.Controllers
 
             return Ok();
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var recipeEntity = await _recipeRepository.GetByIdAsync(id);
+
+            if (recipeEntity == null)
+            {
+                return NotFound($"No recipe with an id of {id}");
+            }
+
+            await _recipeRepository.DeleteAsync(recipeEntity);
+
+            return Ok();
+        }
     }
 }
