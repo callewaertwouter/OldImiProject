@@ -1,5 +1,6 @@
 ﻿using Imi.Project.Api.Core.Services.Interfaces;
 using Imi.Project.Api.Core.Services.Models.RecipeService;
+using Imi.Project.Shared.Models.RecipeModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,21 @@ namespace Imi.Project.Wpf
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            var result = await _recipeService.GetAllRecipes();
+
+            if (result.IsSuccess == false)
+            {
+                ShowErrorMessages(result);
+            }
+            else
+            {
+                var recipes = new List<RecipeItemViewModel>();
+                foreach (var recipe in result.Recipes)
+                {
+                    recipes.Add(new RecipeItemViewModel { Id = recipe.Id, Title = recipe.Title });
+                }
+                dgRecipes.ItemsSource = recipes;
+            }
         }
 
         private void btnSearch_Click(object sender, RoutedEventArgs e)
