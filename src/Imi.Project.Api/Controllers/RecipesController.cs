@@ -34,7 +34,7 @@ namespace Imi.Project.Api.Controllers
             return Ok(recipesDto);
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
             var recipe = await _recipeRepository.GetByIdAsync(id);

@@ -36,7 +36,7 @@ namespace Imi.Project.Api.Controllers
             return Ok(usersDto);
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
             var user = await _userRepository.GetByIdAsync(id);
