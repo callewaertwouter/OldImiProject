@@ -78,9 +78,32 @@ namespace Imi.Project.Wpf
             }
         }
 
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        private async void btnSearch_Click(object sender, RoutedEventArgs e)
         {
+            ClearFeedback();
 
+            var searchInput = txtSearchInput.Text;
+            var result = await _recipeService.SearchRecipeByName(searchInput);
+
+            if (result.IsSuccess == false)
+            {
+                ShowErrorMessages(result);
+            }
+            else
+            {
+                var recipes = new List<RecipeItemViewModel>();
+                foreach (var recipe in result.Recipes)
+                {
+                    recipes.Add(new RecipeItemViewModel { Id = recipe.Id, Title = recipe.Title });
+                }
+                dgRecipes.ItemsSource = recipes;
+
+                if (recipes.Count == 0)
+                {
+                    lblFeedback.Content = $"Er zijn geen recepten gevonden met de naam {searchInput}.";
+                    lblFeedback.Background = Brushes.Orange;
+                }
+            }
         }
 
         private void ShowErrorMessages(ViewRecipesResult result)
