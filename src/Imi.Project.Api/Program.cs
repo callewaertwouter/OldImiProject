@@ -1,4 +1,6 @@
 using Imi.Project.Api.Core.Infrastructure;
+using Imi.Project.Api.Core.Services;
+using Imi.Project.Api.Core.Services.Interfaces;
 using Imi.Project.Api.Infrastructure.Data;
 using Imi.Project.Api.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +14,10 @@ builder.Services.AddScoped<IRecipeRepository, RecipeRepository>();
 builder.Services.AddScoped<IIngedrientRepository, IngedrientRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUnitOfMeasureRepository, UnitOfMeasureRepository>();
+
+builder.Services.AddScoped<IRecipeService, RecipeService>();
+builder.Services.AddScoped<IIngedrientService, IngedrientService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddCors();
 
