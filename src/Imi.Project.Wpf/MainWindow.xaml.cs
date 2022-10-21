@@ -70,7 +70,7 @@ namespace Imi.Project.Wpf
                     foreach (var recipe in result.Recipes)
                     {
                         lblRecipeDetailTitle.Content = recipe.Title;
-                        lblRecipeDetailDescription.Content = recipe.Description;
+                        lsvRecipeDetailDescription.Items.Add(recipe.Description);
 
                         //TODO Add ingedrients to show
                     }
