@@ -1,5 +1,6 @@
 ﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
 using Imi.Project.Api.Core.DTOs.Recipe;
+using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
@@ -28,7 +29,13 @@ namespace Imi.Project.Api.Controllers
             var recipesDto = recipes.Select(r => new RecipeResponseDto
             {
                 Id = r.Id,
-                Title = r.Title
+                Title = r.Title,
+                Description = r.Description,
+                CreatedByUser = new UserResponseDto
+                {
+                    Id = r.User.Id,
+                    Email = r.User.Email
+                }
             });
 
             return Ok(recipesDto);
@@ -47,7 +54,13 @@ namespace Imi.Project.Api.Controllers
             var recipeDto = new RecipeResponseDto
             {
                 Id = recipe.Id,
-                Title = recipe.Title
+                Title = recipe.Title,
+                Description = recipe.Description,
+                CreatedByUser = new UserResponseDto
+                {
+                    Id = recipe.User.Id,
+                    Email = recipe.User.Email
+                }
             };
 
             return Ok(recipeDto);
