@@ -6,6 +6,8 @@
 
         public string Title { get; set; }
 
+        public string Description { get; set; }
+
         //TODO Add list of recipes
     }
 }
