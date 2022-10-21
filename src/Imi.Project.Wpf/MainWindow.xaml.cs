@@ -71,7 +71,7 @@ namespace Imi.Project.Wpf
                     {
                         lblRecipeDetailTitle.Content = recipe.Title;
                         lsvRecipeDetailDescription.Items.Add(recipe.Description);
-
+                        lblRecipeDetailUser.Content = recipe.User.Email;
                         //TODO Add ingedrients to show
                     }
                 }
@@ -123,6 +123,7 @@ namespace Imi.Project.Wpf
         {
             lblFeedback.Content = string.Empty;
             lblFeedback.Background = Brushes.White;
+            lsvRecipeDetailDescription.Items.Clear();
         }
     }
 }
