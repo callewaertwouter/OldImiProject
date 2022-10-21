@@ -21,11 +21,13 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Label Content="Details" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold" HorizontalAlignment="Center"></Label>
             <Label Content="Titel" Grid.Row="1" Grid.Column="0" FontWeight="Bold"></Label>
-            <Label x:Name="lblRecipeDetailId" Grid.Row="1" Grid.Column="1"></Label>
-            <Label x:Name="lblRecipeDetailTitle" Grid.Row="2" Grid.Column="1"></Label>
+            <Label Content="Bereiding" Grid.Row="2" Grid.Column="0" FontWeight="Bold"></Label>
+            <Label x:Name="lblRecipeDetailTitle" Grid.Row="1" Grid.Column="1"></Label>
+            <Label x:Name="lblRecipeDetailDescription" Grid.Row="2" Grid.Column="1"></Label>
         </Grid>
         <Grid Margin="555,73,10,48" Grid.ColumnSpan="2">
             <Grid.RowDefinitions>
