@@ -64,12 +64,12 @@ namespace Imi.Project.Api.Core.Services
 
             if (string.IsNullOrWhiteSpace(searchInput))
             {
-                validationResults.Add(new ValidationResult($"No searchtext provided!"));
+                validationResults.Add(new ValidationResult($"Zoekveld niet ingevuld!"));
                 result.IsSuccess = false;
             }
             else if (searchInput.Length <= 1)
             {
-                validationResults.Add(new ValidationResult($"At least 2 characters are required to search for recipes."));
+                validationResults.Add(new ValidationResult($"Ten minste 2 karakters zijn vereist om te zoeken naar recepten."));
                 result.IsSuccess = false;
             }
             else
