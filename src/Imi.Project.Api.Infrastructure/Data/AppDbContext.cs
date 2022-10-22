@@ -12,7 +12,6 @@ namespace Imi.Project.Api.Infrastructure.Data
         public DbSet<Ingedrient> Ingedrients { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
         public DbSet<User> Users { get; set; }
-        public DbSet<RecipeIngedrient> RecipeIngedrients { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -27,64 +26,50 @@ namespace Imi.Project.Api.Infrastructure.Data
             RecipeSeeder.Seed(modelBuilder);
             UserSeeder.Seed(modelBuilder);
 
-            modelBuilder.Entity<RecipeIngedrient>()
-                .HasKey(ri => new { ri.RecipeId, ri.IngedrientId });
-
-            modelBuilder.Entity<RecipeIngedrient>()
-                .HasOne(ri => ri.Recipe)
-                .WithMany(r => r.ListOfIngedrients)
-                .HasForeignKey(ri => ri.RecipeId);
-
-            modelBuilder.Entity<RecipeIngedrient>()
-                .HasOne(ri => ri.Ingedrient)
-                .WithMany(i => i.UsedInRecipes)
-                .HasForeignKey(ri => ri.IngedrientId);
-
-            modelBuilder.Entity<RecipeIngedrient>()
-                .HasData(
-                new[]
-                {
+            modelBuilder.Entity<Recipe>()
+                .HasMany(r => r.Ingedrients)
+                .WithMany(i => i.Recipes)
+                .UsingEntity(x => x.HasData(
                     // Testrecept heeft enkel melk om dit te testen
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000001"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000001")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000001"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000001") },
                     // Witte saus heeft boter en melk
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000002"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000005")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000002"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000001")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000002"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000005") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000002"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000001") },
                     // Gemarineerde brochetten heeft boter, paprika, ajuin en gehakt
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000005")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000006")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000008")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000003")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000005") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000006") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000008") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000003"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000003") },
                     // Champignonsoep heeft champignons en olijfolie
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000004"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000011")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000004"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000010")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000004"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000011") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000004"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000010") },
                     // Gehaktbrood heeft boter, gehakt en ajuin
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000005"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000005")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000005"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000003")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000005"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000008")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000005"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000005") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000005"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000003") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000005"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000008") },
                     // Hamburger heeft gehakt en wortel
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000006"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000003")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000006"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000007")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000006"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000003") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000006"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000007") },
                     // Viskroketjes met patatten heeft enkel olijfolie
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000007"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000010")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000007"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000010") },
                     // Grillworst met puree heeft boter, melk en gehakt
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000008"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000005")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000008"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000001")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000008"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000003")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000008"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000005") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000008"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000001") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000008"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000003") },
                     // Spaghetti bolognaise heeft boter, gehakt, wortel, courgette, paprika, ajuin, tomatenpuree, champignons, gemalen kaas en spaghetti
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000005")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000003")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000007")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000014")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000006")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000008")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000004")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000011")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000012")},
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000013")},
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000005") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000003") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000007") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000014") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000006") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000008") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000004") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000011") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000012") },
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000009"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000013") },
                     // Ongelooflijk goed gerecht heeft enkel melk
-                    new { RecipeId = Guid.Parse("00000000-0000-0000-0000-000000000010"), IngedrientId = Guid.Parse("00000000-0000-0000-0000-000000000001")}
-                }
-                );
+                    new { RecipesId = Guid.Parse("00000000-0000-0000-0000-000000000010"), IngedrientsId = Guid.Parse("00000000-0000-0000-0000-000000000001") }
+                    ));
         }
     }
 }
