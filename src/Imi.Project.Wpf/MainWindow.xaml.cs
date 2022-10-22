@@ -73,9 +73,9 @@ namespace Imi.Project.Wpf
                         lsvRecipeDetailDescription.Items.Add(recipe.Description);
                         lblRecipeDetailUser.Content = recipe.User.Email;
 
-                        foreach (var ingedrient in recipe.ListOfIngedrients.ToList())
+                        foreach (var ingedrient in recipe.Ingedrients.ToList())
                         {
-                            lstRecipeDetailIngedrients.Items.Add(ingedrient.IngedrientId);
+                            lstRecipeDetailIngedrients.Items.Add(ingedrient.Name);
                         }
                         //TODO Fix displayed ingedrients, ingedrient.Ingedrient.Name gets returned null (even with ToString())
                     }
