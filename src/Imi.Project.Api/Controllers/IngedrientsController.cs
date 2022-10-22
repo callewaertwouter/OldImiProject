@@ -1,4 +1,5 @@
 ﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
+using Imi.Project.Api.Core.DTOs.UnitOfMeasure;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Imi.Project.Api.Core.Services.Interfaces;
@@ -34,7 +35,12 @@ namespace Imi.Project.Api.Controllers
             var ingedrientsDto = ingedrients.Select(i => new IngedrientResponseDto
             {
                 Id = i.Id,
-                Name = i.Name
+                Name = i.Name,
+                MeasureUnit = new UnitOfMeasureResponseDto
+                {
+                    Id = i.UnitOfMeasure.Id,
+                    MeasureUnit = i.UnitOfMeasure.MeasureUnit
+                }
             });
 
             return Ok(ingedrientsDto);
@@ -53,7 +59,12 @@ namespace Imi.Project.Api.Controllers
             var ingedrientDto = new IngedrientResponseDto
             {
                 Id = ingedrient.Id,
-                Name = ingedrient.Name
+                Name = ingedrient.Name,
+                MeasureUnit = new UnitOfMeasureResponseDto
+                {
+                    Id = ingedrient.UnitOfMeasure.Id,
+                    MeasureUnit = ingedrient.UnitOfMeasure.MeasureUnit
+                }
             };
 
             return Ok(ingedrientDto);
