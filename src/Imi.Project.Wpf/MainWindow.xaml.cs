@@ -72,7 +72,12 @@ namespace Imi.Project.Wpf
                         lblRecipeDetailTitle.Content = recipe.Title;
                         lsvRecipeDetailDescription.Items.Add(recipe.Description);
                         lblRecipeDetailUser.Content = recipe.User.Email;
-                        //TODO Add ingedrients to show
+
+                        foreach (var ingedrient in recipe.ListOfIngedrients.ToList())
+                        {
+                            lstRecipeDetailIngedrients.Items.Add(ingedrient.IngedrientId);
+                        }
+                        //TODO Fix displayed ingedrients, ingedrient.Ingedrient.Name gets returned null (even with ToString())
                     }
                 }
             }
@@ -124,6 +129,7 @@ namespace Imi.Project.Wpf
             lblFeedback.Content = string.Empty;
             lblFeedback.Background = Brushes.White;
             lsvRecipeDetailDescription.Items.Clear();
+            lstRecipeDetailIngedrients.Items.Clear();
         }
     }
 }
