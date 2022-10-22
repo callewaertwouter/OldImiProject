@@ -19,7 +19,7 @@ namespace Imi.Project.Api.Infrastructure.Repositories
         // Since there's already a GetAll from BaseRepository, override allows it to change just the code
         public override IQueryable<Recipe> GetAll()
         {
-            return _dbContext.Recipes.Include(r => r.ListOfIngedrients)
+            return _dbContext.Recipes.Include(r => r.Ingedrients)
                                      .Include(r => r.User);
         }
 
