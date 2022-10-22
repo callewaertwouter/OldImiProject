@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Imi.Project.Api.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221019170812_FixRecipeUserId")]
-    partial class FixRecipeUserId
+    [Migration("20221022204806_Init3")]
+    partial class Init3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,112 +53,112 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9637),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9639),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9169),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9170),
                             Name = "Melk",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9643),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9644),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9172),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9173),
                             Name = "Laurier",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000004")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9646),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9647),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9174),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9175),
                             Name = "Gehakt",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9649),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9649),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9176),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9176),
                             Name = "Tomatenpuree",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000003")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9651),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9651),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9178),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9178),
                             Name = "Boter",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9653),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9654),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9180),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9180),
                             Name = "Paprika",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9655),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9656),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9182),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9182),
                             Name = "Wortel",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9658),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9658),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9184),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9184),
                             Name = "Ajuin",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9660),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9661),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9186),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9186),
                             Name = "Kippenbouillon",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9663),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9663),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9187),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9188),
                             Name = "Olijfolie",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000007")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000011"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9665),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9665),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9189),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9189),
                             Name = "Champignons",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000008")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000012"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9667),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9668),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9192),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9192),
                             Name = "Gemalen kaas",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000013"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9673),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9674),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9194),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9194),
                             Name = "Spaghetti",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000014"),
-                            CreatedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9679),
-                            LastEditedOn = new DateTime(2022, 10, 19, 17, 8, 12, 37, DateTimeKind.Utc).AddTicks(9679),
+                            CreatedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9196),
+                            LastEditedOn = new DateTime(2022, 10, 22, 20, 48, 5, 970, DateTimeKind.Utc).AddTicks(9196),
                             Name = "Courgette",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         });
@@ -197,254 +197,92 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9733),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9218),
                             Description = "Dit recept test de werking van dit recept.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9778),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9253),
                             Title = "Testrecept",
                             UserId = new Guid("00000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9782),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9258),
                             Description = "Maak een roux van de boter en de bloem. Dit doe je door de boter in een steelpannetje te smelten. Doe de bloem bij de boter en roer met de garde.\r\n\r\nLaat het mengsel een beetje opdrogen in het pannetje, tot je de geur van koekjes ruikt.\r\n\r\nGiet er beetje bij beetje de koude melk bij en roer telkens het mengsel glad. Breng al roerend aan de kook, op matig vuur. Laat de witte saus indikken en laat nog enkele minuten doorkoken zodat de bloemsmaak verdwijnt.Breng op smaak met nootmuskaat, peper en zout.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9783),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9259),
                             Title = "Witte saus",
                             UserId = new Guid("00000000-0000-0000-0000-000000000006")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9787),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9262),
                             Description = "Koop brochetten van de slager, easy. Smijt ze in een ovenpan, doe er boter over en zet ze in de combi-oven. Serveer met rijst en wortelen.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9788),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9263),
                             Title = "Gemarineerde brochetten",
                             UserId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9791),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9266),
                             Description = "Neem een ruime mengschaal, doe er het warm water in en week er de gedroogde paddenstoelen in. Het eekhoorntjesbrood zal z’n smaak afgeven en het water in een bouillon veranderen. Pel de uien en snij ze in grove stukken. Verhit een ruime stoofpot of een soepketel. Smelt er een klont boter in en stoof de stukken ui. Snij de stammen prei overlangs door, snij het donkerste loof weg en spoel ze onder stromend water. Snij de gewassen prei in grove stukken en stoof ze mee met de uien. Pel de look, snij de teentjes grof en laat ze ook meestoven. Maak 2/3 van de Parijse paddenstoelen schoon. Gebruik een borsteltje en snij (indien nodig) het steeltje wat bij. Snij de paddenstoelen vervolgens middendoor en laat ze meestoven. Hou 1/3 van de paddenstoelen opzij. Maak een bouquet garni met enkele blaadjes laurier, wat tijm en (indien beschikbaar) peterseliestengels. Bind alles samen met een eindje keukentouw en laat het kruidentuiltje meestoven. Schil de aardappelen en snij ze in grove stukken. Laat ze meestoven. Zeef de bouillon van eekhoorntjesbrood en giet het vocht in de soepketel met gestoofde groenten. De rubberachtige gewelde paddenstoelen gebruiken we niet. Laat de soep een half uur sudderen op een zacht vuur. Intussen kan je de kaasstengels bereiden. Verwijder het bouquet garni en mix de soep glad met een staafmixer. Je hoeft ze niet te zeven. Mix er ook een flinke scheut room in. Proef de soep en kruid het gerecht naar smaak met wat peper van de molen en een snuif zout.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9793),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9268),
                             Title = "Champignonsoep",
                             UserId = new Guid("00000000-0000-0000-0000-000000000007")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9796),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9271),
                             Description = "Meng gehakt en ajuin in een schaal en mix ze. Smijt de mix in een ovenpan en herschaap het tot een brood. Doe er vervolgens paneermeel en boter over. 20 minuten in de combi-oven. Kook de patatten en de bonen. Smakelijk.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9798),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9272),
                             Title = "Gehaktbrood met bonen en patatten",
                             UserId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9801),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9275),
                             Description = "Wortelen snijden en koken. Kook de patatten. Doe de hamburger in een pan en laat het bakken. Easy-peasy.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9803),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9277),
                             Title = "Hamburger met wortel en patatten",
                             UserId = new Guid("00000000-0000-0000-0000-000000000004")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9806),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9280),
                             Description = "1-pansgerecht met viskroketjes en patatjes. Groenten zijn voor de dieren.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9807),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9281),
                             Title = "Viskroketjes met gebakken aardappelen",
                             UserId = new Guid("00000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9810),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9284),
                             Description = "Patatten koken tot ze zacht zijn. Water afgieten, doe er melk en nootmuskaat bij. Grillworst in de microgolfoven voor anderhalf minuut ofzo.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9812),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9285),
                             Title = "Grillworst met puree",
                             UserId = new Guid("00000000-0000-0000-0000-000000000003")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9815),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9288),
                             Description = "1) Snij de ajuin, paprika, wortelen, courgette en champignons tot je ze klein genoeg vindt. Doe ze vervolgens allemaal in de pot met wat boter.2) Smijt het gehakt in een pan en bak ze lichtjes. Kap ze in kleinere stukken eenmaal de buitenkant gebakken is.3) Kook de spaghetti en voeg voldoende tomatenpuree en kruiden bij de bolognaise.4) Serveer met gemalen kaas.5) Bon appetit.",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9817),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9289),
                             Title = "Spaghetti bolognaise",
                             UserId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9820),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9292),
                             Description = "Ga naar de frituur ipv te koken. Ongelooflijk goed he LOL!",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9822),
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9294),
                             Title = "Ongelooflijk goed gerecht",
                             UserId = new Guid("00000000-0000-0000-0000-000000000010")
-                        });
-                });
-
-            modelBuilder.Entity("Imi.Project.Api.Core.Entities.RecipeIngedrient", b =>
-                {
-                    b.Property<Guid>("RecipeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("IngedrientId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("RecipeId", "IngedrientId");
-
-                    b.HasIndex("IngedrientId");
-
-                    b.ToTable("RecipeIngedrients");
-
-                    b.HasData(
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000001"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000001")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000002"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000005")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000002"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000001")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000003"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000005")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000003"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000006")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000003"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000008")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000003"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000003")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000004"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000011")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000004"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000010")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000005"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000005")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000005"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000003")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000005"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000008")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000006"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000003")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000006"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000007")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000007"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000010")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000008"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000005")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000008"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000001")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000008"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000003")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000005")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000003")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000007")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000014")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000006")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000008")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000004")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000011")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000012")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000009"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000013")
-                        },
-                        new
-                        {
-                            RecipeId = new Guid("00000000-0000-0000-0000-000000000010"),
-                            IngedrientId = new Guid("00000000-0000-0000-0000-000000000001")
                         });
                 });
 
@@ -543,72 +381,234 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9843),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9314),
                             Email = "admin@admin.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9846)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9315)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9853),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9318),
                             Email = "woutercallewaert@gmail.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9854)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9319)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9857),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9321),
                             Email = "jjameson@hotmail.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9859)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9323)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9861),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9325),
                             Email = "tigbiddies@xxx.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9863)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9326)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9865),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9329),
                             Email = "allthebutz@hotmail.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9867)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9330)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9870),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9332),
                             Email = "ikloopindiestrond@gagmaker.net",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9871)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9334)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9874),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9336),
                             Email = "olklo@gmail.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9876)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9338)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9878),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9340),
                             Email = "wsmets1991@hotmail.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9880)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9341)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9882),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9383),
                             Email = "maarten.raviola@gmail.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9884)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9385)
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            CreatedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9886),
+                            CreatedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9388),
                             Email = "toiletbril@lolbroek.com",
-                            LastEditedOn = new DateTime(2022, 10, 19, 19, 8, 12, 37, DateTimeKind.Local).AddTicks(9888)
+                            LastEditedOn = new DateTime(2022, 10, 22, 22, 48, 5, 970, DateTimeKind.Local).AddTicks(9389)
+                        });
+                });
+
+            modelBuilder.Entity("IngedrientRecipe", b =>
+                {
+                    b.Property<Guid>("IngedrientsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("RecipesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("IngedrientsId", "RecipesId");
+
+                    b.HasIndex("RecipesId");
+
+                    b.ToTable("IngedrientRecipe");
+
+                    b.HasData(
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000001")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000005"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000002")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000002")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000005"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000003")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000006"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000003")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000008"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000003")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000003")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000011"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000004")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000010"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000004")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000005"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000005")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000005")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000008"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000005")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000006")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000007"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000006")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000010"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000007")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000005"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000008")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000008")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000008")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000005"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000003"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000007"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000014"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000006"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000008"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000004"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000011"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000012"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000013"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000009")
+                        },
+                        new
+                        {
+                            IngedrientsId = new Guid("00000000-0000-0000-0000-000000000001"),
+                            RecipesId = new Guid("00000000-0000-0000-0000-000000000010")
                         });
                 });
 
@@ -634,33 +634,19 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Imi.Project.Api.Core.Entities.RecipeIngedrient", b =>
+            modelBuilder.Entity("IngedrientRecipe", b =>
                 {
-                    b.HasOne("Imi.Project.Api.Core.Entities.Ingedrient", "Ingedrient")
-                        .WithMany("UsedInRecipes")
-                        .HasForeignKey("IngedrientId")
+                    b.HasOne("Imi.Project.Api.Core.Entities.Ingedrient", null)
+                        .WithMany()
+                        .HasForeignKey("IngedrientsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Imi.Project.Api.Core.Entities.Recipe", "Recipe")
-                        .WithMany("ListOfIngedrients")
-                        .HasForeignKey("RecipeId")
+                    b.HasOne("Imi.Project.Api.Core.Entities.Recipe", null)
+                        .WithMany()
+                        .HasForeignKey("RecipesId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Ingedrient");
-
-                    b.Navigation("Recipe");
-                });
-
-            modelBuilder.Entity("Imi.Project.Api.Core.Entities.Ingedrient", b =>
-                {
-                    b.Navigation("UsedInRecipes");
-                });
-
-            modelBuilder.Entity("Imi.Project.Api.Core.Entities.Recipe", b =>
-                {
-                    b.Navigation("ListOfIngedrients");
                 });
 
             modelBuilder.Entity("Imi.Project.Api.Core.Entities.User", b =>
