@@ -1,4 +1,5 @@
 ﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
+using Imi.Project.Api.Core.DTOs.Recipe;
 using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
@@ -53,6 +54,25 @@ namespace Imi.Project.Api.Controllers
             };
 
             return Ok(userDto);
+        }
+
+        [HttpGet("{userId}/recipes")]
+        public async Task<IActionResult> GetRecipesFromUserId(Guid userId)
+        {
+            var recipes = await _recipeRepository.GetByUserIdAsync(userId);
+
+            var recipesDto = recipes.Select(r => new RecipeResponseDto
+            {
+                Id = r.Id,
+                Title = r.Title,
+                CreatedByUser = new UserResponseDto
+                {
+                    Id = r.User.Id,
+                    Email = r.User.Email
+                }
+            });
+
+            return Ok(recipesDto);
         }
 
         [HttpPost]
