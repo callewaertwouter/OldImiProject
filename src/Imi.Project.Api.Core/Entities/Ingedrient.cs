@@ -13,6 +13,6 @@ namespace Imi.Project.Api.Core.Entities
         public UnitOfMeasure UnitOfMeasure { get; set; }
 
         // Many ingedrients can be used in many recipes
-        public ICollection<RecipeIngedrient> UsedInRecipes { get; set; }
+        public ICollection<Recipe> Recipes { get; set; }
     }
 }

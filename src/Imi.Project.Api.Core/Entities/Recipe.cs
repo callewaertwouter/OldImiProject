@@ -13,7 +13,7 @@ namespace Imi.Project.Api.Core.Entities
         public string Description { get; set; }
 
         // Many recipes will use many ingedriënts
-        public ICollection<RecipeIngedrient> ListOfIngedrients { get; set; }
+        public ICollection<Ingedrient> Ingedrients { get; set; }
 
         public Guid UserId { get; set; }
         public User User { get; set; }
