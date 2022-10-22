@@ -23,14 +23,17 @@
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Label Content="Details" Grid.Row="0" Grid.ColumnSpan="2" FontWeight="Bold" HorizontalAlignment="Center"></Label>
             <Label Content="Titel" Grid.Row="1" Grid.Column="0" FontWeight="Bold"></Label>
             <Label Content="Bereiding" Grid.Row="2" Grid.Column="0" FontWeight="Bold"></Label>
             <Label Content="Auteur" Grid.Row="3" Grid.Column="0" FontWeight="Bold"></Label>
+            <Label Content="Ingedrienten" Grid.Row="4" Grid.Column="0" FontWeight="Bold"></Label>
             <Label x:Name="lblRecipeDetailTitle" Grid.Row="1" Grid.Column="1"></Label>
             <ListView x:Name="lsvRecipeDetailDescription" Grid.Row="2" Grid.Column="1"></ListView>
             <Label x:Name="lblRecipeDetailUser" Grid.Row="3" Grid.Column="1"></Label>
+            <ListBox x:Name="lstRecipeDetailIngedrients" Grid.Row="4" Grid.Column="1"></ListBox>
         </Grid>
         <Grid Margin="924,73,10,74">
             <Grid.RowDefinitions>
