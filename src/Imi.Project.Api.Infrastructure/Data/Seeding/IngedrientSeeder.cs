@@ -6,7 +6,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
 {
     public class IngedrientSeeder
     {
-        //TODO Add units of measure to each ingedrient
         public static void Seed(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ingedrient>().HasData(

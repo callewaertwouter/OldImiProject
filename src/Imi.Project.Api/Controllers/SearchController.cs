@@ -18,7 +18,6 @@ namespace Imi.Project.Api.Controllers
             _userRepository = userRepository;
         }
 
-        //TODO Think about whether or showing ingedrients is necessary for a searchresult
         [HttpGet]
         public async Task<IActionResult> Search([FromQuery] string searchQuery)
         {

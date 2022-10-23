@@ -6,7 +6,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
 {
     public class RecipeSeeder
     {
-        //TODO Add list of ingedrients to each recipe and which user created it
         public static void Seed(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Recipe>().HasData(

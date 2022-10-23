@@ -6,7 +6,5 @@ namespace Imi.Project.Api.Core.DTOs.Recipe
     {
         [Required(ErrorMessage = "{0} is required!")]
         public string Title { get; set; }
-
-        //TODO Add list of ingedrients so they show on requested recipe
     }
 }

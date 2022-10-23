@@ -77,7 +77,6 @@ namespace Imi.Project.Wpf
                         {
                             lstRecipeDetailIngedrients.Items.Add(ingedrient.Name);
                         }
-                        //TODO Fix displayed ingedrients, ingedrient.Ingedrient.Name gets returned null (even with ToString())
                     }
                 }
             }

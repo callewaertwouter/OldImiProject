@@ -6,7 +6,5 @@ namespace Imi.Project.Api.Core.DTOs.User
     {
         [Required(ErrorMessage = "{0} is required!")]
         public string Email { get; set; }
-
-        //TODO Add list of recipes so they show on requested user
     }
 }

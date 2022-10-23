@@ -21,7 +21,6 @@ namespace Imi.Project.Api.Controllers
             _ingedrientRepository = ingedrientRepository;
         }
 
-        //TODO Recipes and ingedrients are many-to-many relationship. Need to figure out how to get all ingedrients for each recipe
         [HttpGet]
         public async Task<IActionResult> Get()
         {
