@@ -1,13 +1,13 @@
-using Imi.Project.Api.Core.Services;
-using Imi.Project.Api.Core.Services.Interfaces;
+using Imi.Project.Api.Core.Entities;
+using Imi.Project.Blazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-builder.Services.AddTransient<IIngedrientService, IngedrientService>();
-builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<ICRUDService<Recipe>, BlazorRecipeService>();
+builder.Services.AddTransient<ICRUDService<User>, BlazorUserService>();
 
 var app = builder.Build();
 
