@@ -1,6 +1,6 @@
 ﻿@page "/recipes"
 @using Imi.Project.Api.Core.Entities
-@using Imi.Project.Blazor.Services
+@using Imi.Project.Blazor.Services.Crud
 @inject BlazorRecipeService service;
 
 <h3>Recipes</h3>
@@ -26,9 +26,9 @@
 </div>
 
 @code {
-    private Recipe[] recipes;
-    private Recipe currentRecipe;
-    private string error;
+    private Recipe[]? recipes;
+    private Recipe? currentRecipe;
+    private string? error;
 
     public async Task RefreshRecipes()
     {

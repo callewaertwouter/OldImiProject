@@ -1,6 +1,6 @@
 ﻿@page "/users"
 @using Imi.Project.Api.Core.Entities
-@using Imi.Project.Blazor.Services
+@using Imi.Project.Blazor.Services.Crud
 @inject BlazorUserService service;
 
 <h3>Users</h3>
@@ -26,9 +26,9 @@
 </div>
 
 @code {
-    private User[] users;
-    private User currentUser;
-    private string error;
+    private User[]? users;
+    private User? currentUser;
+    private string? error;
 
     public async Task RefreshUsers()
     {
