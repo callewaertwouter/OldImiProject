@@ -1,0 +1,54 @@
+﻿@using Imi.Project.Api.Core.Entities
+<button class="btn btn-dark">Add recipe</button>
+<table class="table mt-4">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Id</th>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Ingedrients</th>
+			<th>User</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var recipe in Recipes)
+		{
+			<tr>
+				<td>
+					<button class="btn btn-warning">Edit</button>
+				</td>
+				<td>
+					@recipe.Id
+				</td>
+				<td>
+					@recipe.Title
+				</td>
+				<td>
+					@recipe.Description
+				</td>
+					@foreach (var ingedrient in recipe.Ingedrients)
+					{
+						<td>
+							ingedrient.Name;
+						</td>
+					}
+				<td>
+					@recipe.User.Email
+				</td>
+				<td>
+					<button class="btn btn-danger">Delete</button>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+@code {
+	[Parameter]
+	public Recipe[] Recipes { get; set; }
+
+	//TODO Updaten met OnAdd, OnEdit en OnDelete voor volledige CRUD
+
+}
