@@ -1,7 +1,40 @@
 ﻿@page "/recipes"
+@using Imi.Project.Api.Core.Entities
+@using Imi.Project.Blazor.Services
+@inject BlazorRecipeService service;
 
-<h3>Recepten</h3>
+<h3>Recipes</h3>
+
+<div class="mt-3">
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <div class="alert alert-danger">
+            @error
+        </div>
+    }
+
+    @if (currentRecipe == null)
+    {
+        <RecipeList Items ="recipes">
+        </RecipeList>
+    }
+    else
+    {
+        <RecipeForm Recipe="currentRecipe">
+        </RecipeForm>
+    }
+</div>
 
 @code {
+    private Recipe[] recipes;
+    private Recipe currentRecipe;
+    private string error;
 
+    public async Task RefreshRecipes()
+    {
+        recipes = (await service.GetAll()).ToArray();
+        this.currentRecipe = null;
+    }
+
+    //TODO Functions for rest of CRUD
 }
