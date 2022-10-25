@@ -1,5 +1,6 @@
 using Imi.Project.Api.Core.Entities;
-using Imi.Project.Blazor.Services;
+using Imi.Project.Blazor.Services.Concepts;
+using Imi.Project.Blazor.Services.Crud;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddServerSideBlazor();
 
 builder.Services.AddTransient<ICRUDService<Recipe>, BlazorRecipeService>();
 builder.Services.AddTransient<ICRUDService<User>, BlazorUserService>();
+builder.Services.AddTransient<IQuizService, QuizService>();
 
 var app = builder.Build();
 
