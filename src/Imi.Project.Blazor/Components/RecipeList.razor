@@ -1,6 +1,6 @@
 ﻿@using Imi.Project.Blazor.Models
 
-<button class="btn btn-dark">Add recipe</button>
+<button class="btn btn-dark" @onclick="OnAdd">Add recipe</button>
 <table class="table mt-4">
 	<thead>
 		<tr>
@@ -18,7 +18,7 @@
 		{
 			<tr>
 				<td>
-					<button class="btn btn-warning">Edit</button>
+					<button class="btn btn-warning" @onclick="e => OnEdit.InvokeAsync(recipe)">Edit</button>
 				</td>
 				<td>
 					@recipe.Id
@@ -30,7 +30,7 @@
 					@recipe.Description
 				</td>
 				<td>
-					<button class="btn btn-danger">Delete</button>
+					<button class="btn btn-danger" @onclick="e => OnDelete.InvokeAsync(recipe)">Delete</button>
 				</td>
 			</tr>
 		}
@@ -41,6 +41,12 @@
 	[Parameter]
 	public MockRecipe[]? Recipes { get; set; }
 
-	//TODO Updaten met OnAdd, OnEdit en OnDelete voor volledige CRUD
+	[Parameter]
+	public EventCallback OnAdd { get; set; }
 
+	[Parameter]
+	public EventCallback<MockRecipe> OnEdit { get; set; }
+
+	[Parameter]
+	public EventCallback<MockRecipe> OnDelete { get; set; }
 }

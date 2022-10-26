@@ -1,5 +1,5 @@
 ﻿@using Imi.Project.Blazor.Models
-<button class="btn btn-dark">Add user</button>
+<button class="btn btn-dark" @onclick="OnAdd">Add user</button>
 <table class="table mt-4">
 	<thead>
 		<tr>
@@ -14,7 +14,7 @@
 		{
 			<tr>
 				<td>
-					<button class="btn btn-warning">Edit</button>
+					<button class="btn btn-warning" @onclick="e => OnEdit.InvokeAsync(user)">Edit</button>
 				</td>
 				<td>
 					@user.Id
@@ -23,7 +23,7 @@
 					@user.Name
 				</td>
 				<td>
-					<button class="btn btn-danger">Delete</button>
+					<button class="btn btn-danger" @onclick="e => OnDelete.InvokeAsync(user)">Delete</button>
 				</td>
 			</tr>
 		}
@@ -34,6 +34,12 @@
 	[Parameter]
 	public MockUser[] Users { get; set; }
 
-	//TODO Updaten met OnAdd, OnEdit en OnDelete voor volledige CRUD
+	[Parameter]
+	public EventCallback OnAdd { get; set; }
 
+	[Parameter]
+	public EventCallback<MockUser> OnEdit { get; set; }
+
+	[Parameter]
+	public EventCallback<MockUser> OnDelete { get; set; }
 }
