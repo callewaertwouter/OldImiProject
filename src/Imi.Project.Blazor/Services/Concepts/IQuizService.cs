@@ -1,8 +1,12 @@
 ﻿namespace Imi.Project.Blazor.Services.Concepts
 {
-    public interface IQuizService
+    public interface IQuizService<T> where T : class
     {
         Task<IQueryable> GetAllQuestions();
+
+        Task<IQueryable> Get5RandomQuestions();
+
+        Task<T> CalculateUserScore();
 
         /* Quiz has a number of questions (and several answers to those questions), of which it will pick 5 for the user
          * User answers these 5 questions
