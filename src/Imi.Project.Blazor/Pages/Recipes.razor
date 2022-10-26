@@ -41,5 +41,41 @@
         this.currentRecipe = null;
     }
 
-    //TODO Functions for rest of CRUD
+    public void AddRecipe()
+    {
+        this.currentRecipe = new MockRecipe();
+    }
+
+    public async Task EditRecipe(MockRecipe item)
+    {
+        this.currentRecipe = await service.Get(item.Id);
+    }
+
+    public async Task SaveRecipe(MockRecipe item)
+    {
+        try
+        {
+            if (currentRecipe.Id == 0) await service.Create(currentRecipe);
+            else await service.Update(currentRecipe);
+
+            await this.RefreshRecipes();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+
+    public async Task DeleteRecipe(MockRecipe item)
+    {
+        try
+        {
+            await service.Delete(item.Id);
+            await this.RefreshRecipes();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
 }
