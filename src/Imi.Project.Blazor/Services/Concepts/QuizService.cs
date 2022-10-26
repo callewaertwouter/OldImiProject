@@ -2,8 +2,9 @@
 
 namespace Imi.Project.Blazor.Services.Concepts
 {
-    public class QuizService : IQuizService
+    public class QuizService : IQuizService<Quiz>
     {
+        #region MockData
         static List<Question> questions = new List<Question>
         {
             new Question() { Id = 1, QuestionText = "Tot welke soort behoort keukenzout?" },
@@ -11,6 +12,7 @@ namespace Imi.Project.Blazor.Services.Concepts
             new Question() { Id = 3, QuestionText = "Wat betekent het japanse woord 'Nori'?" },
             new Question() { Id = 4, QuestionText = "Welke saus wordt traditioneel gebruikt voor eieren Benedict?" },
             new Question() { Id = 5, QuestionText = "Is deze quiz de beste quiz ooit?" },
+            new Question() { Id = 6, QuestionText = "Waar komt graan vandaan?" },
         };
 
         static List<Answer> answers = new List<Answer>
@@ -35,10 +37,26 @@ namespace Imi.Project.Blazor.Services.Concepts
             new Answer() { Id = 14, QuestionId = 4, Text = "Barbecuesaus", IsCorrect = false },
             // Question 5
             new Answer() { Id = 15, QuestionId = 5, Text = "Jaaa!!!", IsCorrect = true },
-            new Answer() { Id = 16, QuestionId = 5, Text = "Nee zeg...", IsCorrect = false }
+            new Answer() { Id = 16, QuestionId = 5, Text = "Nee zeg...", IsCorrect = false },
+            // Question 6
+            new Answer() { Id = 17, QuestionId = 6, Text = "Van de bomen", IsCorrect = false },
+            new Answer() { Id = 18, QuestionId = 6, Text = "Van de struiken", IsCorrect = false },
+            new Answer() { Id = 19, QuestionId = 6, Text = "Van de velden", IsCorrect = true },
+            new Answer() { Id = 20, QuestionId = 6, Text = "Van de dieren", IsCorrect = false }
         };
+        #endregion
 
         public Task<IQueryable> GetAllQuestions()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IQueryable> Get5RandomQuestions()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<Quiz> CalculateUserScore()
         {
             throw new NotImplementedException();
         }
