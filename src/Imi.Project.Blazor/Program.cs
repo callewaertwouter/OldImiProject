@@ -9,7 +9,7 @@ builder.Services.AddServerSideBlazor();
 
 builder.Services.AddTransient<ICRUDService<MockRecipe>, BlazorRecipeService>();
 builder.Services.AddTransient<ICRUDService<MockUser>, BlazorUserService>();
-builder.Services.AddTransient<IQuizService, QuizService>();
+builder.Services.AddTransient<IQuizService<Quiz>, QuizService>();
 
 var app = builder.Build();
 
