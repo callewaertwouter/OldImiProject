@@ -1,50 +1,55 @@
 ﻿using Imi.Project.Api.Core.Entities;
+using Imi.Project.Blazor.Models;
 
 namespace Imi.Project.Blazor.Services.Crud
 {
-    public class BlazorUserService : ICRUDService<User>
+    public class BlazorUserService : ICRUDService<MockUser>
     {
-        static List<User> users = new List<User>();
+        static List<MockUser> users = new List<MockUser>
+        {
+            new MockUser() { Id=1, Name="Wouter Callewaert"},
+            new MockUser() { Id=2, Name="David Norenberg"},
+            new MockUser() { Id=3, Name="Admin"},
+        };
 
-        public Task<User> Get(Guid id)
+        public Task<MockUser> Get(int id)
         {
             return Task.FromResult(
                 users.SingleOrDefault(x => x.Id == id)
                 );
         }
 
-        public Task<IQueryable<User>> GetAll()
+        public Task<IQueryable<MockUser>> GetAll()
         {
             return Task.FromResult(
-                users.Select(x => new User()
+                users.Select(x => new MockUser()
                 {
                     Id = x.Id,
-                    Email = x.Email,
-                    CreatedRecipes = x.CreatedRecipes
+                    Name = x.Name
                 }).AsQueryable()
                 );
         }
 
-        public Task Create(User item)
+        public Task Create(MockUser item)
         {
-            item.Id = Guid.NewGuid();
+            item.Id = users.Count() > 0 ? users.Max(x => x.Id) + 1 : 1;
             users.Add(item);
             return Task.CompletedTask;
         }
 
-        public Task Update(User item)
+        public Task Update(MockUser item)
         {
             var user = users.SingleOrDefault(x => x.Id == item.Id);
 
             if (user == null) throw new ArgumentException("User not found...");
 
-            user.Email = item.Email;
+            user.Name = item.Name;
             // I don't think a new user will have created recipes already, so not including those
 
             return Task.CompletedTask;
         }
 
-        public Task Delete(Guid id)
+        public Task Delete(int id)
         {
             var user = users.SingleOrDefault(x => x.Id == id);
 

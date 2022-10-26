@@ -1,40 +1,44 @@
 ﻿using Imi.Project.Api.Core.Entities;
+using Imi.Project.Blazor.Models;
 
 namespace Imi.Project.Blazor.Services.Crud
 {
-    public class BlazorRecipeService : ICRUDService<Recipe>
+    public class BlazorRecipeService : ICRUDService<MockRecipe>
     {
-        static List<Recipe> recipes = new List<Recipe>();
+        static List<MockRecipe> recipes = new List<MockRecipe>
+        {
+            new MockRecipe() { Id=1, Title="Gehaktbrood", Description="Meng gehakt en ajuin in een schaal en mix ze. Smijt de mix in een ovenpan en herschaap het tot een brood. Doe er vervolgens paneermeel en boter over. 20 minuten in de combi-oven. Kook de patatten en de bonen. Smakelijk." },
+            new MockRecipe() { Id=2, Title="Witte saus", Description="Maak een roux van de boter en de bloem. Dit doe je door de boter in een steelpannetje te smelten. Doe de bloem bij de boter en roer met de garde. Laat het mengsel een beetje opdrogen in het pannetje, tot je de geur van koekjes ruikt. Giet er beetje bij beetje de koude melk bij en roer telkens het mengsel glad. Breng al roerend aan de kook, op matig vuur. Laat de witte saus indikken en laat nog enkele minuten doorkoken zodat de bloemsmaak verdwijnt. Breng op smaak met nootmuskaat, peper en zout." },
+            new MockRecipe() { Id=2, Title="Hamburger", Description="Wortelen snijden en koken. Kook de patatten. Doe de hamburger in een pan en laat het bakken. Easy-peasy." }
+        };
 
-        public Task<Recipe> Get(Guid id)
+        public Task<MockRecipe> Get(int id)
         {
             return Task.FromResult(
                 recipes.SingleOrDefault(x => x.Id == id)
                 );
         }
 
-        public Task<IQueryable<Recipe>> GetAll()
+        public Task<IQueryable<MockRecipe>> GetAll()
         {
             return Task.FromResult(
-                recipes.Select(x => new Recipe()
+                recipes.Select(x => new MockRecipe()
                 {
                     Id = x.Id,
                     Title = x.Title,
-                    Description = x.Description,
-                    Ingedrients = x.Ingedrients,
-                    User = x.User
+                    Description = x.Description
                 }).AsQueryable()
                 );
         }
 
-        public Task Create(Recipe item)
+        public Task Create(MockRecipe item)
         {
-            item.Id = Guid.NewGuid();
+            item.Id = recipes.Count() > 0 ? recipes.Max(x => x.Id) + 1 : 1;
             recipes.Add(item);
             return Task.CompletedTask;
         }
 
-        public Task Update(Recipe item)
+        public Task Update(MockRecipe item)
         {
             var recipe = recipes.SingleOrDefault(x => x.Id == item.Id);
 
@@ -42,13 +46,11 @@ namespace Imi.Project.Blazor.Services.Crud
 
             recipe.Title = item.Title;
             recipe.Description = item.Description;
-            recipe.Ingedrients = item.Ingedrients;
-            recipe.User = item.User;
 
             return Task.CompletedTask;
         }
 
-        public Task Delete(Guid id)
+        public Task Delete(int id)
         {
             var recipe = recipes.SingleOrDefault(x => x.Id == id);
 
