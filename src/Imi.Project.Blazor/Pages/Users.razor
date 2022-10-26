@@ -1,7 +1,7 @@
 ﻿@page "/users"
-@using Imi.Project.Api.Core.Entities
+@using Imi.Project.Blazor.Models
 @using Imi.Project.Blazor.Services.Crud
-@inject BlazorUserService service;
+@inject ICRUDService<MockUser> service;
 
 <h3>Users</h3>
 
@@ -15,20 +15,25 @@
 
     @if (currentUser == null)
     {
-        <UserList Items="users">
+        <UserList Users="users">
         </UserList>
     }
     else
     {
-        <UserForm Recipe="currentUser">
+        <UserForm User="currentUser">
         </UserForm>
     }
 </div>
 
 @code {
-    private User[]? users;
-    private User? currentUser;
+    private MockUser[]? users;
+    private MockUser? currentUser;
     private string? error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshUsers();
+    }
 
     public async Task RefreshUsers()
     {

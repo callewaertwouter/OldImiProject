@@ -1,7 +1,7 @@
 ﻿@page "/recipes"
 @using Imi.Project.Api.Core.Entities
 @using Imi.Project.Blazor.Services.Crud
-@inject BlazorRecipeService service;
+@inject ICRUDService<MockRecipe> service;
 
 <h3>Recipes</h3>
 
@@ -15,7 +15,7 @@
 
     @if (currentRecipe == null)
     {
-        <RecipeList Items ="recipes">
+        <RecipeList Recipes="recipes">
         </RecipeList>
     }
     else
@@ -26,9 +26,14 @@
 </div>
 
 @code {
-    private Recipe[]? recipes;
-    private Recipe? currentRecipe;
+    private MockRecipe[]? recipes;
+    private MockRecipe? currentRecipe;
     private string? error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshRecipes();
+    }
 
     public async Task RefreshRecipes()
     {
