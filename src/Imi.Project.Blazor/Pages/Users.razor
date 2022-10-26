@@ -41,5 +41,41 @@
         this.currentUser = null;
     }
 
-    //TODO Functions for rest of CRUD
+    public void AddUser()
+    {
+        this.currentUser = new MockUser();
+    }
+
+    public async Task EditUser(MockUser item)
+    {
+        this.currentUser = await service.Get(item.Id);
+    }
+
+    public async Task SaveUser(MockUser item)
+    {
+        try
+        {
+            if (currentUser.Id == 0) await service.Create(currentUser);
+            else await service.Update(currentUser);
+
+            await this.RefreshUsers();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+
+    public async Task DeleteUser(MockUser item)
+    {
+        try
+        {
+            await service.Delete(item.Id);
+            await this.RefreshUsers();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
 }
