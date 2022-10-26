@@ -1,4 +1,4 @@
-﻿@using Imi.Project.Api.Core.Entities
+﻿@using Imi.Project.Blazor.Models
 
 <div class="form-group">
 	<label for="title">Title: </label>
@@ -9,21 +9,10 @@
 	<label for="description">Description: </label>
 	<InputTextArea id="description" class="form-control" @bind-Value="Recipe.Description" />
 </div>
-<div class="form-group">
-	<label for="ingedrients">List of ingedrients: </label>
-	@foreach (var ingedrient in Recipe.Ingedrients)
-	{
-		<InputText class="form-control" @bind-Value="ingedrient.Name" />
-	}
-</div>
-<div class="form-group">
-	<label for="user">Created by user: </label>
-	<InputText id="user" class="form-control" @bind-Value="Recipe.User.Email" />
-</div>
 
 @code {
 	[Parameter]
-	public Recipe Recipe { get; set; }
+	public MockRecipe Recipe { get; set; }
 
 	//TODO Add OnSave and OnCancel and corresponding buttons
 }

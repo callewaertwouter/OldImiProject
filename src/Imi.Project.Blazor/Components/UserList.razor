@@ -1,4 +1,4 @@
-﻿@using Imi.Project.Api.Core.Entities
+﻿@using Imi.Project.Blazor.Models
 <button class="btn btn-dark">Add user</button>
 <table class="table mt-4">
 	<thead>
@@ -20,7 +20,7 @@
 					@user.Id
 				</td>
 				<td>
-					@user.Email
+					@user.Name
 				</td>
 				<td>
 					<button class="btn btn-danger">Delete</button>
@@ -32,7 +32,7 @@
 
 @code {
 	[Parameter]
-	public User[] Users { get; set; }
+	public MockUser[] Users { get; set; }
 
 	//TODO Updaten met OnAdd, OnEdit en OnDelete voor volledige CRUD
 

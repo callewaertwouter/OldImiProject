@@ -1,4 +1,5 @@
-﻿@using Imi.Project.Api.Core.Entities
+﻿@using Imi.Project.Blazor.Models
+
 <button class="btn btn-dark">Add recipe</button>
 <table class="table mt-4">
 	<thead>
@@ -28,15 +29,6 @@
 				<td>
 					@recipe.Description
 				</td>
-					@foreach (var ingedrient in recipe.Ingedrients)
-					{
-						<td>
-							ingedrient.Name;
-						</td>
-					}
-				<td>
-					@recipe.User.Email
-				</td>
 				<td>
 					<button class="btn btn-danger">Delete</button>
 				</td>
@@ -47,7 +39,7 @@
 
 @code {
 	[Parameter]
-	public Recipe[] Recipes { get; set; }
+	public MockRecipe[]? Recipes { get; set; }
 
 	//TODO Updaten met OnAdd, OnEdit en OnDelete voor volledige CRUD
 

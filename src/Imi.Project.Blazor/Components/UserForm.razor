@@ -1,14 +1,14 @@
-﻿@using Imi.Project.Api.Core.Entities
+﻿@using Imi.Project.Blazor.Models
 
 <div class="form-group">
 	<label for="email">Title: </label>
-	<InputText id="name" class="form-control" @bind-Value="User.Email" />
-	<ValidationMessage For="@(() => User.Email)" />
+	<InputText id="name" class="form-control" @bind-Value="User.Name" />
+	<ValidationMessage For="@(() => User.Name)" />
 </div>
 
 @code {
 	[Parameter]
-	public User User { get; set; }
+	public MockUser User { get; set; }
 
 	//TODO Add OnSave and OnCancel and corresponding buttons
 }
