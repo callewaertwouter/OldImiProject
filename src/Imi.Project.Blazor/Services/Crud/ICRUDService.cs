@@ -4,12 +4,12 @@
     {
         Task<IQueryable<T>> GetAll();
 
-        Task<T> Get(Guid id);
+        Task<T> Get(int id);
 
         Task Create(T item);
 
         Task Update(T item);
 
-        Task Delete(Guid id);
+        Task Delete(int id);
     }
 }
