@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Imi.Project.Mobile.Pages
@@ -13,6 +8,16 @@ namespace Imi.Project.Mobile.Pages
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void btnRegister_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegisterPage(), true);
+        }
+
+        private async void btnLogin_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MenuPage(), true);
         }
     }
 }
