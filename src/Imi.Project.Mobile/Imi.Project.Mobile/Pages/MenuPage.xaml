@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Imi.Project.Mobile.Pages.MenuPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button x:Name="btnAddRecipe" Text="Maak een nieuw recept" Clicked="btnAddRecipe_Clicked" />
+            <Button x:Name="btnViewRecipes" Text="Bekijk alle recepten" Clicked="btnViewRecipes_Clicked" />
+            <Button x:Name="btnQuiz" Text="Speel de quiz" Clicked="btnQuiz_Clicked" />
+            <Button x:Name="btnQuit" Text="Afsluiten" Clicked="btnQuit_Clicked" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
