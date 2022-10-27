@@ -6,9 +6,9 @@
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <Label Text="Inloggen" HorizontalTextAlignment="Center" />
         <Entry x:Name="txtEmail" Text="Geef uw e-mailadres in" />
-        <Button x:Name="btnLogin" Text="Inloggen" />
+        <Button x:Name="btnLogin" Text="Inloggen" Clicked="btnLogin_Clicked" />
 
-        <Button Text="Registreren" HorizontalOptions="End" VerticalOptions="End" />
+        <Button x:Name="btnRegister" Text="Registreren" HorizontalOptions="End" VerticalOptions="End" Clicked="btnRegister_Clicked"/>
     </StackLayout>
 
 </ContentPage>
