@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Imi.Project.Mobile.Pages.RecipePage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Text="Recepttitel" />
+            <TableView>
+                <TableSection Title="Titel van geselecteerd/aangemaakt recept">
+                    <ViewCell>
+                        <ListView x:Name="lstAllIngedrients" />
+                    </ViewCell>
+                    <ViewCell>
+                        <Label x:Name="lblDescription" Text="Beschrijving van dit recept komt hier" />
+                    </ViewCell>
+                    <ViewCell>
+                        <Button x:Name="btnBack" Text="Naar menu" Clicked="btnBack_Clicked" />
+                    </ViewCell>
+                </TableSection>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
