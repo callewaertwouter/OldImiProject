@@ -28,6 +28,8 @@
             <!--Style for Titles (TitleStyle is built-in by Xamarin Forms)-->
             <Style x:Key="CustomTitleStyle" TargetType="Label" BaseResourceKey="TitleStyle">
                 <Setter Property="TextColor" Value="{StaticResource TitleTextColor}" />
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="FontAttributes" Value="Bold" />
             </Style>
             
             <!--Style for Captions (CaptionStyle also built-in)-->
