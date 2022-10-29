@@ -10,7 +10,7 @@ namespace Imi.Project.Mobile.Domain.Services
 
         Task<Recipe> GetAllRecipes();
 
-        Task<Recipe> AddRecipe();
+        Task<Recipe> AddRecipe(Recipe recipe);
 
         Task<Recipe> UpdateRecipe(Recipe recipe);
 
