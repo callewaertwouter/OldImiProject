@@ -52,7 +52,7 @@
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <Editor x:Name="txtDescription" Placeholder="Beschrijf de bereiding van uw recept." />
+                        <Editor x:Name="txtDescription" Placeholder="Beschrijf de bereiding van uw recept." HeightRequest="250" />
                     </ViewCell>
                 </TableSection>
                 <TableSection>
