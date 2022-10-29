@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Imi.Project.Mobile.Pages.MenuPage">
+             x:Class="Imi.Project.Mobile.Pages.MenuPage"
+             Style="{StaticResource ContentPageStyle}">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-            <Button x:Name="btnAddRecipe" Text="Maak een nieuw recept" Clicked="btnAddRecipe_Clicked" />
-            <Button x:Name="btnViewRecipes" Text="Bekijk alle recepten" Clicked="btnViewRecipes_Clicked" />
-            <Button x:Name="btnQuiz" Text="Speel de quiz" Clicked="btnQuiz_Clicked" />
-            <Button x:Name="btnQuit" Text="Afsluiten" Clicked="btnQuit_Clicked" />
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Button x:Name="btnAddRecipe" Text="Maak een nieuw recept" Clicked="btnAddRecipe_Clicked" Style="{StaticResource StandardButtonStyle}" />
+            <Button x:Name="btnViewRecipes" Text="Bekijk alle recepten" Clicked="btnViewRecipes_Clicked" Style="{StaticResource StandardButtonStyle}" />
+            <Button x:Name="btnQuiz" Text="Speel de quiz" Clicked="btnQuiz_Clicked" Style="{StaticResource StandardButtonStyle}" />
+            <Button x:Name="btnQuit" Text="Afsluiten" Clicked="btnQuit_Clicked" Style="{StaticResource BackButtonStyle}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
