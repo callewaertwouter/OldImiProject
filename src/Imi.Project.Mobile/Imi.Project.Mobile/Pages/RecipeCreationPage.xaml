@@ -1,32 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Imi.Project.Mobile.Pages.RecipeCreationPage">
+             x:Class="Imi.Project.Mobile.Pages.RecipeCreationPage"
+             Style="{StaticResource ContentPageStyle}">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <TableView>
-                <TableSection Title="Uw nieuw recept">
-                    <ImageCell x:Name="imgRecipe" />
+                <TableSection Title="nieuw recept">
+                    <ImageCell x:Name="imgRecipe" /> <!--TODO: Add event clicked-->
                     <ViewCell>
-                        <ListView x:Name="lstMeal" />
+                        <ListView x:Name="lstMeal"
+                                  WidthRequest="150"
+                                  HeightRequest="100"
+                                  Style="{StaticResource ListViewStyle}">
+                        </ListView>
                     </ViewCell>
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <ListView x:Name="lstIngedrients" />
+                        <ListView x:Name="lstIngedrients" 
+                                  WidthRequest="150" 
+                                  HeightRequest="200"
+                                  HasUnevenRows="True"
+                                  SeparatorVisibility="None"
+                                  Style="{StaticResource ListViewStyle}">
+                            <ListView.Header>
+                                <Frame>
+                                    <Grid Margin="0" Padding="0" RowSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="200" />
+                                            <ColumnDefinition Width="100" />
+                                            <ColumnDefinition Width="150" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                        </Grid.RowDefinitions>
+                                        <Label Grid.Row="0" Grid.Column="0" Text="Ingedriënt" />
+                                        <Label Grid.Row="0" Grid.Column="1" Text="Hoeveelheid" />
+                                        <Label Grid.Row="0" Grid.Column="2" Text="Maateenheid" />
+                                    </Grid>
+                                </Frame>
+                            </ListView.Header>
+                        </ListView>
+                    </ViewCell>
+                    <ViewCell>
+                        <Button x:Name="btnAddIngedrient" Text="Ingedriënt toevoegen" Style="{StaticResource StandardButtonStyle}" />
+                    </ViewCell>
+                    <ViewCell>
+                        <Button x:Name="btnSpeechToText" Text="Gebruik Speech-To-Text" Style="{StaticResource StandardButtonStyle}" />
                     </ViewCell>
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <Editor x:Name="txtDescription" Text="Beschrijf de bereiding van uw recept." />
+                        <Editor x:Name="txtDescription" Placeholder="Beschrijf de bereiding van uw recept." />
                     </ViewCell>
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <Button x:Name="btnAdd" Text="Aanmaken" Clicked="btnAdd_Clicked" />
+                        <Button x:Name="btnAdd" Text="Aanmaken" Clicked="btnAdd_Clicked" Style="{StaticResource StandardButtonStyle}" />
                     </ViewCell>
                     <ViewCell>
-                        <Button x:Name="btnBack" Text="Annuleren" Clicked="btnBack_Clicked" />
+                        <Button x:Name="btnBack" Text="Annuleren" Clicked="btnBack_Clicked" Style="{StaticResource BackButtonStyle}" />
                     </ViewCell>
                 </TableSection>
             </TableView>
