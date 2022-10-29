@@ -61,7 +61,15 @@
                 <Setter Property="TextColor" Value="{StaticResource BackButtonTextColor}" />
                 <Setter Property="BackgroundColor" Value="{StaticResource BackButtonBackColor}" />
             </Style>
-
+            
+            <!--Style for listviews-->
+            <Color x:Key="ListViewTextColor">#000000</Color>
+            <Color x:Key="ListViewBackColor">#FFFFFF</Color>
+            <Style x:Key="ListViewStyle" TargetType="ListView">
+                <Setter Property="ItemsSource" Value="{StaticResource ListViewTextColor}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource ListViewBackColor}" />
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
