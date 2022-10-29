@@ -54,10 +54,11 @@
             </Style>
             
             <!--Style for Cancel/Back buttons-->
-            <Color x:Key="BackButtonBackColor">#FFCCBB</Color>
+            <Color x:Key="BackButtonTextColor">#FFFFFF</Color>
+            <Color x:Key="BackButtonBackColor">#7D1211</Color>
             <Style x:Key="BackButtonStyle" TargetType="Button">
                 <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
-                <Setter Property="TextColor" Value="{StaticResource StandardButtonTextColor}" />
+                <Setter Property="TextColor" Value="{StaticResource BackButtonTextColor}" />
                 <Setter Property="BackgroundColor" Value="{StaticResource BackButtonBackColor}" />
             </Style>
 
