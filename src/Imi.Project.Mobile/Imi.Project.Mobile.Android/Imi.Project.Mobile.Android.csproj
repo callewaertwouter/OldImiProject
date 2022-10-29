@@ -86,7 +86,9 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\mainicon.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Imi.Project.Mobile\Imi.Project.Mobile.csproj">
       <Project>{DF2BCC13-CCEE-4582-B7DA-C6EB55D333DB}</Project>
@@ -131,9 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\add.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\mainicon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ok.png" />

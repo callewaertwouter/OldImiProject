@@ -1,14 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Imi.Project.Mobile.Pages.MainPage">
+             x:Class="Imi.Project.Mobile.Pages.MainPage"
+             Style="{StaticResource ContentPageStyle}">
 
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-        <Label Text="Inloggen" HorizontalTextAlignment="Center" />
-        <Entry x:Name="txtEmail" Text="Geef uw e-mailadres in" />
-        <Button x:Name="btnLogin" Text="Inloggen" Clicked="btnLogin_Clicked" />
+        <Image Aspect="Fill"
+               AbsoluteLayout.LayoutFlags="All"
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+               Scale="0.3"
+               IsOpaque="True"
+               WidthRequest="250"
+               HeightRequest="250">
+            <Image.Source>
+                <OnPlatform x:TypeArguments="ImageSource">
+                    <On Platform="Android">mainicon.png</On>
+                    <On Platform="UWP">Images/mainicon.png</On>
+                </OnPlatform>
 
-        <Button x:Name="btnRegister" Text="Registreren" HorizontalOptions="End" VerticalOptions="End" Clicked="btnRegister_Clicked"/>
+            </Image.Source>
+        </Image>
+        <Label Text="Inloggen" HorizontalTextAlignment="Center" Style="{StaticResource CustomTitleStyle}" />
+        <Entry x:Name="txtEmail" Placeholder="Geef uw e-mailadres in" WidthRequest="200" />
+        <Button x:Name="btnLogin" Text="Inloggen" Clicked="btnLogin_Clicked" Style="{StaticResource StandardButtonStyle}" WidthRequest="250" />
+
+        <Button x:Name="btnRegister" Text="Registreren" HorizontalOptions="End" VerticalOptions="End" Clicked="btnRegister_Clicked"
+                Style="{StaticResource StandardButtonStyle}" WidthRequest="250" />
     </StackLayout>
 
 </ContentPage>
