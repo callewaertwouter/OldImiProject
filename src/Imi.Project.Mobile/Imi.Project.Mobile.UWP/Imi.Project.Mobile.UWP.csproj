@@ -103,7 +103,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="add.png" />
+    <Content Include="Images\add.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />
     <Content Include="Assets\LargeTile.scale-400.png" />
@@ -131,10 +131,10 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="mainicon.png" />
-    <Content Include="ok.png" />
+    <Content Include="Images\mainicon.png" />
+    <Content Include="Images\ok.png" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="recipes.png" />
+    <Content Include="Images\recipes.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
