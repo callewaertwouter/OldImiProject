@@ -10,9 +10,9 @@ namespace Imi.Project.Mobile.Domain.Services.Mocking
     {
         private static List<Recipe> recipes = new List<Recipe>
         {
-            new Recipe{ Id=Guid.Parse("00000000-0000-0000-0000-000000000001"), Title="Gemarineerde brochetten", Description="Zo maak je deze klaar!" },
-            new Recipe{ Id=Guid.Parse("00000000-0000-0000-0000-000000000002"), Title="Spaghetti bolognaise", Description="De lekkerste spaghetti ooit." },
-            new Recipe{ Id=Guid.Parse("00000000-0000-0000-0000-000000000003"), Title="Testrecept", Description="Test, test en nog eens test." }
+            new Recipe{ Id=Guid.Parse("00000000-0000-0000-0000-000000000001"), Title="Gemarineerde brochetten", Description="Zo maak je deze klaar!", UserId=Guid.Parse("00000000-0000-0000-0000-000000000001") },
+            new Recipe{ Id=Guid.Parse("00000000-0000-0000-0000-000000000002"), Title="Spaghetti bolognaise", Description="De lekkerste spaghetti ooit.", UserId=Guid.Parse("00000000-0000-0000-0000-000000000001") },
+            new Recipe{ Id=Guid.Parse("00000000-0000-0000-0000-000000000003"), Title="Testrecept", Description="Test, test en nog eens test.", UserId=Guid.Parse("00000000-0000-0000-0000-000000000002") }
         };
 
 
