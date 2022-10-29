@@ -32,7 +32,7 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="Imi.Project.Mobile.UWP.App">
       <uap:VisualElements
-        DisplayName="Imi.Project.Mobile.UWP"
+        DisplayName="Persoonlijke Recepten"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Imi.Project.Mobile.UWP"
