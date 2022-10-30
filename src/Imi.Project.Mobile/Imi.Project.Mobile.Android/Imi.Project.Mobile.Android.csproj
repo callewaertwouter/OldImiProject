@@ -97,11 +97,24 @@
       <Name>Imi.Project.Mobile</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable\" />
+    <Content Include="Resources\drawable-hdpi\add.png" />
+    <Content Include="Resources\drawable-hdpi\mainicon.png" />
+    <Content Include="Resources\drawable-hdpi\ok.png" />
+    <Content Include="Resources\drawable-hdpi\recipes.png" />
+    <Content Include="Resources\drawable-xhdpi\add.png" />
+    <Content Include="Resources\drawable-xhdpi\mainicon.png" />
+    <Content Include="Resources\drawable-xhdpi\ok.png" />
+    <Content Include="Resources\drawable-xhdpi\recipes.png" />
+    <Content Include="Resources\drawable-xxhdpi\add.png" />
+    <Content Include="Resources\drawable-xxhdpi\mainicon.png" />
+    <Content Include="Resources\drawable-xxhdpi\ok.png" />
+    <Content Include="Resources\drawable-xxhdpi\recipes.png" />
+    <Content Include="Resources\drawable\add.png" />
+    <Content Include="Resources\drawable\mainicon.png" />
+    <Content Include="Resources\drawable\ok.png" />
+    <Content Include="Resources\drawable\recipes.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
