@@ -1,6 +1,8 @@
 ﻿using Imi.Project.Api.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Security.Claims;
 
 namespace Imi.Project.Api.Infrastructure.Data.Seeding
 {
@@ -8,86 +10,142 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
     {
         public static void Seed(ModelBuilder modelBuilder)
         {
+            IPasswordHasher<User> passwordHasher = new PasswordHasher<User>();
+
+            // IMI User
+            var imiUser = new User
+            {
+                Id = "11",
+                UserName = "ImiUser",
+                NormalizedUserName = "IMIUSER",
+                Email = "user@imi.be",
+                NormalizedEmail = "USER@IMI.BE",
+                SecurityStamp = Guid.NewGuid().ToString(),
+                ConcurrencyStamp = Guid.NewGuid().ToString(),
+                EmailConfirmed = true,
+                HasApprovedTermsAndConditions = true
+            };
+
+            imiUser.PasswordHash = passwordHasher.HashPassword(imiUser, "Test123?");
+            modelBuilder.Entity<User>().HasData(imiUser);
+
+            modelBuilder.Entity<IdentityUserClaim<string>>()
+                .HasData(new IdentityUserClaim<string>
+                {
+                    Id = 11,
+                    UserId = "11",
+                    ClaimType = ClaimTypes.Role,
+                    ClaimValue = "user"
+                });
+
+            // IMI Refuser
+            var imiRefuser = new User
+            {
+                Id = "12",
+                UserName = "ImiRefuser",
+                NormalizedUserName = "IMIREFUSER",
+                Email = "refuser@imi.be",
+                NormalizedEmail = "REFUSER@IMI.BE",
+                SecurityStamp = Guid.NewGuid().ToString(),
+                ConcurrencyStamp = Guid.NewGuid().ToString(),
+                EmailConfirmed = true,
+                HasApprovedTermsAndConditions = false
+            };
+
+            imiRefuser.PasswordHash = passwordHasher.HashPassword(imiRefuser, "Test123?");
+            modelBuilder.Entity<User>().HasData(imiRefuser);
+
+            modelBuilder.Entity<IdentityUserClaim<string>>()
+                .HasData(new IdentityUserClaim<string>
+                {
+                    Id = 12,
+                    UserId = "12",
+                    ClaimType = ClaimTypes.Role,
+                    ClaimValue = "refuser"
+                });
+
+            // IMI Admin
+            var imiAdmin = new User
+            {
+                Id = "13",
+                UserName = "ImiAdmin",
+                NormalizedUserName = "IMIADMIN",
+                Email = "admin@imi.be",
+                NormalizedEmail = "ADMIN@IMI.BE",
+                SecurityStamp = Guid.NewGuid().ToString(),
+                ConcurrencyStamp = Guid.NewGuid().ToString(),
+                EmailConfirmed = true
+            };
+
+            imiAdmin.PasswordHash = passwordHasher.HashPassword(imiAdmin, "Test123?");
+            modelBuilder.Entity<User>().HasData(imiAdmin);
+
+            modelBuilder.Entity<IdentityUserClaim<string>>()
+                .HasData(new IdentityUserClaim<string>
+                {
+                    Id = 13,
+                    UserId = "13",
+                    ClaimType = ClaimTypes.Role,
+                    ClaimValue = "admin"
+                });
+
+
             modelBuilder.Entity<User>().HasData(
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000001"),
+                    UserName = "Admin",
                     Email = "admin@admin.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Password = "Test123?",
+                    Birthday = new DateTime(1990, 1, 1),
+                    HasApprovedTermsAndConditions = true
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000002"),
-                    Email = "woutercallewaert@gmail.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    UserName = "Yusifer",
+                    Email = "woutercallewaert@gmail.com"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000003"),
-                    Email = "jjameson@hotmail.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "jjameson@hotmail.com"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000004"),
-                    Email = "tigbiddies@xxx.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "tigbiddies@xxx.com"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000005"),
-                    Email = "allthebutz@hotmail.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "allthebutz@hotmail.com"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000006"),
-                    Email = "ikloopindiestrond@gagmaker.net",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "ikloopindiestrond@gagmaker.net"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000007"),
-                    Email = "olklo@gmail.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "olklo@gmail.com"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000008"),
-                    Email = "wsmets1991@hotmail.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "wsmets1991@hotmail.com"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000009"),
-                    Email = "maarten.raviola@gmail.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "maarten.raviola@gmail.com"
                 },
 
                 new User
                 {
-                    Id = Guid.Parse("00000000-0000-0000-0000-000000000010"),
-                    Email = "toiletbril@lolbroek.com",
-                    CreatedOn = DateTime.Now,
-                    LastEditedOn = DateTime.Now,
+                    Email = "toiletbril@lolbroek.com"
                 }
+
                 );
         }
     }
