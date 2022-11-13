@@ -4,7 +4,10 @@ using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Imi.Project.Api.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace Imi.Project.Api.Controllers
 {
@@ -14,12 +17,47 @@ namespace Imi.Project.Api.Controllers
     {
         protected readonly IUserRepository _userRepository;
         protected readonly IRecipeRepository _recipeRepository;
+        private readonly UserManager<User> _userManager;
+        private readonly IConfiguration _configuration;
 
         public UsersController(IUserRepository userRepository,
-                               IRecipeRepository recipeRepository)
+                               IRecipeRepository recipeRepository,
+                               UserManager<User> userManager,
+                               IConfiguration configuration)
         {
             _userRepository = userRepository;
             _recipeRepository = recipeRepository;
+            _userManager = userManager;
+            _configuration = configuration;
+        }
+
+        [AllowAnonymous]
+        [HttpPost("auth/register")]
+        public async Task<IActionResult> Register([FromBody] RegisterUserRequestDto registration)
+        {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
+            User newUser = new User
+            {
+                Email = registration.Email,
+                UserName = registration.Username,
+                Birthday = registration.Birthday
+            };
+
+            IdentityResult result = await _userManager.CreateAsync(newUser, registration.Password);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
+                return BadRequest(ModelState);
+            }
+
+            newUser = await _userManager.FindByEmailAsync(registration.Email);
+            await _userManager.AddClaimAsync(newUser, new Claim("registration-date", DateTime.UtcNow.ToString("yy-MM-dd")));
+
+            return Ok();
         }
 
         [HttpGet]
