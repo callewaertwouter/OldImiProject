@@ -32,7 +32,6 @@ namespace Imi.Project.Api.Controllers
                 Description = r.Description,
                 CreatedByUser = new UserResponseDto
                 {
-                    Id = r.User.Id,
                     Email = r.User.Email
                 }
             });
@@ -57,7 +56,6 @@ namespace Imi.Project.Api.Controllers
                 Description = recipe.Description,
                 CreatedByUser = new UserResponseDto
                 {
-                    Id = recipe.User.Id,
                     Email = recipe.User.Email
                 }
             };

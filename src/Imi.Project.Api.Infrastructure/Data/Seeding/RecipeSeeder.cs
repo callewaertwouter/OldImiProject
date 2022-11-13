@@ -14,7 +14,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                     Id = Guid.Parse("00000000-0000-0000-0000-000000000001"),
                     Title = "Testrecept",
                     Description = "Dit recept test de werking van dit recept.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000001"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -28,7 +27,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                                   "tot je de geur van koekjes ruikt.\r\n\r\nGiet er beetje bij beetje de koude melk bij en roer telkens het mengsel glad. " +
                                   "Breng al roerend aan de kook, op matig vuur. Laat de witte saus indikken en laat nog enkele minuten doorkoken zodat de bloemsmaak " +
                                   "verdwijnt.Breng op smaak met nootmuskaat, peper en zout.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000006"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -38,7 +36,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                     Id = Guid.Parse("00000000-0000-0000-0000-000000000003"),
                     Title = "Gemarineerde brochetten",
                     Description = "Koop brochetten van de slager, easy. Smijt ze in een ovenpan, doe er boter over en zet ze in de combi-oven. Serveer met rijst en wortelen.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000002"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -59,7 +56,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                                   "half uur sudderen op een zacht vuur. Intussen kan je de kaasstengels bereiden. Verwijder het bouquet garni en mix de soep glad met " +
                                   "een staafmixer. Je hoeft ze niet te zeven. Mix er ook een flinke scheut room in. Proef de soep en kruid het gerecht naar smaak met " +
                                   "wat peper van de molen en een snuif zout.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000007"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -70,7 +66,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                     Title = "Gehaktbrood met bonen en patatten",
                     Description = "Meng gehakt en ajuin in een schaal en mix ze. Smijt de mix in een ovenpan en herschaap het tot een brood. Doe er vervolgens paneermeel " +
                                   "en boter over. 20 minuten in de combi-oven. Kook de patatten en de bonen. Smakelijk.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000002"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -80,7 +75,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                     Id = Guid.Parse("00000000-0000-0000-0000-000000000006"),
                     Title = "Hamburger met wortel en patatten",
                     Description = "Wortelen snijden en koken. Kook de patatten. Doe de hamburger in een pan en laat het bakken. Easy-peasy.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000004"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -90,7 +84,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                     Id = Guid.Parse("00000000-0000-0000-0000-000000000007"),
                     Title = "Viskroketjes met gebakken aardappelen",
                     Description = "1-pansgerecht met viskroketjes en patatjes. Groenten zijn voor de dieren.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000009"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -100,7 +93,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                     Id = Guid.Parse("00000000-0000-0000-0000-000000000008"),
                     Title = "Grillworst met puree",
                     Description = "Patatten koken tot ze zacht zijn. Water afgieten, doe er melk en nootmuskaat bij. Grillworst in de microgolfoven voor anderhalf minuut ofzo.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000003"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -114,7 +106,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                                   "3) Kook de spaghetti en voeg voldoende tomatenpuree en kruiden bij de bolognaise." +
                                   "4) Serveer met gemalen kaas." +
                                   "5) Bon appetit.",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000002"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 },
@@ -124,7 +115,6 @@ namespace Imi.Project.Api.Infrastructure.Data.Seeding
                     Id = Guid.Parse("00000000-0000-0000-0000-000000000010"),
                     Title = "Ongelooflijk goed gerecht",
                     Description = "Ga naar de frituur ipv te koken. Ongelooflijk goed he LOL!",
-                    UserId = Guid.Parse("00000000-0000-0000-0000-000000000010"),
                     CreatedOn = DateTime.Now,
                     LastEditedOn = DateTime.Now
                 }
