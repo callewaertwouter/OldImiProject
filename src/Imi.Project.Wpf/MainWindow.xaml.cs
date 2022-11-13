@@ -71,7 +71,7 @@ namespace Imi.Project.Wpf
                     {
                         lblRecipeDetailTitle.Content = recipe.Title;
                         lsvRecipeDetailDescription.Items.Add(recipe.Description);
-                        lblRecipeDetailUser.Content = recipe.User.Email;
+                        //lblRecipeDetailUser.Content = recipe.User.Email;
 
                         foreach (var ingedrient in recipe.Ingedrients.ToList())
                         {
