@@ -40,7 +40,7 @@ namespace Imi.Project.Api.Infrastructure.Repositories
         // Functions below appear only in this interface, so no override needed
         public async Task<IEnumerable<Recipe>> GetByUserIdAsync(Guid id)
         {
-            var recipes = await GetAll().Where(r => r.UserId.Equals(id)).ToListAsync();
+            var recipes = await GetAll().Where(r => r.User.Id.Equals(id)).ToListAsync();
 
             return recipes;
         }
