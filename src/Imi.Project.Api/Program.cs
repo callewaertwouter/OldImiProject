@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -53,6 +54,27 @@ builder.Services.AddAuthentication(options =>
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTConfiguration:SigningKey"]))
         };
     });
+
+// User Policies
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("Admin", policy =>
+    {
+        policy.RequireClaim(ClaimTypes.Role, "admin");
+    });
+
+    options.AddPolicy("User", policy =>
+    {
+        policy.RequireAssertion(context =>
+        {
+            if (context.User.HasClaim(ClaimTypes.Role, "admin") || context.User.HasClaim(ClaimTypes.Role, "user"))
+            {
+                return true;
+            }
+            return false;
+        });
+    });
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
