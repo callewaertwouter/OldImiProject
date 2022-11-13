@@ -1,14 +1,16 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
 
 namespace Imi.Project.Api.Core.Entities
 {
-    public class User : BaseEntity
+    public class User : IdentityUser
     {
-        [Required]
-        public string Email { get; set; }
+        public string Password { get; set; }
 
-        // Not setting a password for now since it's just a simple login functionality and only meant to show users keeping created recipes in database.
+        public DateTime Birthday { get; set; }
+
+        public bool HasApprovedTermsAndConditions { get; set; }
 
         public ICollection<Recipe> CreatedRecipes { get; set; }
     }
