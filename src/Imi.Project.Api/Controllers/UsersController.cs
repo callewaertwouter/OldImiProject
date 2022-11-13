@@ -1,13 +1,14 @@
-﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
-using Imi.Project.Api.Core.DTOs.Recipe;
+﻿using Imi.Project.Api.Core.DTOs.Recipe;
 using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
-using Imi.Project.Api.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
 
 namespace Imi.Project.Api.Controllers
 {
@@ -19,16 +20,19 @@ namespace Imi.Project.Api.Controllers
         protected readonly IRecipeRepository _recipeRepository;
         private readonly UserManager<User> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly SignInManager<User> _signInManager;
 
         public UsersController(IUserRepository userRepository,
                                IRecipeRepository recipeRepository,
                                UserManager<User> userManager,
-                               IConfiguration configuration)
+                               IConfiguration configuration,
+                               SignInManager<User> signInManager)
         {
             _userRepository = userRepository;
             _recipeRepository = recipeRepository;
             _userManager = userManager;
             _configuration = configuration;
+            _signInManager = signInManager;
         }
 
         [AllowAnonymous]
@@ -60,13 +64,64 @@ namespace Imi.Project.Api.Controllers
             return Ok();
         }
 
+        [AllowAnonymous]
+        [HttpPost("auth/login")]
+        public async Task<IActionResult> Login([FromBody] LoginUserRequestDto login)
+        {
+            var result = await _signInManager.PasswordSignInAsync(login.Email, login.Password, isPersistent: false, lockoutOnFailure: false);
+
+            if (!result.Succeeded)
+            {
+                return Unauthorized();
+            }
+
+            var user = await _userManager.FindByEmailAsync(login.Email);
+            JwtSecurityToken token = await GenerateTokenAsync(user);
+
+            string serializedToken = new JwtSecurityTokenHandler().WriteToken(token);
+
+            return Ok(new LoginUserResponseDto()
+            {
+                Token = serializedToken,
+            });
+        }
+
+        private async Task<JwtSecurityToken> GenerateTokenAsync(User user)
+        {
+            var claims = new List<Claim>();
+
+            var userClaims = await _userManager.GetClaimsAsync(user);
+
+            claims.AddRange(userClaims);
+
+            var roleClaims = await _userManager.GetRolesAsync(user);
+            foreach (var roleClaim in roleClaims)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, roleClaim));
+            }
+
+            var expirationDays = _configuration.GetValue<int>("JWTConfiguration:TokenExpirationDays");
+            var signInKey = Encoding.UTF8.GetBytes(_configuration.GetValue<string>("JWTConfiguration:SigninKey"));
+
+            var token = new JwtSecurityToken
+                (
+                    issuer: _configuration.GetValue<string>("JWTConfiguration:Issuer"),
+                    audience: _configuration.GetValue<string>("JWTConfigration:Audience"),
+                    claims: claims,
+                    expires: DateTime.UtcNow.Add(TimeSpan.FromDays(expirationDays)),
+                    notBefore: DateTime.UtcNow,
+                    signingCredentials: new SigningCredentials(new SymmetricSecurityKey(signInKey), SecurityAlgorithms.HmacSha256)
+                );
+
+            return token;
+        }
+
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             var users = await _userRepository.ListAllAsync();
             var usersDto = users.Select(r => new UserResponseDto
             {
-                Id = r.Id,
                 Email = r.Email
             });
 
@@ -85,7 +140,6 @@ namespace Imi.Project.Api.Controllers
 
             var userDto = new UserResponseDto
             {
-                Id = user.Id,
                 Email = user.Email
             };
 
@@ -103,7 +157,6 @@ namespace Imi.Project.Api.Controllers
                 Title = r.Title,
                 CreatedByUser = new UserResponseDto
                 {
-                    Id = r.User.Id,
                     Email = r.User.Email
                 }
             });
