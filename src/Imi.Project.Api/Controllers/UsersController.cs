@@ -88,6 +88,12 @@ namespace Imi.Project.Api.Controllers
 
         private async Task<JwtSecurityToken> GenerateTokenAsync(User user)
         {
+            //var claims = new List<Claim>{
+            //    new Claim(JwtRegisteredClaimNames.Birthdate, user.Birthday.ToString()),
+            //    new Claim(JwtRegisteredClaimNames.Email, user.Email),
+            //    new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName)
+            //};
+
             var claims = new List<Claim>();
 
             var userClaims = await _userManager.GetClaimsAsync(user);
