@@ -5,6 +5,7 @@ using Imi.Project.Api.Core.Infrastructure;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
@@ -51,6 +52,11 @@ namespace Imi.Project.Api.Controllers
                 Birthday = registration.Birthday,
                 HasApprovedTermsAndConditions = registration.HasApprovedTermsAndConditions
             };
+
+            if (!newUser.HasApprovedTermsAndConditions)
+            {
+                return Problem("You need to accept terms and conditions to register!");
+            }
 
             IdentityResult result = await _userManager.CreateAsync(newUser, registration.Password);
             if (!result.Succeeded)
