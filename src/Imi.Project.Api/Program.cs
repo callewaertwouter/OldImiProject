@@ -4,7 +4,10 @@ using Imi.Project.Api.Core.Services;
 using Imi.Project.Api.Core.Services.Interfaces;
 using Imi.Project.Api.Infrastructure.Data;
 using Imi.Project.Api.Infrastructure.Repositories;
+using Imi.Project.Api.Policies;
+using Imi.Project.Api.Policies.Handlers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -24,6 +27,8 @@ builder.Services.AddScoped<IUnitOfMeasureRepository, UnitOfMeasureRepository>();
 builder.Services.AddScoped<IRecipeService, RecipeService>();
 builder.Services.AddScoped<IIngedrientService, IngedrientService>();
 builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddSingleton<IAuthorizationHandler, MinimumAgeHandler>();
 
 builder.Services.AddCors();
 
@@ -73,6 +78,11 @@ builder.Services.AddAuthorization(options =>
             }
             return false;
         });
+    });
+
+    options.AddPolicy("Over15Only", policy =>
+    {
+        policy.Requirements.Add(new MinimumAgeRequirement(15));
     });
 });
 
