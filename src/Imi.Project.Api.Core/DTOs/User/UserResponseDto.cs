@@ -5,6 +5,6 @@ namespace Imi.Project.Api.Core.DTOs.User
     public class UserResponseDto : BaseDto
     {
         public string Email { get; set; }
-        public RecipeResponseDto Recipe { get; set; }
+        public RecipeResponseDto Recipes { get; set; }
     }
 }
