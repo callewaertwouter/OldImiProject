@@ -36,6 +36,7 @@ namespace Imi.Project.Api.Controllers
             _signInManager = signInManager;
         }
 
+        [Authorize(Policy = "Over15Only")]
         [AllowAnonymous]
         [HttpPost("auth/register")]
         public async Task<IActionResult> Register([FromBody] RegisterUserRequestDto registration)
