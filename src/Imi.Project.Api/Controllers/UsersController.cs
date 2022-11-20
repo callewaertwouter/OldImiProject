@@ -146,6 +146,7 @@ namespace Imi.Project.Api.Controllers
 
             var userDto = new UserResponseDto
             {
+                Id = Guid.Parse(user.Id),
                 Email = user.Email
             };
 
@@ -165,6 +166,7 @@ namespace Imi.Project.Api.Controllers
                 {
                     Email = r.User.Email
                 }
+                // Could also get the description and list of ingedrients but that might get too cluttery so we make do with just ID, Title and User Email
             });
 
             return Ok(recipesDto);
@@ -180,6 +182,7 @@ namespace Imi.Project.Api.Controllers
 
             var userEntity = new User
             {
+                Id = Guid.NewGuid().ToString(), // Since it's a new user, an ID does not exists yet so an ID needs to be created
                 Email = userDto.Email
             };
 
@@ -204,6 +207,7 @@ namespace Imi.Project.Api.Controllers
             }
 
             userEntity.Email = userDto.Email;
+            //TODO Check if list of recipes also require an update (no property added for such in UserRequestDto yet)
 
             await _userRepository.UpdateAsync(userEntity);
 
