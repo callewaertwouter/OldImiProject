@@ -3,6 +3,7 @@ using Imi.Project.Api.Core.DTOs.Recipe;
 using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
+using Imi.Project.Api.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Imi.Project.Api.Controllers
@@ -73,7 +74,9 @@ namespace Imi.Project.Api.Controllers
 
             var recipeEntity = new Recipe
             {
-                Title = recipeDto.Title
+                Title = recipeDto.Title,
+                Description = recipeDto.Description,
+                Ingedrients = (ICollection<Ingedrient>)recipeDto.Ingedrients.ToList()
             };
 
             await _recipeRepository.AddAsync(recipeEntity);
@@ -97,6 +100,8 @@ namespace Imi.Project.Api.Controllers
             }
 
             recipeEntity.Title = recipeDto.Title;
+            recipeEntity.Description = recipeDto.Description;
+            recipeEntity.Ingedrients = (ICollection<Ingedrient>)recipeDto.Ingedrients.ToList();
 
             await _recipeRepository.UpdateAsync(recipeEntity);
 
