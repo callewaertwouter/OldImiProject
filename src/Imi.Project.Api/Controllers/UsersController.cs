@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Net;
 using System.Security.Claims;
 using System.Text;
 
@@ -38,7 +39,7 @@ namespace Imi.Project.Api.Controllers
 
         [Authorize(Policy = "Over15Only")]
         [AllowAnonymous]
-        [HttpPost("auth/register")]
+        [HttpPost("api/auth/register")]
         public async Task<IActionResult> Register([FromBody] RegisterUserRequestDto registration)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
@@ -67,7 +68,7 @@ namespace Imi.Project.Api.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("auth/login")]
+        [HttpPost("api/auth/login")]
         public async Task<IActionResult> Login([FromBody] LoginUserRequestDto login)
         {
             var result = await _signInManager.PasswordSignInAsync(login.Email, login.Password, isPersistent: false, lockoutOnFailure: false);
@@ -86,6 +87,14 @@ namespace Imi.Project.Api.Controllers
             {
                 Token = serializedToken,
             });
+        }
+
+        [HttpGet("api/auth/logout")]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+
+            return Ok();
         }
 
         private async Task<JwtSecurityToken> GenerateTokenAsync(User user)
