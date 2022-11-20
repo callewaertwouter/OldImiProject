@@ -48,7 +48,8 @@ namespace Imi.Project.Api.Controllers
             {
                 Email = registration.Email,
                 UserName = registration.Username,
-                Birthday = registration.Birthday
+                Birthday = registration.Birthday,
+                HasApprovedTermsAndConditions = registration.HasApprovedTermsAndConditions
             };
 
             IdentityResult result = await _userManager.CreateAsync(newUser, registration.Password);
