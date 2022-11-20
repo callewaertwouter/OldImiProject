@@ -51,112 +51,112 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9282),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9283),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1757),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1757),
                             Name = "Melk",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9285),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9285),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1759),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1760),
                             Name = "Laurier",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000004")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9287),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9287),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1761),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1762),
                             Name = "Gehakt",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9289),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9289),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1763),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1764),
                             Name = "Tomatenpuree",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000003")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9291),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9291),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1765),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1766),
                             Name = "Boter",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9293),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9293),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1767),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1768),
                             Name = "Paprika",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9295),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9295),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1769),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1770),
                             Name = "Wortel",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9297),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9297),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1771),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1772),
                             Name = "Ajuin",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9299),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9299),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1773),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1774),
                             Name = "Kippenbouillon",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9301),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9301),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1775),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1776),
                             Name = "Olijfolie",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000007")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000011"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9303),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9303),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1777),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1778),
                             Name = "Champignons",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000008")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000012"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9306),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9306),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1781),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1782),
                             Name = "Gemalen kaas",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000013"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9308),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9308),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1783),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1784),
                             Name = "Spaghetti",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000014"),
-                            CreatedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9310),
-                            LastEditedOn = new DateTime(2022, 11, 13, 19, 24, 19, 179, DateTimeKind.Utc).AddTicks(9310),
+                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1785),
+                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1786),
                             Name = "Courgette",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         });
@@ -195,81 +195,81 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9328),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1804),
                             Description = "Dit recept test de werking van dit recept.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9385),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1844),
                             Title = "Testrecept"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9387),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1846),
                             Description = "Maak een roux van de boter en de bloem. Dit doe je door de boter in een steelpannetje te smelten. Doe de bloem bij de boter en roer met de garde.\r\n\r\nLaat het mengsel een beetje opdrogen in het pannetje, tot je de geur van koekjes ruikt.\r\n\r\nGiet er beetje bij beetje de koude melk bij en roer telkens het mengsel glad. Breng al roerend aan de kook, op matig vuur. Laat de witte saus indikken en laat nog enkele minuten doorkoken zodat de bloemsmaak verdwijnt.Breng op smaak met nootmuskaat, peper en zout.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9389),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1848),
                             Title = "Witte saus"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9391),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1850),
                             Description = "Koop brochetten van de slager, easy. Smijt ze in een ovenpan, doe er boter over en zet ze in de combi-oven. Serveer met rijst en wortelen.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9393),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1852),
                             Title = "Gemarineerde brochetten"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9395),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1854),
                             Description = "Neem een ruime mengschaal, doe er het warm water in en week er de gedroogde paddenstoelen in. Het eekhoorntjesbrood zal z’n smaak afgeven en het water in een bouillon veranderen. Pel de uien en snij ze in grove stukken. Verhit een ruime stoofpot of een soepketel. Smelt er een klont boter in en stoof de stukken ui. Snij de stammen prei overlangs door, snij het donkerste loof weg en spoel ze onder stromend water. Snij de gewassen prei in grove stukken en stoof ze mee met de uien. Pel de look, snij de teentjes grof en laat ze ook meestoven. Maak 2/3 van de Parijse paddenstoelen schoon. Gebruik een borsteltje en snij (indien nodig) het steeltje wat bij. Snij de paddenstoelen vervolgens middendoor en laat ze meestoven. Hou 1/3 van de paddenstoelen opzij. Maak een bouquet garni met enkele blaadjes laurier, wat tijm en (indien beschikbaar) peterseliestengels. Bind alles samen met een eindje keukentouw en laat het kruidentuiltje meestoven. Schil de aardappelen en snij ze in grove stukken. Laat ze meestoven. Zeef de bouillon van eekhoorntjesbrood en giet het vocht in de soepketel met gestoofde groenten. De rubberachtige gewelde paddenstoelen gebruiken we niet. Laat de soep een half uur sudderen op een zacht vuur. Intussen kan je de kaasstengels bereiden. Verwijder het bouquet garni en mix de soep glad met een staafmixer. Je hoeft ze niet te zeven. Mix er ook een flinke scheut room in. Proef de soep en kruid het gerecht naar smaak met wat peper van de molen en een snuif zout.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9397),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1856),
                             Title = "Champignonsoep"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9399),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1858),
                             Description = "Meng gehakt en ajuin in een schaal en mix ze. Smijt de mix in een ovenpan en herschaap het tot een brood. Doe er vervolgens paneermeel en boter over. 20 minuten in de combi-oven. Kook de patatten en de bonen. Smakelijk.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9401),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1860),
                             Title = "Gehaktbrood met bonen en patatten"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9432),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1862),
                             Description = "Wortelen snijden en koken. Kook de patatten. Doe de hamburger in een pan en laat het bakken. Easy-peasy.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9433),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1864),
                             Title = "Hamburger met wortel en patatten"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9436),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1866),
                             Description = "1-pansgerecht met viskroketjes en patatjes. Groenten zijn voor de dieren.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9438),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1868),
                             Title = "Viskroketjes met gebakken aardappelen"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9440),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1870),
                             Description = "Patatten koken tot ze zacht zijn. Water afgieten, doe er melk en nootmuskaat bij. Grillworst in de microgolfoven voor anderhalf minuut ofzo.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9442),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1872),
                             Title = "Grillworst met puree"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9444),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1874),
                             Description = "1) Snij de ajuin, paprika, wortelen, courgette en champignons tot je ze klein genoeg vindt. Doe ze vervolgens allemaal in de pot met wat boter.2) Smijt het gehakt in een pan en bak ze lichtjes. Kap ze in kleinere stukken eenmaal de buitenkant gebakken is.3) Kook de spaghetti en voeg voldoende tomatenpuree en kruiden bij de bolognaise.4) Serveer met gemalen kaas.5) Bon appetit.",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9446),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1876),
                             Title = "Spaghetti bolognaise"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            CreatedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9448),
+                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1878),
                             Description = "Ga naar de frituur ipv te koken. Ongelooflijk goed he LOL!",
-                            LastEditedOn = new DateTime(2022, 11, 13, 20, 24, 19, 179, DateTimeKind.Local).AddTicks(9450),
+                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1880),
                             Title = "Ongelooflijk goed gerecht"
                         });
                 });
@@ -411,16 +411,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "11",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "41d7b4ef-ac5a-4279-88c5-a7287be64545",
+                            ConcurrencyStamp = "667495bd-fbd9-46e6-90ce-91516379f689",
                             Email = "user@imi.be",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@IMI.BE",
                             NormalizedUserName = "IMIUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEC6qtn9fJkNX0Qp4x7h7bogK0MzlEv4W8lPIhArHPLSYYJPGpRmdWJfxQuuhlJd3mw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHkrTVArYhiw4KMzQBzqC9F+KXc/VCt/5n+t463HYfxDtzZZ1YzEQTvanmNigIkqKg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "951ae934-0857-4431-a107-56be4980f0e4",
+                            SecurityStamp = "d31449f9-b358-4778-8c13-cc3b5569c5c6",
                             TwoFactorEnabled = false,
                             UserName = "ImiUser"
                         },
@@ -429,16 +429,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "12",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "fc7d142d-e094-4b97-9d20-78aeb69bafac",
+                            ConcurrencyStamp = "5c7c3045-edb4-4f3a-9706-7133f217a845",
                             Email = "refuser@imi.be",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "REFUSER@IMI.BE",
                             NormalizedUserName = "IMIREFUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAECWn+Bd1w3IgchQjKW8686ZG3rzwnZLpKK9ZiPl0vTpLkOkOgAJ2mPJZNRTYIGgSoQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMRXU3g/tw9sGDlWKH2iTQKNOqaNnCFGZvcZuBPWzQl+oAyVI9CmNKuHn6rgt5KtGQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7fe0a724-9604-4e29-86fa-0f9d490cdd42",
+                            SecurityStamp = "813c6d26-d214-4f90-b198-4641d6cc28df",
                             TwoFactorEnabled = false,
                             UserName = "ImiRefuser"
                         },
@@ -447,161 +447,197 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "13",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "abbfdaed-c748-4766-a909-31313b60c056",
+                            ConcurrencyStamp = "3fc73802-9ab6-4169-a4c2-4da553ba5072",
                             Email = "admin@imi.be",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@IMI.BE",
                             NormalizedUserName = "IMIADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKt7wODtdskTKunsPXTNp4ngaxpNMsUZlEzhKYuqbD1W92FU+t8579gBSnh3GYNf/A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMi3a9Jep3gJDHzZbjb+qdLqpEGj1ssujumhR4dd7O3+ezLqGKNIiniI8NI/8ZqAhw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d6077d8c-9c90-416b-87d2-f37638076940",
+                            SecurityStamp = "79ff060a-21ce-4be3-a569-70df32d1b238",
                             TwoFactorEnabled = false,
                             UserName = "ImiAdmin"
                         },
                         new
                         {
-                            Id = "e1c0a5cc-7b2e-473d-8b25-ef3dc541ad7c",
+                            Id = "1",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1990, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "2844862c-4958-43b2-a1c3-cceac53d2dd7",
+                            Birthday = new DateTime(1986, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "9a9e6135-2253-4991-9583-6c55095409e9",
                             Email = "admin@admin.com",
-                            EmailConfirmed = false,
+                            EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
-                            Password = "Test123?",
+                            NormalizedEmail = "ADMIN@ADMIN.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAECfdw1+X8LpN/n0UhDB/0VPCBBoRYOWMKaFSqbMic2a0XPhLC4efTQPQA+ccfYgnMg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b30e274b-a145-4307-8633-7656c0faa0e9",
+                            SecurityStamp = "903401b3-cd79-49bc-a331-57408e9d6178",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         },
                         new
                         {
-                            Id = "bf4413fe-2af6-4083-a80d-7c5ff82a6dde",
+                            Id = "2",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "8efc4202-38ef-43dc-8b34-2b37818455b7",
+                            Birthday = new DateTime(1986, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "9ca857d1-442f-4207-a7bf-fe87c96277fc",
                             Email = "woutercallewaert@gmail.com",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "WOUTERCALLEWAERT@GMAIL.COM",
+                            NormalizedUserName = "YUSIFER",
+                            PasswordHash = "AQAAAAEAACcQAAAAECWLFUG+pyEtiiCu8Em0SEGCyHN2jk/Zy5dbJ87g2Zqp8ELFReCfSEzg9NOyye9pPQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e86022cb-eb6c-41a4-9021-eb7243ee53fe",
+                            SecurityStamp = "f02b758a-316f-465b-98b3-92d70ea4c31e",
                             TwoFactorEnabled = false,
                             UserName = "Yusifer"
                         },
                         new
                         {
-                            Id = "0593622a-9e80-468f-89bc-af7d070f17c1",
+                            Id = "3",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "69b9ac5f-5634-49b4-af4b-69076f5ea69c",
+                            Birthday = new DateTime(1980, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "08a8b493-bb93-4e5d-b9b4-810f086c0923",
                             Email = "jjameson@hotmail.com",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "JJAMESON@HOTMAIL.COM",
+                            NormalizedUserName = "JJJ",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPtzn6todSZZWEGybVG/f7KRIG+8WyId1DHp2Z72s8Adrj1ap/V3up1ZN0FEd4XWfw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cb5d5e01-5094-46a2-95c1-e75401150b19",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "15819f11-7ccd-4378-94a2-7adbc98c682a",
+                            TwoFactorEnabled = false,
+                            UserName = "JJJ"
                         },
                         new
                         {
-                            Id = "b0b420d1-3745-4c8a-8629-6fa841d5f38a",
+                            Id = "4",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "754e6644-d8a8-41a6-a948-4fe2ccb6d155",
+                            Birthday = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "771c09ec-9166-46af-bde3-8748f37a3c06",
                             Email = "tigbiddies@xxx.com",
-                            EmailConfirmed = false,
+                            EmailConfirmed = true,
                             HasApprovedTermsAndConditions = false,
                             LockoutEnabled = false,
+                            NormalizedEmail = "TIGBIDDIES@XXX.COM",
+                            NormalizedUserName = "BIGPP",
+                            PasswordHash = "AQAAAAEAACcQAAAAED3c/zHxrb6+AHAvzDRCtvxFAVJxGcGl0VNxLT5n627BtB6piedpU9RWnFwTWgrl5g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1f0d69ac-330b-4909-97a1-54e08b0ca3f4",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "3b1c07c5-9a66-4917-8483-53ccf6e86e78",
+                            TwoFactorEnabled = false,
+                            UserName = "BigPP"
                         },
                         new
                         {
-                            Id = "e5e29657-d10f-47de-892d-cbf1e95b2ef3",
+                            Id = "5",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "753ff2ee-f847-4043-a184-de571217edaa",
+                            Birthday = new DateTime(1995, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "8c5ebee9-a57b-4afd-ae77-7e74962035ea",
                             Email = "allthebutz@hotmail.com",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "ALLTHEBUTZ@HOTMAIL.COM",
+                            NormalizedUserName = "ALLTHEB",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGfIxw/sntf45S7fAaxWlXYnQcaaiaOacj8t+KM6ETFOyrO0zwxafQH5C/TDatASTw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "77277116-8ca1-4495-b0a5-cd5377391633",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "3269cf16-6ae7-499d-8fdc-754e9c97119d",
+                            TwoFactorEnabled = false,
+                            UserName = "AlltheB"
                         },
                         new
                         {
-                            Id = "ea0a5285-95f8-40d0-a5fa-9317f6d93085",
+                            Id = "6",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "c357b48b-936f-47af-b2a0-6ffb16808937",
+                            Birthday = new DateTime(2010, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "003de745-be4e-43a3-9bc3-ebbeb9b8a5fd",
                             Email = "ikloopindiestrond@gagmaker.net",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "IKLOOPINDIESTROND@GAGMAKER.NET",
+                            NormalizedUserName = "TAALJOKER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEPLd0GbXBz6V19nGaKfJd/1xzucg8PyQQmZr3a0srH9MYfJuNFik9gY+lSoF4KfuSQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "9d24fd5b-97fe-4396-af11-ce6e4501535e",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "eb2be603-ac7c-4fbb-ba34-a77f66674e32",
+                            TwoFactorEnabled = false,
+                            UserName = "Taaljoker"
                         },
                         new
                         {
-                            Id = "448567be-3806-44b4-ad1f-814c0ed13392",
+                            Id = "7",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "15c5ca31-1a7f-49db-9ea9-c41670f4ef9a",
-                            Email = "olklo@gmail.com",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            Birthday = new DateTime(1999, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "e351730f-a560-45aa-b67e-b55b4e13797b",
+                            Email = "olklo@hotmail.com",
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "OLKLO@HOTMAIL.COM",
+                            NormalizedUserName = "PALINGDROOL",
+                            PasswordHash = "AQAAAAEAACcQAAAAECaZ4EnmjGwqvlZgoV0SwJooN5OYtrBe8+ZRCsfMFNRKKX0R6tFRSztQwfecpIVVeA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "edd214cf-eecb-458c-9311-a4f1de5b759a",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "7b03d53e-6b04-4b76-873f-579c8a345e2c",
+                            TwoFactorEnabled = false,
+                            UserName = "Palingdrool"
                         },
                         new
                         {
-                            Id = "f7d5fbc2-1159-408d-ab6d-a48d1f713d99",
+                            Id = "8",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "c734ae91-a8e6-4195-bf18-17688096cbd2",
-                            Email = "wsmets1991@hotmail.com",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            Birthday = new DateTime(1991, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "38a20ce3-be36-40ef-ae3b-aab7b66ae68e",
+                            Email = "wsmets1991@gmail.com",
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "WSMETS1991@GMAIL.COM",
+                            NormalizedUserName = "WSMETS",
+                            PasswordHash = "AQAAAAEAACcQAAAAEC+w/Tx67O8gcbA5qYADhBstpbZXASmPC7blr+3K73f9C25wA7ReSs2pMk0XN3ThCA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "4c8433a8-66ec-4d8b-b132-358c2c2b89db",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "6e40c496-a069-4eaf-810e-d80ec5321c66",
+                            TwoFactorEnabled = false,
+                            UserName = "WSmets"
                         },
                         new
                         {
-                            Id = "42123969-5624-40d7-8f66-6360fcccabeb",
+                            Id = "9",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "03856461-a1cc-4300-a521-4d57a1282bf1",
-                            Email = "maarten.raviola@gmail.com",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            Birthday = new DateTime(1982, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "58b03a8d-12f8-4564-8129-72dfacdfd70e",
+                            Email = "maarten.raviola@hotmail.com",
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "MAARTEN.RAVIOLA@HOTMAIL.COM",
+                            NormalizedUserName = "MAVOLIA",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGWsWmc76M0d9AXBKpz5EbYLbX7CnjFrbCNPgtCc4mm8yZWn8RXOzpuGXngTXur2aw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "855bac0b-3610-4d6a-8309-eb963f46d9c0",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "d50cf963-487e-4a9b-b95a-807d79dae441",
+                            TwoFactorEnabled = false,
+                            UserName = "Mavolia"
                         },
                         new
                         {
-                            Id = "d410fc48-afef-4284-997d-45d245758e11",
+                            Id = "10",
                             AccessFailedCount = 0,
-                            Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "b26113a8-1b79-4cf9-8907-7702cbf8c5bb",
-                            Email = "toiletbril@lolbroek.com",
-                            EmailConfirmed = false,
-                            HasApprovedTermsAndConditions = false,
+                            Birthday = new DateTime(2006, 3, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            ConcurrencyStamp = "c8b2ec00-9766-42c0-976c-e586bc6b89fd",
+                            Email = "toiletbril@gmail.com",
+                            EmailConfirmed = true,
+                            HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
+                            NormalizedEmail = "TOILETBRIL@GMAIL.COM",
+                            NormalizedUserName = "TOITOITOILET",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1b72bc20-de71-4034-9387-aefa5c3de24a",
-                            TwoFactorEnabled = false
+                            SecurityStamp = "82ffc399-b2f2-4642-b5be-c384d86a0986",
+                            TwoFactorEnabled = false,
+                            UserName = "Toitoitoilet"
                         });
                 });
 
@@ -809,6 +845,76 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
                             ClaimValue = "admin",
                             UserId = "13"
+                        },
+                        new
+                        {
+                            Id = 1,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "admin",
+                            UserId = "1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "3"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "refuser",
+                            UserId = "4"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "5"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "6"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "7"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "8"
+                        },
+                        new
+                        {
+                            Id = 9,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "9"
+                        },
+                        new
+                        {
+                            Id = 10,
+                            ClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
+                            ClaimValue = "user",
+                            UserId = "10"
                         });
                 });
 
