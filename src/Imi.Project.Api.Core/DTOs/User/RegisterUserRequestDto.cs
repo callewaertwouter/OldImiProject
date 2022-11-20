@@ -19,5 +19,7 @@ namespace Imi.Project.Api.Core.DTOs.User
         public string ConfirmPassword { get; set; }
         [Required]
         public DateTime Birthday { get; set; }
+
+        public bool HasApprovedTermsAndConditions { get; set; }
     }
 }
