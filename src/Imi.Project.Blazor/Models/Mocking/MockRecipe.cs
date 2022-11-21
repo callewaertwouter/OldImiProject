@@ -1,4 +1,4 @@
-﻿namespace Imi.Project.Blazor.Models
+﻿namespace Imi.Project.Blazor.Models.Mocking
 {
     public class MockRecipe : BaseEntity
     {

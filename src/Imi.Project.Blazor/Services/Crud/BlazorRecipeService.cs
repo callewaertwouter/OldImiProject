@@ -1,5 +1,5 @@
 ﻿using Imi.Project.Api.Core.Entities;
-using Imi.Project.Blazor.Models;
+using Imi.Project.Blazor.Models.Mocking;
 
 namespace Imi.Project.Blazor.Services.Crud
 {
