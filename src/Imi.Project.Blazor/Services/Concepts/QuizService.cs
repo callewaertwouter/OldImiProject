@@ -1,4 +1,4 @@
-﻿using Imi.Project.Blazor.Models;
+﻿using Imi.Project.Blazor.Models.Concepts;
 
 namespace Imi.Project.Blazor.Services.Concepts
 {
