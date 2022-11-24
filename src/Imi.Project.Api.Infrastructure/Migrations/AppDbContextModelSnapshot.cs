@@ -51,112 +51,112 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1757),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1757),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8451),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8455),
                             Name = "Melk",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1759),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1760),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8461),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8462),
                             Name = "Laurier",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000004")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1761),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1762),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8466),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8467),
                             Name = "Gehakt",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1763),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1764),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8471),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8471),
                             Name = "Tomatenpuree",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000003")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1765),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1766),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8476),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8476),
                             Name = "Boter",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000001")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1767),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1768),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8481),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8481),
                             Name = "Paprika",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1769),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1770),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8486),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8487),
                             Name = "Wortel",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1771),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1772),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8491),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8492),
                             Name = "Ajuin",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1773),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1774),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8498),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8499),
                             Name = "Kippenbouillon",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000002")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1775),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1776),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8503),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8504),
                             Name = "Olijfolie",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000007")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000011"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1777),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1778),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8508),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8509),
                             Name = "Champignons",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000008")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000012"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1781),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1782),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8518),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8519),
                             Name = "Gemalen kaas",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000013"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1783),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1784),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8523),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8524),
                             Name = "Spaghetti",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000009")
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000014"),
-                            CreatedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1785),
-                            LastEditedOn = new DateTime(2022, 11, 20, 0, 15, 38, 364, DateTimeKind.Utc).AddTicks(1786),
+                            CreatedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8528),
+                            LastEditedOn = new DateTime(2022, 11, 24, 8, 48, 58, 364, DateTimeKind.Utc).AddTicks(8528),
                             Name = "Courgette",
                             UnitOfMeasureId = new Guid("00000000-0000-0000-0000-000000000011")
                         });
@@ -195,81 +195,81 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000001"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1804),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8581),
                             Description = "Dit recept test de werking van dit recept.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1844),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8679),
                             Title = "Testrecept"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000002"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1846),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8688),
                             Description = "Maak een roux van de boter en de bloem. Dit doe je door de boter in een steelpannetje te smelten. Doe de bloem bij de boter en roer met de garde.\r\n\r\nLaat het mengsel een beetje opdrogen in het pannetje, tot je de geur van koekjes ruikt.\r\n\r\nGiet er beetje bij beetje de koude melk bij en roer telkens het mengsel glad. Breng al roerend aan de kook, op matig vuur. Laat de witte saus indikken en laat nog enkele minuten doorkoken zodat de bloemsmaak verdwijnt.Breng op smaak met nootmuskaat, peper en zout.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1848),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8691),
                             Title = "Witte saus"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000003"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1850),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8697),
                             Description = "Koop brochetten van de slager, easy. Smijt ze in een ovenpan, doe er boter over en zet ze in de combi-oven. Serveer met rijst en wortelen.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1852),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8701),
                             Title = "Gemarineerde brochetten"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000004"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1854),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8707),
                             Description = "Neem een ruime mengschaal, doe er het warm water in en week er de gedroogde paddenstoelen in. Het eekhoorntjesbrood zal z’n smaak afgeven en het water in een bouillon veranderen. Pel de uien en snij ze in grove stukken. Verhit een ruime stoofpot of een soepketel. Smelt er een klont boter in en stoof de stukken ui. Snij de stammen prei overlangs door, snij het donkerste loof weg en spoel ze onder stromend water. Snij de gewassen prei in grove stukken en stoof ze mee met de uien. Pel de look, snij de teentjes grof en laat ze ook meestoven. Maak 2/3 van de Parijse paddenstoelen schoon. Gebruik een borsteltje en snij (indien nodig) het steeltje wat bij. Snij de paddenstoelen vervolgens middendoor en laat ze meestoven. Hou 1/3 van de paddenstoelen opzij. Maak een bouquet garni met enkele blaadjes laurier, wat tijm en (indien beschikbaar) peterseliestengels. Bind alles samen met een eindje keukentouw en laat het kruidentuiltje meestoven. Schil de aardappelen en snij ze in grove stukken. Laat ze meestoven. Zeef de bouillon van eekhoorntjesbrood en giet het vocht in de soepketel met gestoofde groenten. De rubberachtige gewelde paddenstoelen gebruiken we niet. Laat de soep een half uur sudderen op een zacht vuur. Intussen kan je de kaasstengels bereiden. Verwijder het bouquet garni en mix de soep glad met een staafmixer. Je hoeft ze niet te zeven. Mix er ook een flinke scheut room in. Proef de soep en kruid het gerecht naar smaak met wat peper van de molen en een snuif zout.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1856),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8711),
                             Title = "Champignonsoep"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000005"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1858),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8717),
                             Description = "Meng gehakt en ajuin in een schaal en mix ze. Smijt de mix in een ovenpan en herschaap het tot een brood. Doe er vervolgens paneermeel en boter over. 20 minuten in de combi-oven. Kook de patatten en de bonen. Smakelijk.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1860),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8721),
                             Title = "Gehaktbrood met bonen en patatten"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000006"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1862),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8726),
                             Description = "Wortelen snijden en koken. Kook de patatten. Doe de hamburger in een pan en laat het bakken. Easy-peasy.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1864),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8730),
                             Title = "Hamburger met wortel en patatten"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000007"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1866),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8737),
                             Description = "1-pansgerecht met viskroketjes en patatjes. Groenten zijn voor de dieren.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1868),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8745),
                             Title = "Viskroketjes met gebakken aardappelen"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000008"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1870),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8753),
                             Description = "Patatten koken tot ze zacht zijn. Water afgieten, doe er melk en nootmuskaat bij. Grillworst in de microgolfoven voor anderhalf minuut ofzo.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1872),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8758),
                             Title = "Grillworst met puree"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000009"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1874),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8767),
                             Description = "1) Snij de ajuin, paprika, wortelen, courgette en champignons tot je ze klein genoeg vindt. Doe ze vervolgens allemaal in de pot met wat boter.2) Smijt het gehakt in een pan en bak ze lichtjes. Kap ze in kleinere stukken eenmaal de buitenkant gebakken is.3) Kook de spaghetti en voeg voldoende tomatenpuree en kruiden bij de bolognaise.4) Serveer met gemalen kaas.5) Bon appetit.",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1876),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8773),
                             Title = "Spaghetti bolognaise"
                         },
                         new
                         {
                             Id = new Guid("00000000-0000-0000-0000-000000000010"),
-                            CreatedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1878),
+                            CreatedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8782),
                             Description = "Ga naar de frituur ipv te koken. Ongelooflijk goed he LOL!",
-                            LastEditedOn = new DateTime(2022, 11, 20, 1, 15, 38, 364, DateTimeKind.Local).AddTicks(1880),
+                            LastEditedOn = new DateTime(2022, 11, 24, 9, 48, 58, 364, DateTimeKind.Local).AddTicks(8787),
                             Title = "Ongelooflijk goed gerecht"
                         });
                 });
@@ -357,10 +357,12 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
@@ -375,10 +377,12 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         .HasColumnType("datetimeoffset");
 
                     b.Property<string>("NormalizedEmail")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("NormalizedUserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
@@ -399,11 +403,20 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users");
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
 
                     b.HasData(
                         new
@@ -411,16 +424,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "11",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "667495bd-fbd9-46e6-90ce-91516379f689",
+                            ConcurrencyStamp = "579c221b-de4e-47e6-acad-79c60f4d1956",
                             Email = "user@imi.be",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@IMI.BE",
                             NormalizedUserName = "IMIUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHkrTVArYhiw4KMzQBzqC9F+KXc/VCt/5n+t463HYfxDtzZZ1YzEQTvanmNigIkqKg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJX0/8Csid/mYhB5QMQk7CEOCE0frMMsYNmIG6FJPxCHqwRKAdcklWbOWNdU47LX0g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d31449f9-b358-4778-8c13-cc3b5569c5c6",
+                            SecurityStamp = "6ef70d6f-7d35-4914-b7fc-6da6d67e6fcd",
                             TwoFactorEnabled = false,
                             UserName = "ImiUser"
                         },
@@ -429,16 +442,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "12",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "5c7c3045-edb4-4f3a-9706-7133f217a845",
+                            ConcurrencyStamp = "2587bf60-8853-45d6-9447-309f0139c7fa",
                             Email = "refuser@imi.be",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "REFUSER@IMI.BE",
                             NormalizedUserName = "IMIREFUSER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMRXU3g/tw9sGDlWKH2iTQKNOqaNnCFGZvcZuBPWzQl+oAyVI9CmNKuHn6rgt5KtGQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAgl5laGFgiiDyWvDP6qrZZPJq1kXjxL/JubvsBwNj1EliAms5lgPS+RERHhmTAcOg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "813c6d26-d214-4f90-b198-4641d6cc28df",
+                            SecurityStamp = "7fa84522-810e-418a-8f6c-4d876c06babf",
                             TwoFactorEnabled = false,
                             UserName = "ImiRefuser"
                         },
@@ -447,16 +460,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "13",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "3fc73802-9ab6-4169-a4c2-4da553ba5072",
+                            ConcurrencyStamp = "73ef3c0b-1b4b-4572-aa3b-d52978cd8c45",
                             Email = "admin@imi.be",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@IMI.BE",
                             NormalizedUserName = "IMIADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMi3a9Jep3gJDHzZbjb+qdLqpEGj1ssujumhR4dd7O3+ezLqGKNIiniI8NI/8ZqAhw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELrHyZPHlV54lzNY1/oSF9tPLqM6habhTvZ6zkzxmMevITrRiKe8+iWopVCog1TJsA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "79ff060a-21ce-4be3-a569-70df32d1b238",
+                            SecurityStamp = "fd11c83b-3e9e-4e1e-8e62-d60344ebb566",
                             TwoFactorEnabled = false,
                             UserName = "ImiAdmin"
                         },
@@ -465,16 +478,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "1",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1986, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "9a9e6135-2253-4991-9583-6c55095409e9",
+                            ConcurrencyStamp = "84ff3821-952b-4530-95ce-dbb90f17480f",
                             Email = "admin@admin.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@ADMIN.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAECfdw1+X8LpN/n0UhDB/0VPCBBoRYOWMKaFSqbMic2a0XPhLC4efTQPQA+ccfYgnMg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJuhE+2uMxQdKdmFI4JWAMyBOmC24CICbLD1PmYzdI4u8yT0COyug6HVEsw5ZsSJAg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "903401b3-cd79-49bc-a331-57408e9d6178",
+                            SecurityStamp = "73da36cb-0cd3-4ad0-9161-9cb27ca4aec8",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         },
@@ -483,16 +496,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "2",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1986, 7, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "9ca857d1-442f-4207-a7bf-fe87c96277fc",
+                            ConcurrencyStamp = "c31bed7c-23f2-42c9-897c-3ddc54de6ede",
                             Email = "woutercallewaert@gmail.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "WOUTERCALLEWAERT@GMAIL.COM",
                             NormalizedUserName = "YUSIFER",
-                            PasswordHash = "AQAAAAEAACcQAAAAECWLFUG+pyEtiiCu8Em0SEGCyHN2jk/Zy5dbJ87g2Zqp8ELFReCfSEzg9NOyye9pPQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEHNaRSUeYq1UV+gBt1MsvswlbaDbE1MCIYTcumuwaD+atXfWDAi1gwvyWssvAsCHKw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "f02b758a-316f-465b-98b3-92d70ea4c31e",
+                            SecurityStamp = "cc56cf1d-ecef-43da-b2bb-8ab76249c269",
                             TwoFactorEnabled = false,
                             UserName = "Yusifer"
                         },
@@ -501,16 +514,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "3",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1980, 5, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "08a8b493-bb93-4e5d-b9b4-810f086c0923",
+                            ConcurrencyStamp = "e31f6ebb-9e76-4134-b2f2-c1aaf2684271",
                             Email = "jjameson@hotmail.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "JJAMESON@HOTMAIL.COM",
                             NormalizedUserName = "JJJ",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPtzn6todSZZWEGybVG/f7KRIG+8WyId1DHp2Z72s8Adrj1ap/V3up1ZN0FEd4XWfw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDAhFmt5NS/YmYtWzfrS7ADFrqwfV5MQU/SXhqgoc+NIrJduHUwr0/ajNPOKqSHPkw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "15819f11-7ccd-4378-94a2-7adbc98c682a",
+                            SecurityStamp = "80155647-c54a-453a-acfa-1499fdba7e79",
                             TwoFactorEnabled = false,
                             UserName = "JJJ"
                         },
@@ -519,16 +532,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "4",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "771c09ec-9166-46af-bde3-8748f37a3c06",
+                            ConcurrencyStamp = "172cddaa-6ca8-4605-ae0c-01e5802b7d0c",
                             Email = "tigbiddies@xxx.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "TIGBIDDIES@XXX.COM",
                             NormalizedUserName = "BIGPP",
-                            PasswordHash = "AQAAAAEAACcQAAAAED3c/zHxrb6+AHAvzDRCtvxFAVJxGcGl0VNxLT5n627BtB6piedpU9RWnFwTWgrl5g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEARXvWpPBU2TvPHCI7idA0Kc0muXIpmfV9YhMux2Kc792l6QjzaUyeH2kIY3hOqW8Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3b1c07c5-9a66-4917-8483-53ccf6e86e78",
+                            SecurityStamp = "9a56b8ea-cf7c-4fc3-b226-791bf8ebb5c3",
                             TwoFactorEnabled = false,
                             UserName = "BigPP"
                         },
@@ -537,16 +550,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "5",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1995, 9, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "8c5ebee9-a57b-4afd-ae77-7e74962035ea",
+                            ConcurrencyStamp = "74f27c03-ae51-49ba-82db-c44b3f84f097",
                             Email = "allthebutz@hotmail.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "ALLTHEBUTZ@HOTMAIL.COM",
                             NormalizedUserName = "ALLTHEB",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGfIxw/sntf45S7fAaxWlXYnQcaaiaOacj8t+KM6ETFOyrO0zwxafQH5C/TDatASTw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEDzUh+LhY4gQpzoGBsnkaJjP9mPFv94/fSeeK4OP8jCB/rI0jv3QpU9A1JwAp7QwKw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3269cf16-6ae7-499d-8fdc-754e9c97119d",
+                            SecurityStamp = "155a50db-e4e1-45e0-9410-9d6c5e04d20f",
                             TwoFactorEnabled = false,
                             UserName = "AlltheB"
                         },
@@ -555,16 +568,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "6",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(2010, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "003de745-be4e-43a3-9bc3-ebbeb9b8a5fd",
+                            ConcurrencyStamp = "ddc5902e-d815-42e0-b696-30ffb5e4f8ba",
                             Email = "ikloopindiestrond@gagmaker.net",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "IKLOOPINDIESTROND@GAGMAKER.NET",
                             NormalizedUserName = "TAALJOKER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEPLd0GbXBz6V19nGaKfJd/1xzucg8PyQQmZr3a0srH9MYfJuNFik9gY+lSoF4KfuSQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAELGbZdOkvTbbv9t8J1/KDS/Z7HTop3k1WansOtbjAsmUgnVU6FBn25nBexG8xKMi6A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "eb2be603-ac7c-4fbb-ba34-a77f66674e32",
+                            SecurityStamp = "c2432593-1cf0-4b3c-8994-6535a9d884de",
                             TwoFactorEnabled = false,
                             UserName = "Taaljoker"
                         },
@@ -573,16 +586,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "7",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1999, 9, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "e351730f-a560-45aa-b67e-b55b4e13797b",
+                            ConcurrencyStamp = "4f4923bc-0925-4720-8cc2-e84767c77a58",
                             Email = "olklo@hotmail.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "OLKLO@HOTMAIL.COM",
                             NormalizedUserName = "PALINGDROOL",
-                            PasswordHash = "AQAAAAEAACcQAAAAECaZ4EnmjGwqvlZgoV0SwJooN5OYtrBe8+ZRCsfMFNRKKX0R6tFRSztQwfecpIVVeA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBjz0ApBYyAtv2c6LgO6x9lFsdEgBiebKNTiycRhxA81CKLgGcVZ3imGr+l1HdCdig==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7b03d53e-6b04-4b76-873f-579c8a345e2c",
+                            SecurityStamp = "bfb7be00-f866-4376-9368-6747803e000a",
                             TwoFactorEnabled = false,
                             UserName = "Palingdrool"
                         },
@@ -591,16 +604,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "8",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1991, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "38a20ce3-be36-40ef-ae3b-aab7b66ae68e",
+                            ConcurrencyStamp = "0d547642-b7e5-4eed-a443-31504fb06f4e",
                             Email = "wsmets1991@gmail.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "WSMETS1991@GMAIL.COM",
                             NormalizedUserName = "WSMETS",
-                            PasswordHash = "AQAAAAEAACcQAAAAEC+w/Tx67O8gcbA5qYADhBstpbZXASmPC7blr+3K73f9C25wA7ReSs2pMk0XN3ThCA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJLMYPCkwPUyCo3HfLEIGbODjxMZtKTDs6278lYRRvID1Q+Eu1qlOU4kjSFP2zUSRQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6e40c496-a069-4eaf-810e-d80ec5321c66",
+                            SecurityStamp = "04cb55b8-dcd7-4bac-87df-666f28832915",
                             TwoFactorEnabled = false,
                             UserName = "WSmets"
                         },
@@ -609,16 +622,16 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "9",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(1982, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "58b03a8d-12f8-4564-8129-72dfacdfd70e",
+                            ConcurrencyStamp = "c7314f7f-5bf9-49a1-9eb1-4caee0d6a86f",
                             Email = "maarten.raviola@hotmail.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "MAARTEN.RAVIOLA@HOTMAIL.COM",
                             NormalizedUserName = "MAVOLIA",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGWsWmc76M0d9AXBKpz5EbYLbX7CnjFrbCNPgtCc4mm8yZWn8RXOzpuGXngTXur2aw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENccpncvJlN7xc5bJ57oYl6vnfeHDC0OCgqsZn+kYI4EihhxpoRG1i1bIZIw1c+j0A==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d50cf963-487e-4a9b-b95a-807d79dae441",
+                            SecurityStamp = "66708ac9-e5df-4b07-b5bb-31e13450ead5",
                             TwoFactorEnabled = false,
                             UserName = "Mavolia"
                         },
@@ -627,7 +640,7 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             Id = "10",
                             AccessFailedCount = 0,
                             Birthday = new DateTime(2006, 3, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "c8b2ec00-9766-42c0-976c-e586bc6b89fd",
+                            ConcurrencyStamp = "be2c173a-d975-4eb9-8a91-29cb3fb891d9",
                             Email = "toiletbril@gmail.com",
                             EmailConfirmed = true,
                             HasApprovedTermsAndConditions = true,
@@ -635,7 +648,7 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                             NormalizedEmail = "TOILETBRIL@GMAIL.COM",
                             NormalizedUserName = "TOITOITOILET",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "82ffc399-b2f2-4642-b5be-c384d86a0986",
+                            SecurityStamp = "27e451e1-8cb6-4c9b-a3c3-42f055b14112",
                             TwoFactorEnabled = false,
                             UserName = "Toitoitoilet"
                         });
@@ -803,6 +816,58 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -818,11 +883,14 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(max)");
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("IdentityUserClaim<string>");
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
 
                     b.HasData(
                         new
@@ -918,6 +986,62 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
+                });
+
             modelBuilder.Entity("Imi.Project.Api.Core.Entities.Ingedrient", b =>
                 {
                     b.HasOne("Imi.Project.Api.Core.Entities.UnitOfMeasure", "UnitOfMeasure")
@@ -949,6 +1073,57 @@ namespace Imi.Project.Api.Infrastructure.Migrations
                     b.HasOne("Imi.Project.Api.Core.Entities.Recipe", null)
                         .WithMany()
                         .HasForeignKey("RecipesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("Imi.Project.Api.Core.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("Imi.Project.Api.Core.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Imi.Project.Api.Core.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("Imi.Project.Api.Core.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
