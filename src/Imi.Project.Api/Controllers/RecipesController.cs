@@ -1,5 +1,6 @@
 ﻿using Imi.Project.Api.Core.DTOs.Ingedrient;
 using Imi.Project.Api.Core.DTOs.Recipe;
+using Imi.Project.Api.Core.DTOs.UnitOfMeasure;
 using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
@@ -31,10 +32,21 @@ namespace Imi.Project.Api.Controllers
                 Id = r.Id,
                 Title = r.Title,
                 Description = r.Description,
-                CreatedByUser = new UserResponseDto
+                Ingedrients = r.Ingedrients.Select(i => new IngedrientResponseDto
                 {
-                    Email = r.User.Email
-                }
+                    Id = i.Id,
+                    Name = i.Name,
+                    // //System.NullReferenceException: 'Object reference not set to an instance of an object.'
+                    //MeasureUnit = new UnitOfMeasureResponseDto
+                    //{
+                    //    Id = i.UnitOfMeasure.Id,
+                    //    MeasureUnit = i.UnitOfMeasure.MeasureUnit
+                    //}
+                }).ToList(),
+                //CreatedByUser = new UserResponseDto
+                //{
+                //    Email = r.User.Email
+                //}
             });
 
             return Ok(recipesDto);
