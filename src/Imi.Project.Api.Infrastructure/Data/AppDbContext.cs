@@ -26,6 +26,11 @@ namespace Imi.Project.Api.Infrastructure.Data
             RecipeSeeder.Seed(modelBuilder);
             UserSeeder.Seed(modelBuilder);
 
+            //modelBuilder.Entity<Recipe>()
+            //    .HasOne(r => r.User)
+            //    .WithMany(u => u.CreatedRecipes)
+            //    .HasForeignKey(r => r.UserId);
+
             modelBuilder.Entity<Recipe>()
                 .HasMany(r => r.Ingedrients)
                 .WithMany(i => i.Recipes)
