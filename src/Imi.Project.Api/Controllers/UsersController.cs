@@ -78,7 +78,7 @@ namespace Imi.Project.Api.Controllers
         [HttpPost("api/auth/login")]
         public async Task<IActionResult> Login([FromBody] LoginUserRequestDto login)
         {
-            var result = await _signInManager.PasswordSignInAsync(login.Email, login.Password, isPersistent: false, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(login.UserName, login.Password, isPersistent: false, lockoutOnFailure: false);
 
             if (!result.Succeeded)
             {
@@ -92,7 +92,7 @@ namespace Imi.Project.Api.Controllers
 
             return Ok(new LoginUserResponseDto()
             {
-                Token = serializedToken,
+                Token = serializedToken
             });
         }
 
@@ -249,9 +249,8 @@ namespace Imi.Project.Api.Controllers
     }
 }
 
-// TODO 1) Fix 401 Unauthorized bij registeren/inloggen
-// TODO 2) Fix policies en zorg ervoor dat ze correct toegepast worden (mensen jonger dan 15 kunnen nog altijd registreren)
-// TODO 3) API/JWT token aanmaken mocht het zijn dat GenerateTokenAsync() dit niet doet (doe navraag bij Dries)
-// TODO 4) Valideer ingedrienten bij aanmaken/updaten van recept
-// TODO 5) Lijst van ingedrienten toevoegen aan recepten in RecipesController
-// TODO 6) Lijst van recepten toevoegen aan users in UsersController
+// TODO 1) Fix policies en zorg ervoor dat ze correct toegepast worden (mensen jonger dan 15 kunnen nog altijd registreren)
+
+// TODO 2) Valideer ingedrienten bij aanmaken/updaten van recept
+// TODO 3) Lijst van ingedrienten toevoegen aan recepten in RecipesController
+// TODO 4) Lijst van recepten toevoegen aan users in UsersController
