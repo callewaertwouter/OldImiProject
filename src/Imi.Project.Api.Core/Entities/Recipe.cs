@@ -15,7 +15,7 @@ namespace Imi.Project.Api.Core.Entities
         // Many recipes will use many ingedriënts
         public ICollection<Ingedrient> Ingedrients { get; set; }
 
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public User User { get; set; }
     }
 }
