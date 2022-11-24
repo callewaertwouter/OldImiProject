@@ -1,12 +1,12 @@
 ﻿using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Infrastructure.Data.Seeding;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 
 namespace Imi.Project.Api.Infrastructure.Data
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<User>
     {
         public DbSet<UnitOfMeasure> UnitsOfMeasure { get; set; }
         public DbSet<Ingedrient> Ingedrients { get; set; }
