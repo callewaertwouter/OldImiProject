@@ -5,6 +5,7 @@ using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Imi.Project.Api.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Imi.Project.Api.Controllers
@@ -76,6 +77,7 @@ namespace Imi.Project.Api.Controllers
             return Ok(recipeDto);
         }
 
+        [Authorize(Policy = "Over15Only")]
         [HttpPost]
         public async Task<IActionResult> Add(RecipeRequestDto recipeDto)
         {
