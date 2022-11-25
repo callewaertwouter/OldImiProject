@@ -16,16 +16,11 @@ namespace Imi.Project.Api.Controllers
            UnitOfMeasure will therefore not have its own controller.
         */
         protected readonly IIngedrientRepository _ingedrientRepository;
-        protected readonly IIngedrientService _ingedrientService;
-        protected readonly IUnitOfMeasureRepository _unitOfMeasureRepository;
 
-        public IngedrientsController(IIngedrientRepository ingedrientRepository,
-                                     IIngedrientService ingedrientService,
-                                     IUnitOfMeasureRepository unitOfMeasureRepository)
+        public IngedrientsController(IIngedrientRepository ingedrientRepository)
         {
             _ingedrientRepository = ingedrientRepository;
-            _ingedrientService = ingedrientService;
-            _unitOfMeasureRepository = unitOfMeasureRepository;
+
         }
 
         [HttpGet]
