@@ -38,16 +38,15 @@ namespace Imi.Project.Api.Controllers
                     Id = i.Id,
                     Name = i.Name,
                     // //System.NullReferenceException: 'Object reference not set to an instance of an object.'
-                    //MeasureUnit = new UnitOfMeasureResponseDto
-                    //{
-                    //    Id = i.UnitOfMeasure.Id,
-                    //    MeasureUnit = i.UnitOfMeasure.MeasureUnit
-                    //}
+                    MeasureUnit = new UnitOfMeasureResponseDto
+                    {
+                        MeasureUnit = i?.UnitOfMeasure?.MeasureUnit
+                    }
                 }).ToList(),
-                //CreatedByUser = new UserResponseDto
-                //{
-                //    Email = r.User.Email
-                //}
+                CreatedByUser = new UserResponseDto
+                {
+                    Email = r.User.Email
+                }
             });
 
             return Ok(recipesDto);
@@ -90,7 +89,8 @@ namespace Imi.Project.Api.Controllers
             {
                 Title = recipeDto.Title,
                 Description = recipeDto.Description,
-                Ingedrients = (ICollection<Ingedrient>)recipeDto.Ingedrients.ToList()
+                Ingedrients = (ICollection<Ingedrient>)recipeDto.Ingedrients.ToList(),
+                UserId = recipeDto.CreatedBy.Id.ToString()
             };
 
             await _recipeRepository.AddAsync(recipeEntity);
