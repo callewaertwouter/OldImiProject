@@ -15,13 +15,10 @@ namespace Imi.Project.Api.Controllers
     public class RecipesController : ControllerBase
     {
         protected readonly IRecipeRepository _recipeRepository;
-        protected readonly IIngedrientRepository _ingedrientRepository;
 
-        public RecipesController(IRecipeRepository recipeRepository, 
-                                 IIngedrientRepository ingedrientRepository)
+        public RecipesController(IRecipeRepository recipeRepository)
         {
             _recipeRepository = recipeRepository;
-            _ingedrientRepository = ingedrientRepository;
         }
 
         [HttpGet]
