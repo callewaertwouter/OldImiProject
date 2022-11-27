@@ -1,6 +1,7 @@
 ﻿@page "/recipes"
 @using Imi.Project.Api.Core.Entities
 @using Imi.Project.Blazor.Services.Crud
+@using Imi.Project.Blazor.Components.Recipe
 @inject ICRUDService<MockRecipe> service;
 
 <h3>Recipes</h3>
@@ -15,12 +16,17 @@
 
     @if (currentRecipe == null)
     {
-        <RecipeList Recipes="recipes">
+        <RecipeList Recipes="recipes"
+                    OnAdd="AddRecipe"
+                    OnEdit="EditRecipe"
+                    OnDelete="DeleteRecipe">
         </RecipeList>
     }
     else
     {
-        <RecipeForm Recipe="currentRecipe">
+        <RecipeForm Recipe="currentRecipe"
+                    OnSave="SaveRecipe"
+                    OnCancel="RefreshRecipes">
         </RecipeForm>
     }
 </div>
