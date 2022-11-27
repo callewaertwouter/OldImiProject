@@ -1,6 +1,7 @@
 ﻿@page "/users"
 @using Imi.Project.Blazor.Models
 @using Imi.Project.Blazor.Services.Crud
+@using Imi.Project.Blazor.Components.User
 @inject ICRUDService<MockUser> service;
 
 <h3>Users</h3>
@@ -15,12 +16,17 @@
 
     @if (currentUser == null)
     {
-        <UserList Users="users">
+        <UserList Users="users"
+                  OnAdd="AddUser"
+                  OnEdit="EditUser"
+                  OnDelete="DeleteUser">
         </UserList>
     }
     else
     {
-        <UserForm User="currentUser">
+        <UserForm User="currentUser"
+                  OnSave="SaveUser"
+                  OnCancel="RefreshUsers">
         </UserForm>
     }
 </div>
