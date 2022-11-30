@@ -137,6 +137,12 @@ app {
 }
 
 /* Quiz CSS */
+.quiz-title{
+    font-size: 24px;
+    font-weight: 500;
+    align-self: center;
+}
+
 .choice {
     background-color: #0366d6;
     border-radius: 5px;
@@ -146,7 +152,7 @@ app {
     box-shadow: -0.5px 0.5px 2px rgb(5, 39, 103);
 }
 
-.choice-hover {
+.choice:hover {
     background-color: #37f0fc;
     border-radius: 3px;
     padding: 10px;
