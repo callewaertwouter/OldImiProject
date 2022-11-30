@@ -1,6 +1,7 @@
 using Imi.Project.Blazor.Models;
 using Imi.Project.Blazor.Models.Mocking;
 using Imi.Project.Blazor.Services.Crud;
+using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ builder.Services.AddServerSideBlazor();
 
 builder.Services.AddTransient<ICRUDService<MockRecipe>, BlazorRecipeService>();
 builder.Services.AddTransient<ICRUDService<MockUser>, BlazorUserService>();
+
+builder.Services.AddMudServices();
 
 var app = builder.Build();
 
