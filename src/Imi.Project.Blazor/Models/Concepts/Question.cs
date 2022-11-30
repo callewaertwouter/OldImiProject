@@ -2,8 +2,10 @@
 {
     public class Question : BaseEntity
     {
-        public string QuestionText { get; set; }
+        public string QuestionTitle { get; set; } = string.Empty;
 
-        public ICollection<Answer> Answers { get; set; }
+        public IEnumerable<string> Choices { get; set; } = new List<string>();
+
+        public string Answer { get; set; } = string.Empty;
     }
 }
