@@ -18,7 +18,8 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="btnBack" Text="Terug naar menu" Style="{DynamicResource BackButtonStyle}" Command="{Binding OpenMenuPageCommand}" />
+            <Button Text="Search Web" Style="{StaticResource BackButtonStyle}" Command="{Binding OpenBrowserCommand}" />
+            <Button x:Name="btnBack" Text="Terug naar menu" Style="{StaticResource BackButtonStyle}" Command="{Binding OpenMenuPageCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
