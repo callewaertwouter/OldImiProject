@@ -9,7 +9,7 @@
                 <TableSection Title="nieuw recept">
                     <ImageCell x:Name="imgRecipe" /> <!--TODO: Add event clicked-->
                     <ViewCell>
-                        <ListView x:Name="lstMeal"
+                        <ListView x:Name="lvMeal"
                                   WidthRequest="150"
                                   HeightRequest="100"
                                   Style="{StaticResource ListViewStyle}">
@@ -18,7 +18,7 @@
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <ListView x:Name="lstIngedrients" 
+                        <ListView x:Name="lvIngedrients" 
                                   WidthRequest="150" 
                                   HeightRequest="200"
                                   HasUnevenRows="True"
@@ -57,10 +57,10 @@
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <Button x:Name="btnAdd" Text="Aanmaken" Clicked="btnAdd_Clicked" Style="{StaticResource StandardButtonStyle}" />
+                        <Button x:Name="btnAdd" Text="Aanmaken" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenRecipeDetailCommand}" />
                     </ViewCell>
                     <ViewCell>
-                        <Button x:Name="btnBack" Text="Annuleren" Clicked="btnBack_Clicked" Style="{StaticResource BackButtonStyle}" />
+                        <Button x:Name="btnBack" Text="Annuleren" Style="{StaticResource BackButtonStyle}" Command="{Binding OpenMenuPageCommand}" />
                     </ViewCell>
                 </TableSection>
             </TableView>
