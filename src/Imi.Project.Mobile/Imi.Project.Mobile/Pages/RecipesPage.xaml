@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Imi.Project.Mobile.ViewModels"
+             xmlns:entities="clr-namespace:Imi.Project.Mobile.Domain.Models"
+             x:DataType="viewmodels:RecipesViewModel"
+             x:Class="Imi.Project.Mobile.Pages.RecipesPage"
+             Style="{StaticResource ContentPageStyle}">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" 
+                     VerticalOptions="Fill">
+            <ListView ItemsSource="{Binding Recipes}" 
+                      Style="{StaticResource ListViewStyle}"
+                      ItemTapped="ListView_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="entities:Recipe">
+                        <TextCell Text="{Binding Title}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="btnBack" Text="Terug naar menu" Style="{DynamicResource BackButtonStyle}" Command="{Binding OpenMenuPageCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
