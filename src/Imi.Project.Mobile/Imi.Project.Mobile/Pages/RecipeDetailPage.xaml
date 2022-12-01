@@ -1,19 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:Imi.Project.Mobile.Pages"
+             xmlns:views="clr-namespace:Imi.Project.Mobile.Pages" 
+             xmlns:viewmodels="clr-namespace:Imi.Project.Mobile.ViewModels" 
+             x:DataType="viewmodels:RecipeDetailViewModel"
              x:Class="Imi.Project.Mobile.Pages.RecipeDetailPage"
              Style="{StaticResource ContentPageStyle}">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-            <Label Text="Recepttitel" Style="{StaticResource CustomTitleStyle}" />
+            <Label Text="{Binding RecipeTitle}" Style="{StaticResource CustomTitleStyle}" />
             <TableView>
-                <TableSection Title="Titel van geselecteerd/aangemaakt recept">
+                <TableSection>
                     <ViewCell>
                         <ListView x:Name="lvAllIngedrients" HeightRequest="150" Style="{StaticResource ListViewStyle}" />
                     </ViewCell>
                     <ViewCell>
-                        <Label x:Name="lblDescription" Text="Beschrijving van dit recept komt hier" HeightRequest="250" />
+                        <Label x:Name="lblDescription" Text="{Binding RecipeDescription}" HeightRequest="250" />
                     </ViewCell>
                     <ViewCell>
                         <Button x:Name="btnBack" Text="Naar menu" Style="{StaticResource BackButtonStyle}" Command="{Binding OpenMenuPageCommand}" />
