@@ -3,7 +3,9 @@ using Imi.Project.Mobile.Domain.Models;
 using Imi.Project.Mobile.Domain.Services;
 using System;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Imi.Project.Mobile.ViewModels
@@ -53,6 +55,25 @@ namespace Imi.Project.Mobile.ViewModels
             }
             );
 
+        public ICommand OpenBrowserCommand => new Command(
+            async () =>
+            {
+                await OpenBrowser(new Uri("https://www.google.be/"));
+            });
 
+        // Xamarin Essentials: Open Browser
+        // https://learn.microsoft.com/en-us/xamarin/essentials/open-browser?tabs=uwp
+        public async Task OpenBrowser(Uri uri)
+        {
+            try
+            {
+                await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }
