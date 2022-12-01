@@ -42,6 +42,9 @@ namespace Imi.Project.Mobile.Pages
             });
         }
 
+        // https://learn.microsoft.com/en-us/answers/questions/428458/how-do-i-use-xamarinessentials-mediapicker-with-mv.html
+        // Check to bind the functions to UI (ImageCell or replace ImageCell with something better)
+
         private string photoPath;
 
         public string PhotoPath 
