@@ -1,5 +1,8 @@
 ﻿using Imi.Project.Mobile.Domain.Services.Features;
 using System;
+using System.IO;
+using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -39,6 +42,20 @@ namespace Imi.Project.Mobile.Pages
             });
         }
 
+        private string photoPath;
+
+        public string PhotoPath 
+        {
+            get => photoPath;
+
+            set
+            {
+                if (photoPath == value) return;
+                photoPath = value;
+                OnPropertyChanged();
+            }
+        }
+
         private void btnSpeechToTextFinalResultReceived(string args)
         {
             lblSpeechToText.Text = args;
@@ -60,6 +77,45 @@ namespace Imi.Project.Mobile.Pages
             {
                 lblSpeechToText.Text = ex.Message;
             }
+        }
+
+        async Task TakePhotoAsync()
+        {
+            try
+            {
+                var photo = await MediaPicker.CapturePhotoAsync();
+                await LoadPhotoAsync(photo);
+                Console.WriteLine($"CapturePhotoAsync COMPLETED: {PhotoPath}");
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature is not supported on the device
+            }
+            catch (PermissionException pEx)
+            {
+                // Permissions not granted
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"CapturePhotoAsync THREW: {ex.Message}");
+            }
+        }
+
+        async Task LoadPhotoAsync(FileResult photo)
+        {
+            // canceled
+            if (photo == null)
+            {
+                PhotoPath = null;
+                return;
+            }
+            // save the file into local storage
+            var newFile = Path.Combine(FileSystem.CacheDirectory, photo.FileName);
+            using (var stream = await photo.OpenReadAsync())
+            using (var newStream = File.OpenWrite(newFile))
+                await stream.CopyToAsync(newStream);
+
+            PhotoPath = newFile;
         }
     }
 }
