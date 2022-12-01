@@ -47,7 +47,10 @@
                         <Button x:Name="btnAddIngedrient" Text="Ingedriënt toevoegen" Style="{StaticResource StandardButtonStyle}" />
                     </ViewCell>
                     <ViewCell>
-                        <Button x:Name="btnSpeechToText" Text="Gebruik Speech-To-Text" Style="{StaticResource StandardButtonStyle}" />
+                        <Button x:Name="btnSpeechToText" Text="Gebruik Speech-To-Text" Style="{StaticResource StandardButtonStyle}" Clicked="btnSpeechToText_Clicked" />
+                    </ViewCell>
+                    <ViewCell>
+                        <Label x:Name="lblSpeechToText" />
                     </ViewCell>
                 </TableSection>
                 <TableSection>
