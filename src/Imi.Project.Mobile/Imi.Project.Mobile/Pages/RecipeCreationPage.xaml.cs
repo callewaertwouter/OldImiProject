@@ -1,5 +1,4 @@
-﻿using Imi.Project.Mobile.Domain.Services;
-using Imi.Project.Mobile.Domain.Services.Features;
+﻿using Imi.Project.Mobile.Domain.Services.Features;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;

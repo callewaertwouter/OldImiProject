@@ -1,4 +1,4 @@
-﻿namespace Imi.Project.Mobile.Domain.Services
+﻿namespace Imi.Project.Mobile.Domain.Services.Features
 {
     public interface ISpeechToText
     {
