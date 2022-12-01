@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Imi.Project.Mobile.Pages"   
              x:Class="Imi.Project.Mobile.Pages.MainPage"
              Style="{StaticResource ContentPageStyle}">
 
@@ -22,10 +23,10 @@
         </Image>
         <Label Text="Inloggen" HorizontalTextAlignment="Center" Style="{StaticResource CustomTitleStyle}" />
         <Entry x:Name="txtEmail" Placeholder="Geef uw e-mailadres in" WidthRequest="200" />
-        <Button x:Name="btnLogin" Text="Inloggen" Clicked="btnLogin_Clicked" Style="{StaticResource StandardButtonStyle}" WidthRequest="250" />
+        <Button x:Name="btnLogin" Text="Inloggen" Style="{StaticResource StandardButtonStyle}" WidthRequest="250" Command="{Binding OpenMenuPageCommand}" />
 
-        <Button x:Name="btnRegister" Text="Registreren" HorizontalOptions="End" VerticalOptions="End" Clicked="btnRegister_Clicked"
-                Style="{StaticResource StandardButtonStyle}" WidthRequest="250" />
+        <Button x:Name="btnRegister" Text="Registreren" HorizontalOptions="End" VerticalOptions="End"
+                Style="{StaticResource StandardButtonStyle}" WidthRequest="250" Command="{Binding OpenRegisterPageCommand}" />
     </StackLayout>
 
 </ContentPage>
