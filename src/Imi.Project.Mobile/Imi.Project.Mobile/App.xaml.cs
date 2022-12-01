@@ -1,7 +1,8 @@
-﻿using Imi.Project.Mobile.Pages;
-using System;
+﻿using FreshMvvm;
+using Imi.Project.Mobile.Domain.Services;
+using Imi.Project.Mobile.Domain.Services.Mocking;
+using Imi.Project.Mobile.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace Imi.Project.Mobile
 {
@@ -11,7 +12,9 @@ namespace Imi.Project.Mobile
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            FreshIOC.Container.Register<IRecipeService>(new MockRecipeService());
+
+            MainPage = new FreshNavigationContainer(FreshPageModelResolver.ResolvePageModel<MainViewModel>());
         }
 
         protected override void OnStart()
