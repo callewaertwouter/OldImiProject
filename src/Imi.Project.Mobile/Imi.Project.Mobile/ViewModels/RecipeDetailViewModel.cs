@@ -23,6 +23,7 @@ namespace Imi.Project.Mobile.ViewModels
                 var recipe = _recipeService.GetRecipe(recipeId);
 
                 RecipeTitle = recipe.Title;
+                RecipeDescription = recipe.Description;
             }
         }
 
@@ -37,6 +38,21 @@ namespace Imi.Project.Mobile.ViewModels
             set
             {
                 recipeTitle = value;
+                RaisePropertyChanged();
+            }
+        }
+
+        private string recipeDescription;
+
+        public string RecipeDescription
+        {
+            get
+            {
+                return recipeDescription;
+            }
+            set
+            {
+                recipeDescription = value;
                 RaisePropertyChanged();
             }
         }
