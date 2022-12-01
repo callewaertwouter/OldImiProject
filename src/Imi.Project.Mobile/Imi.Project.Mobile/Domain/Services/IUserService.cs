@@ -8,6 +8,6 @@ namespace Imi.Project.Mobile.Domain.Services
     {
         Task<User> GetUser(Guid id);
 
-        //TODO: Maybe add UpdateUser and DeleteUser later if required or enough time left in december
+        Task<User> UpdateUser(User user);
     }
 }
