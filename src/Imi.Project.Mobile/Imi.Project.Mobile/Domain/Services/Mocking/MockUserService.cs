@@ -19,5 +19,15 @@ namespace Imi.Project.Mobile.Domain.Services.Mocking
             var user = users.FirstOrDefault(u => u.Id == id);
             return await Task.FromResult(user);
         }
+
+        public async Task<User> UpdateUser(User user)
+        {
+            var oldUser = users.FirstOrDefault(u => u.Id == user.Id);
+
+            users.Remove(oldUser);
+            users.Add(user);
+
+            return await Task.FromResult(user);
+        }
     }
 }
