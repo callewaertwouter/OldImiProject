@@ -16,17 +16,14 @@ namespace Imi.Project.Mobile.Domain.Services.Mocking
         };
 
 
-        public async Task<Recipe> GetRecipe(Guid id)
+        public Recipe GetRecipe(Guid id)
         {
-            var recipe = recipes.FirstOrDefault(r => r.Id == id);
-            return await Task.FromResult(recipe);
+            return recipes.FirstOrDefault(r => r.Id == id);
         }
 
-        public Task<Recipe> GetAllRecipes()
+        public IEnumerable<Recipe> GetRecipes()
         {
-            throw new NotImplementedException();
-
-            //TODO: Write this method once API connection is established, GetAll() function is needed
+            return recipes;
         }
 
         public async Task<Recipe> AddRecipe(Recipe recipe)
