@@ -28,10 +28,10 @@ namespace Imi.Project.Mobile.ViewModels
             }
             );
 
-        public ICommand OpenMenuPageCommand => new Command(
+        public ICommand OpenQuizPageCommand => new Command(
             async () =>
             {
-                await CoreMethods.PushPageModel<MenuViewModel>(true);
+                await CoreMethods.PushPageModel<QuizViewModel>(true);
             }
             );
     }
