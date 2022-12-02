@@ -65,13 +65,22 @@ namespace Imi.Project.Mobile.ViewModels
         // https://learn.microsoft.com/en-us/xamarin/essentials/open-browser?tabs=uwp
         public async Task OpenBrowser(Uri uri)
         {
+            var current = Connectivity.NetworkAccess;
+
             try
             {
-                await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
-            }
-            catch (Exception ex)
-            {
+                if (current == NetworkAccess.Internet)
+                {
+                    await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+                }
+                else
+                {
+                    await Application.Current.MainPage.DisplayAlert("Probleem!", "Controleer uw internetverbinding.", "Ok");
+                }
 
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
