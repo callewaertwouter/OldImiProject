@@ -247,9 +247,3 @@ namespace Imi.Project.Api.Controllers
         }
     }
 }
-
-// TODO 1) Fix policies en zorg ervoor dat ze correct toegepast worden (mensen jonger dan 15 kunnen nog altijd registreren)
-
-// TODO 2) Valideer ingedrienten bij aanmaken/updaten van recept
-// TODO 3) Lijst van ingedrienten toevoegen aan recepten in RecipesController
-// TODO 4) Lijst van recepten toevoegen aan users in UsersController
