@@ -2,9 +2,11 @@
 using Android.Content;
 using Android.Speech;
 using Imi.Project.Mobile.Domain.Services.Features;
+using Imi.Project.Mobile.Droid;
 using Plugin.CurrentActivity;
 using System;
 
+[assembly: Xamarin.Forms.Dependency(typeof(SpeechToTextImplementation))]
 namespace Imi.Project.Mobile.Droid
 {
     public class SpeechToTextImplementation : ISpeechToText
