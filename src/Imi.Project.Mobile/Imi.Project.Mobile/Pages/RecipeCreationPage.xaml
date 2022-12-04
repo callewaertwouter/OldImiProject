@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:Imi.Project.Mobile.ViewModels" 
+             x:DataType="viewmodels:RecipeCreationViewModel"
              x:Class="Imi.Project.Mobile.Pages.RecipeCreationPage"
              Style="{StaticResource ContentPageStyle}">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <TableView>
-                <TableSection Title="nieuw recept">
+                <TableSection Title="Nieuw recept">
+                    <EntryCell Text="{Binding RecipeTitle}"></EntryCell>
                     <ImageCell x:Name="imgRecipe" /> <!--TODO: Add event clicked-->
                     <ViewCell>
                         <ListView x:Name="lvMeal"
@@ -55,12 +58,16 @@
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <Editor x:Name="txtDescription" Placeholder="Beschrijf de bereiding van uw recept." HeightRequest="250" />
+                        <Editor x:Name="txtDescription" Text="{Binding RecipeDescription}" Placeholder="Beschrijf de bereiding van uw recept." HeightRequest="250" />
+                    </ViewCell>
+                    <ViewCell>
+                        <Label Text="{Binding RecipeDescriptionError}"
+                               IsVisible="{Binding RecipeDescriptionErrorVisible}" />
                     </ViewCell>
                 </TableSection>
                 <TableSection>
                     <ViewCell>
-                        <Button x:Name="btnAdd" Text="Aanmaken" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenRecipeDetailCommand}" />
+                        <Button x:Name="btnAdd" Text="Aanmaken" Style="{StaticResource StandardButtonStyle}" Command="{Binding SaveRecipeCommand}" />
                     </ViewCell>
                     <ViewCell>
                         <Button x:Name="btnBack" Text="Annuleren" Style="{StaticResource BackButtonStyle}" Command="{Binding OpenMenuPageCommand}" />

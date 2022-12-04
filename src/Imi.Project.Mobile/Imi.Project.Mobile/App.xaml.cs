@@ -1,5 +1,6 @@
 ﻿using FreshMvvm;
 using Imi.Project.Mobile.Domain.Services;
+using Imi.Project.Mobile.Domain.Services.Api;
 using Imi.Project.Mobile.Domain.Services.Mocking;
 using Imi.Project.Mobile.ViewModels;
 using Xamarin.Forms;
@@ -13,6 +14,8 @@ namespace Imi.Project.Mobile
             InitializeComponent();
 
             FreshIOC.Container.Register<IRecipeService>(new MockRecipeService());
+            FreshIOC.Container.Register<IUserService>(new MockUserService());
+            FreshIOC.Container.Register<IWebApiClient, WebApiClient>().AsSingleton();
 
             MainPage = new FreshNavigationContainer(FreshPageModelResolver.ResolvePageModel<MainViewModel>());
         }
