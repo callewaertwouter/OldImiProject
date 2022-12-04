@@ -73,7 +73,7 @@ namespace Imi.Project.Mobile.Droid
 
         public void StopSpeechToText()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }
