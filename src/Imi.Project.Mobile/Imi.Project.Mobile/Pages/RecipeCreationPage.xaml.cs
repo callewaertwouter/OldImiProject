@@ -1,5 +1,6 @@
 ﻿using Imi.Project.Mobile.Domain.Services.Features;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -93,10 +94,12 @@ namespace Imi.Project.Mobile.Pages
             catch (FeatureNotSupportedException fnsEx)
             {
                 // Feature is not supported on the device
+                Debug.WriteLine(fnsEx.Message);
             }
             catch (PermissionException pEx)
             {
                 // Permissions not granted
+                Debug.WriteLine(pEx.Message);
             }
             catch (Exception ex)
             {
@@ -122,3 +125,8 @@ namespace Imi.Project.Mobile.Pages
         }
     }
 }
+
+// https://medium.com/@dev.aritradas/xamarin-forms-speech-recognition-c16f07cdf164
+//TODO: MVVM toepassen op SpeechToText
+//TODO: SpeechToText output moet in txtDescription komen, hoe doe ik dit (kan niet uitmaken uit documentatie hoe dit te doen)
+//TODO: MVVM toepassen op cameragebruik en uitvogelen hoe ik best het gebruik van camera toepast
