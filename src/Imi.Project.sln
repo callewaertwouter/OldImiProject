@@ -31,7 +31,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imi.Project.Wpf", "Imi.Proj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imi.Project.Shared", "Imi.Project.Shared\Imi.Project.Shared.csproj", "{6F52D0C7-6241-463B-BD25-49CD9F553D79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imi.Project.Tests", "Imi.Project.Tests\Imi.Project.Tests.csproj", "{8FF6F3DC-AE0F-4470-ACCB-C62D6F4AAB64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Imi.Project.Tests", "Imi.Project.Tests\Imi.Project.Tests.csproj", "{8FF6F3DC-AE0F-4470-ACCB-C62D6F4AAB64}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F1C8F9A-18CF-4023-A153-F3E95EB50334}"
+	ProjectSection(SolutionItems) = preProject
+		Waslijst.txt = Waslijst.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

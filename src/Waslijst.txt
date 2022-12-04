@@ -1,0 +1,59 @@
+# PIN
+
+1) Connectie met Web API maken
+2) Naast Recepten en Gebruikers, ook CRUD voor Ingedrienten aanmaken
+3) Recepten en Gebruikers weergeven zoals in de API
+4) Quiz vragen uitbreiden
+5) 3 willekeurige vragen (Random functie) selecteren
+
+
+# PRI
+
+1) NullReferenceException oplossen met maateenheden (MeasureUnit) in RecipesController (wordt wel correct weergegeven in IngedrientsController)
+2) Validatie voor ingedrienten bij aanmaken van recepten (RecipeService)
+3) Email van LoginUserRequestDto aanpassen, gelijkstellen aan Username
+4) Alle gevraagde claims in token steken (best navragen bij Dries want je controleerde dit al vóór je indiende en blijkbaar toch iets gemist)
+5) Voor gebruikers, validatie voorzien zodat tijdreizigers geen datum in de toekomst kunnen selecteren om te registreren
+6) Endpoints aanpassen voor inloggen en registreren
+7) Alle endpoints (en dus niet enkel UserController zoals je verkeerdelijk aannam) afschermen met Authorize
+8) Policies (User en Admin) toepassen
+9) Over15Only policy toepassen (bv. in RecipesController bij proberen aanmaken van een recept ofzo)
+10) VUE.JS!!!
+
+# MDE
+## RecipeCreationPage
+1) UI volledig in orde zetten
+2) Camera-functie volledig functioneel maken
+3) Speech-To-Text: zorg ervoor dat output in txtDescription terechtkomt.
+## Algemeen
+4) Behaviours toevoegen
+5) Convertors toevoegen
+6) Connectie met API maken en ervoor zorgen dat lijst in RecipesPage alle recepten van de database weergeeft
+
+
+# Analyse van haalbaarheid per vak
+## PIN
+Zeker haalbaar om alles af te werken. Als de verbinding met de API gelegd is, is het vermoedelijk enkel nog aanpassen van de razor pagina's om alle data correct
+weer te geven. Daarna kijken hoe ik best zo'n random-functie kan gebruiken voor 3 willekeurige vragen en controleren dat de score effectief op 3 punten is ipv
+op 6 punten (= totaal aantal vragen in data).
+
+## PRI
+Ondanks dat dit het meest aantal puntjes in de waslijst heeft, zouden puntjes 1 tot 9 niet al teveel tijd in beslag moeten nemen, zeker als ik hiervoor nog navraag
+doe bij Dries via mail. Het zullen vast geen al te ingewikkelde problemen en/of oplossingen zijn waarvoor ik anders zou moeten langskomen.
+
+De grootste wild-card is Vue.Js. Hoe vlot zal dit gaan?
+
+## MDE
+Elk puntje is vrij lastig op te lossen. Onzeker of ik hiervoor kan vragen aan Maxim voor hulp, echt simpel lijkt het niet om het probleem te beschrijven.
+
+
+# Doelstelling voor projectvoorstelling per vak
+## PIN
+Zou volledig in orde moeten geraken.
+
+## PRI
+Puntjes 1 t.e.m. 9 kunnen zeker opgelost worden voor de projectvoorstelling. Niet zeker over Vue.Js
+
+## MDE
+Zeer onwaarschijnlijk om alles af te werken. Focus zal liggen op PIN en PRI, daarna MDE. De hoofdzaak voor MDE blijft dat alle code werkt en alles wat momenteel
+in code-behind staat, ook effectief gebruikt kan worden (bv. Speech-To-Text en camera-functie).
