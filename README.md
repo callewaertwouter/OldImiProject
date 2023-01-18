@@ -1,4 +1,4 @@
-# Personal Receipts On Trade (subject to change)
+# Creative Recipes App Platform
 
 ## Project
 Voor deze app moet de gebruiker zich registreren en inloggen. Daarna kan de gebruiker een recept aanmaken. Voor dit recept kan de gebruiker
