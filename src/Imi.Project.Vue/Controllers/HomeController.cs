@@ -23,6 +23,16 @@ namespace Imi.Project.Vue.Controllers
             return View();
         }
 
+        public IActionResult Recipes()
+        {
+            return View();
+        }
+
+        public IActionResult Users()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
