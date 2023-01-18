@@ -61,7 +61,7 @@
     {
         try
         {
-            if (currentUser.Id == 0) await service.Create(currentUser);
+            if (currentUser.Id.Equals(Guid.Empty)) await service.Create(currentUser);
             else await service.Update(currentUser);
 
             await this.RefreshUsers();
