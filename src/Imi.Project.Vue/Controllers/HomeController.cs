@@ -33,6 +33,11 @@ namespace Imi.Project.Vue.Controllers
             return View();
         }
 
+        public IActionResult Ingedrients()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
