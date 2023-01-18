@@ -61,7 +61,7 @@
     {
         try
         {
-            if (currentRecipe.Id == 0) await service.Create(currentRecipe);
+            if (currentRecipe.Id.Equals(Guid.Empty)) await service.Create(currentRecipe);
             else await service.Update(currentRecipe);
 
             await this.RefreshRecipes();
