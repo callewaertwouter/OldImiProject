@@ -1,0 +1,89 @@
+﻿@{
+	ViewData["Title"] = "Recipes with Vue";
+}
+
+<div class="text-center">
+	<h1 class="display-3">Recipes</h1>
+</div>
+
+<div id="app" class="row">
+	<div class="col-md-3">
+		<ul>
+			<li v-for="recipe in recipes" v-on:click="getRecipeDetails(recipe)">
+				{{recipe.title}}
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-5">
+		<div v-if="currentRecipe">
+			 <div class="form-group">
+                <label>ID</label>
+                <input class="form-control" v-model="currentRecipe.id" readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <label>Title</label>
+                <input class="form-control" v-model="currentRecipe.title" readonly="readonly" />
+            </div>
+            <div class="form-group">
+                <label>Description</label>
+                <input class="form-control" v-model="currentRecipe.description" readonly="readonly" />
+            </div>            
+			<div class="form-group">
+                <label>Ingedrients</label>
+				<ul>
+					<li v-for="ingedrient in currentRecipe.ingedrients">
+						{{ingedrient.name}}
+					</li>
+				</ul>
+            </div>
+			<div class="form-group">
+				<label>Created by</label>
+				<input class="form-control" v-model="currentRecipe.createdByUser.email" readonly="readonly" />
+			</div>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/lib/vue/vue.js"></script>
+	<script src="~/lib/axios/axios.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="~/css/site.css" />
+
+	<script>
+		const baseUrl = "https://localhost:5001/api/recipes";
+		var app = new Vue({
+			el: "#app",
+			data: {
+				recipes: [],
+				currentRecipe: null,
+				errorMessage: "",
+				isLoading: false
+			},
+
+			created: function () {
+				var self = this;
+				self.fetchRecipes();
+			},
+
+			methods: {
+				fetchRecipes: function () {
+					var self = this;
+					axios.get(`${baseUrl}`)
+						 .then(function (response) {
+							 self.recipes = response.data;
+							 console.log(self.recipes);
+						 })
+						 .catch(function (error) {
+							 console.error(error);
+						 });
+				},
+
+				getRecipeDetails: function (recipe) {
+					var self = this;
+					self.currentRecipe = recipe;
+				}
+			}
+		});
+	</script>
+}
