@@ -7,12 +7,12 @@ namespace Imi.Project.Blazor.Services.Crud
     {
         static List<MockUser> users = new List<MockUser>
         {
-            new MockUser() { Id=1, Name="Wouter Callewaert"},
-            new MockUser() { Id=2, Name="David Norenberg"},
-            new MockUser() { Id=3, Name="Admin"},
+            new MockUser() { Id=Guid.NewGuid(), Name="Wouter Callewaert"},
+            new MockUser() { Id=Guid.NewGuid(), Name="David Norenberg"},
+            new MockUser() { Id=Guid.NewGuid(), Name="Admin"},
         };
 
-        public Task<MockUser> Get(int id)
+        public Task<MockUser> Get(Guid id)
         {
             return Task.FromResult(
                 users.SingleOrDefault(x => x.Id == id)
@@ -32,7 +32,8 @@ namespace Imi.Project.Blazor.Services.Crud
 
         public Task Create(MockUser item)
         {
-            item.Id = users.Count() > 0 ? users.Max(x => x.Id) + 1 : 1;
+            //item.Id = users.Count() > 0 ? users.Max(x => x.Id) + 1 : 1;
+            item.Id = Guid.NewGuid();
             users.Add(item);
             return Task.CompletedTask;
         }
@@ -49,7 +50,7 @@ namespace Imi.Project.Blazor.Services.Crud
             return Task.CompletedTask;
         }
 
-        public Task Delete(int id)
+        public Task Delete(Guid id)
         {
             var user = users.SingleOrDefault(x => x.Id == id);
 
