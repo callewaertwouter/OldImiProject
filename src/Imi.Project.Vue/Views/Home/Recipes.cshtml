@@ -6,6 +6,10 @@
 	<h1 class="display-3">Recipes</h1>
 </div>
 
+<div class="row">
+	<input type="text" v-model="recipeSearch" class="form-control mb-5" placeholder="Search for a recipe..." v-on:input="searchRecipe" />
+</div>
+
 <div id="app" class="row">
 	<div class="col-md-3">
 		<ul>
@@ -48,17 +52,15 @@
 @section Scripts{
 	<script src="~/lib/vue/vue.js"></script>
 	<script src="~/lib/axios/axios.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="~/css/site.css" />
 
 	<script>
-		const baseUrl = "https://localhost:5001/api/recipes";
+		const baseUrl = "https://localhost:5001/api";
 		var app = new Vue({
 			el: "#app",
 			data: {
 				recipes: [],
 				currentRecipe: null,
-				errorMessage: "",
-				isLoading: false
+				recipeSearch: ""
 			},
 
 			created: function () {
@@ -67,22 +69,32 @@
 			},
 
 			methods: {
-				fetchRecipes: function () {
+				fetchRecipes: async function () {
 					var self = this;
-					axios.get(`${baseUrl}`)
-						 .then(function (response) {
-							 self.recipes = response.data;
-							 console.log(self.recipes);
-						 })
-						 .catch(function (error) {
-							 console.error(error);
-						 });
+					await axios.get(`${baseUrl}/recipes`)
+							   .then(function (response) {
+									self.recipes = response.data;
+									console.log(self.recipes);
+							   })
+							   .catch(function (error) {
+									console.error(error);
+							   });
 				},
 
 				getRecipeDetails: function (recipe) {
 					var self = this;
 					self.currentRecipe = recipe;
-				}
+				},
+
+				searchRecipe: async function () {
+					const recipesFromApi = await axios.get(`${baseUrl}/search?searchQuery=${this.recipeSearch}`)
+						.then((response) => {
+							this.recipes = response.data
+						})
+						.catch((e) => {
+							console.log(e.message);
+						});
+				},
 			}
 		});
 	</script>
