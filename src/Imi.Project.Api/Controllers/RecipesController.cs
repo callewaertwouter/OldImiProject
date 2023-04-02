@@ -29,7 +29,6 @@ namespace Imi.Project.Api.Controllers
             var recipes = await _recipeRepository.ListAllAsync();
             var recipesDto = recipes.Select(r => new RecipeResponseDto
             {
-                Id = r.Id,
                 Title = r.Title,
                 Description = r.Description,
                 Ingedrients = r.Ingedrients.Select(i => new IngedrientResponseDto
