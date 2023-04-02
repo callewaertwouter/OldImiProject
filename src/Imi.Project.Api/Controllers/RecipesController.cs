@@ -15,10 +15,12 @@ namespace Imi.Project.Api.Controllers
     public class RecipesController : ControllerBase
     {
         protected readonly IRecipeRepository _recipeRepository;
+        protected readonly IUnitOfMeasureRepository _unitOfMeasureRepository;
 
-        public RecipesController(IRecipeRepository recipeRepository)
+        public RecipesController(IRecipeRepository recipeRepository, IUnitOfMeasureRepository unitOfMeasureRepository)
         {
             _recipeRepository = recipeRepository;
+            _unitOfMeasureRepository = unitOfMeasureRepository;
         }
 
         [HttpGet]
@@ -32,12 +34,10 @@ namespace Imi.Project.Api.Controllers
                 Description = r.Description,
                 Ingedrients = r.Ingedrients.Select(i => new IngedrientResponseDto
                 {
-                    Id = i.Id,
                     Name = i.Name,
-                    // //System.NullReferenceException: 'Object reference not set to an instance of an object.'
                     MeasureUnit = new UnitOfMeasureResponseDto
                     {
-                        MeasureUnit = i?.UnitOfMeasure?.MeasureUnit
+                        MeasureUnit = _unitOfMeasureRepository.GetByIdAsync(i.UnitOfMeasureId).Result.MeasureUnit
                     }
                 }).ToList(),
                 CreatedByUser = new UserResponseDto
