@@ -45,11 +45,20 @@ namespace Imi.Project.Api.Core.Services
             }
             else
             {
-                var recipes = new List<Recipe>();
-                recipes.Add(recipe);
+                var recipeIngedrients = result.Recipes.Select(x => x.Ingedrients).ToList();
+                if (recipeIngedrients == null)
+                {
+                    validationResults.Add(new ValidationResult($"Ingedrients not found for this recipe."));
+                    result.IsSuccess = false;
+                }
+                else
+                {
+                    var recipes = new List<Recipe>();
+                    recipes.Add(recipe);
 
-                result.Recipes = recipes;
-                result.IsSuccess = true;
+                    result.Recipes = recipes;
+                    result.IsSuccess = true;
+                }
             }
 
             result.ValidationResults = validationResults;
