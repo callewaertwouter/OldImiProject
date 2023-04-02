@@ -77,7 +77,7 @@ namespace Imi.Project.Api.Controllers
         [HttpPost("api/auth/login")]
         public async Task<IActionResult> Login([FromBody] LoginUserRequestDto login)
         {
-            var result = await _signInManager.PasswordSignInAsync(login.UserName, login.Password, isPersistent: false, lockoutOnFailure: false);
+            var result = await _signInManager.PasswordSignInAsync(login.Email, login.Password, isPersistent: false, lockoutOnFailure: false);
 
             if (!result.Succeeded)
             {
