@@ -1,0 +1,87 @@
+﻿@page "/ingedrientsapi"
+@using Imi.Project.Api.Core.Entities
+@using Imi.Project.Blazor.Services.Crud
+@using Imi.Project.Blazor.Components.Ingedrient
+@inject ICRUDService<Ingedrient> service;
+
+<h3>Ingedrients from API</h3>
+
+<div class="mt-3">
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <div class="alert alert-danger">
+            @error
+        </div>
+    }
+
+    @if (currentIngedrient == null)
+    {
+        <IngedrientApiList Ingedrients="ingedrients"
+                   OnAdd="AddIngedrient"
+                   OnEdit="EditIngedrient"
+                   OnDelete="DeleteIngedrient">
+        </IngedrientApiList>
+    }
+    else
+    {
+        <IngedrientApiForm Ingedrient="currentIngedrient"
+                   OnSave="SaveIngedrient"
+                   OnCancel="RefreshIngedrients">
+        </IngedrientApiForm>
+    }
+</div>
+
+@code {
+    private Ingedrient[] ingedrients = new Ingedrient[0];
+    private Ingedrient? currentIngedrient;
+    private string? error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await RefreshIngedrients();
+    }
+
+    public async Task RefreshIngedrients()
+    {
+        ingedrients = (await service.GetAll()).ToArray();
+        this.currentIngedrient = null;
+    }
+
+    public void AddIngedrient()
+    {
+        this.currentIngedrient = new Ingedrient();
+    }
+
+    public async Task EditIngedrient(Ingedrient item)
+    {
+        this.currentIngedrient = await service.Get(item.Id);
+    }
+
+    public async Task SaveIngedrient(Ingedrient item)
+    {
+        try
+        {
+            if (currentIngedrient.Id.Equals(Guid.Empty)) await service.Create(currentIngedrient);
+            else await service.Update(currentIngedrient);
+
+            await this.RefreshIngedrients();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+
+    public async Task DeleteIngedrient(Ingedrient item)
+    {
+        try
+        {
+            await service.Delete(item.Id);
+            await this.RefreshIngedrients();
+        }
+        catch (Exception ex)
+        {
+            this.error = ex.Message;
+        }
+    }
+}
