@@ -1,72 +1,74 @@
 ﻿using Imi.Project.Api.Core.DTOs.User;
 using Imi.Project.Api.Core.Entities;
 using Imi.Project.Blazor.Services.Crud;
-using System.Net.Http.Headers;
 
-namespace Imi.Project.Blazor.Services.Api
+namespace Imi.Project.Blazor.Services.Api;
+
+public class UserApiService : ICRUDService<User>
 {
-    public class UserApiService : ICRUDService<User>
+    private string baseUrl = "https://localhost:5001/api/users";
+    private readonly HttpClient _httpClient;
+
+    //HttpClient client = new HttpClient();
+
+    public UserApiService(HttpClient httpClient)
     {
-        private string baseUrl = "https://localhost:5001/api/users";
-        private readonly HttpClient _httpClient = null;
+        _httpClient = httpClient;
 
-        //HttpClient client = new HttpClient();
+        //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "Token");
 
-        public UserApiService(HttpClient httpClient)
+        //var response = client.GetAsync(baseUrl);
+    }
+
+    public async Task<User> Get(Guid id)
+    {
+        var dto = await _httpClient.GetFromJsonAsync<UserRequestDto>($"{baseUrl}/{id}");
+
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+        return new User
         {
-            _httpClient = httpClient;
+            Id = dto.Id.ToString(),
+            Email = dto.Email
+        };
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+    }
 
-            //client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "Token");
+    public async Task<IQueryable<User>> GetAll()
+    {
+        var dtos = await _httpClient.GetFromJsonAsync<UserRequestDto[]>($"{baseUrl}");
 
-            //var response = client.GetAsync(baseUrl);
-        }
-
-        public async Task<User> Get(Guid id)
+#pragma warning disable CS8604 // Possible null reference argument.
+        return dtos.Select(dto => new User
         {
-            var dto = await _httpClient.GetFromJsonAsync<UserRequestDto>($"{baseUrl}/{id}");
+            Id = dto.Id.ToString(),
+            Email = dto.Email
+        }).AsQueryable();
+#pragma warning restore CS8604 // Possible null reference argument.
+    }
 
-            return new User
-            {
-                Id = dto.Id.ToString(),
-                Email = dto.Email
-            };
-        }
-
-        public async Task<IQueryable<User>> GetAll()
+    public Task Create(User item)
+    {
+        var dto = new UserRequestDto
         {
-            var dtos = await _httpClient.GetFromJsonAsync<UserRequestDto[]>($"{baseUrl}");
+            Id = Guid.NewGuid(),
+            Email = item.Email
+        };
 
-            return dtos.Select(dto => new User
-            {
-                Id = dto.Id.ToString(),
-                Email = dto.Email
-            }).AsQueryable();
-        }
+        return _httpClient.PostAsJsonAsync($"{baseUrl}", dto);
+    }
 
-        public Task Create(User item)
+    public Task Update(User item)
+    {
+        var dto = new UserRequestDto
         {
-            var dto = new UserRequestDto
-            {
-                Id = Guid.NewGuid(),
-                Email = item.Email
-            };
+            Email = item.Email
+        };
 
-            return _httpClient.PostAsJsonAsync<UserRequestDto>($"{baseUrl}", dto);
-        }
+        return _httpClient.PutAsJsonAsync($"{baseUrl}/{item.Id}", dto);
+    }
 
-        public Task Update(User item)
-        {
-            var dto = new UserRequestDto
-            {
-                Email = item.Email
-            };
-
-            return _httpClient.PutAsJsonAsync<UserRequestDto>($"{baseUrl}/{item.Id}", dto);
-        }
-
-        public Task Delete(Guid id)
-        {
-            return _httpClient.DeleteAsync($"{baseUrl}/{id}");
-        }
+    public Task Delete(Guid id)
+    {
+        return _httpClient.DeleteAsync($"{baseUrl}/{id}");
     }
 }
