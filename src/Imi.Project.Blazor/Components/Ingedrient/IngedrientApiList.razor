@@ -1,0 +1,47 @@
+﻿@using Imi.Project.Blazor.Models
+@using Imi.Project.Api.Core.Entities;
+
+<button class="btn btn-dark" @onclick="OnAdd">Add ingedrient</button>
+<table class="table mt-4">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Id</th>
+			<th>Name</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var ingedrient in Ingedrients)
+		{
+			<tr>
+				<td>
+					<button class="btn btn-warning" @onclick="e => OnEdit.InvokeAsync(ingedrient)">Edit</button>
+				</td>
+				<td>
+					@ingedrient.Id
+				</td>
+				<td>
+					@ingedrient.Name
+				</td>
+				<td>
+					<button class="btn btn-danger" @onclick="e => OnDelete.InvokeAsync(ingedrient)">Delete</button>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+@code {
+	[Parameter]
+	public Ingedrient[]? Ingedrients { get; set; }
+
+	[Parameter]
+	public EventCallback OnAdd { get; set; }
+
+	[Parameter]
+	public EventCallback<Ingedrient> OnEdit { get; set; }
+
+	[Parameter]
+	public EventCallback<Ingedrient> OnDelete { get; set; }
+}

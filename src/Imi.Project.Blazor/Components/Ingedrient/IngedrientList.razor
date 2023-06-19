@@ -1,0 +1,46 @@
+﻿@using Imi.Project.Blazor.Models
+
+<button class="btn btn-dark" @onclick="OnAdd">Add ingedrient</button>
+<table class="table mt-4">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Id</th>
+			<th>Name</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var ingedrient in Ingedrients)
+		{
+			<tr>
+				<td>
+					<button class="btn btn-warning" @onclick="e => OnEdit.InvokeAsync(ingedrient)">Edit</button>
+				</td>
+				<td>
+					@ingedrient.Id
+				</td>
+				<td>
+					@ingedrient.Name
+				</td>
+				<td>
+					<button class="btn btn-danger" @onclick="e => OnDelete.InvokeAsync(ingedrient)">Delete</button>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+@code {
+	[Parameter]
+	public MockIngedrient[]? Ingedrients { get; set; }
+
+	[Parameter]
+	public EventCallback OnAdd { get; set; }
+
+	[Parameter]
+	public EventCallback<MockIngedrient> OnEdit { get; set; }
+
+	[Parameter]
+	public EventCallback<MockIngedrient> OnDelete { get; set; }
+}
