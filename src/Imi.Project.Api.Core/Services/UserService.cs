@@ -1,13 +1,10 @@
 ﻿using Imi.Project.Api.Core.Entities;
 using Imi.Project.Api.Core.Infrastructure;
 using Imi.Project.Api.Core.Services.Interfaces;
-using Imi.Project.Api.Core.Services.Models.RecipeService;
 using Imi.Project.Api.Core.Services.Models.UserService;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Imi.Project.Api.Core.Services
@@ -48,7 +45,6 @@ namespace Imi.Project.Api.Core.Services
             {
                 var users = new List<User>();
                 users.Add(user);
-
                 result.Users = users;
                 result.IsSuccess = true;
             }
