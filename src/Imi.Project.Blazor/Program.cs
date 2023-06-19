@@ -3,7 +3,6 @@ using Imi.Project.Blazor.Models;
 using Imi.Project.Blazor.Models.Mocking;
 using Imi.Project.Blazor.Services.Api;
 using Imi.Project.Blazor.Services.Crud;
-using Microsoft.AspNetCore.Identity;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,9 +12,11 @@ builder.Services.AddServerSideBlazor();
 
 builder.Services.AddTransient<ICRUDService<MockRecipe>, BlazorRecipeService>();
 builder.Services.AddTransient<ICRUDService<MockUser>, BlazorUserService>();
+builder.Services.AddTransient<ICRUDService<MockIngedrient>, BlazorIngedrientService>();
 
 builder.Services.AddTransient<ICRUDService<User>, UserApiService>();
 builder.Services.AddTransient<ICRUDService<Recipe>, RecipeApiService>();
+builder.Services.AddTransient<ICRUDService<Ingedrient>, IngedrientApiService>();
 
 builder.Services.AddMudServices();
 
