@@ -52,10 +52,11 @@ namespace Imi.Project.Api.Controllers
                 HasApprovedTermsAndConditions = registration.HasApprovedTermsAndConditions
             };
 
-            if (!newUser.HasApprovedTermsAndConditions)
-            {
-                return Problem("You need to accept terms and conditions to register!");
-            }
+            if (!newUser.HasApprovedTermsAndConditions) return Problem("You need to accept terms and conditions to register!");
+
+            if (newUser.Birthday.Date > DateTime.Now.Date) return Problem("Sorry, we don't allow timetravellers just yet. Please select a date before today");
+
+            if (newUser.Birthday.Year > DateTime.Now.Year - 15) return Problem("You need to be at least 15 years old to register. Think that's unfair? Welcome to the world kiddo.");
 
             IdentityResult result = await _userManager.CreateAsync(newUser, registration.Password);
             if (!result.Succeeded)
