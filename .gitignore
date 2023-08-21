@@ -59,6 +59,9 @@ artifacts/
 # StyleCop
 StyleCopReport.xml
 
+# Personal TODO-list
+Waslijst.txt
+
 # Files built by Visual Studio
 *_i.c
 *_p.c
@@ -338,3 +341,4 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/src/Waslijst.txt
