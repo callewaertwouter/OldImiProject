@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Speech;
 using Imi.Project.Mobile.Domain.Services.Features;
 using Xamarin.Forms;
+using SkiaSharp;
+using SkiaSharp.Views.Forms;
 
 namespace Imi.Project.Mobile.Droid
 {
@@ -23,6 +25,8 @@ namespace Imi.Project.Mobile.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            //SkiaSharp.SKCanvasViewRenderer.Init();
+
             LoadApplication(new App());
         }
 

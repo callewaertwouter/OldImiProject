@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+﻿using Windows.ApplicationModel.Activation;
+using Xamarin.Forms;
 
 namespace Imi.Project.Mobile.UWP
 {
@@ -23,5 +11,12 @@ namespace Imi.Project.Mobile.UWP
 
             LoadApplication(new Imi.Project.Mobile.App());
         }
+
+        //protected override void OnLaunched(LaunchActivatedEventArgs e)
+        //{
+        //    SkiaSharp.Views.UWP.SKCanvasViewRenderer.Init();
+
+        //    base.OnLaunched(e);
+        //}
     }
 }
