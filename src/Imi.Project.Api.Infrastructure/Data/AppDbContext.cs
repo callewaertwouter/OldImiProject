@@ -11,7 +11,7 @@ namespace Imi.Project.Api.Infrastructure.Data
         public DbSet<UnitOfMeasure> UnitsOfMeasure { get; set; }
         public DbSet<Ingedrient> Ingedrients { get; set; }
         public DbSet<Recipe> Recipes { get; set; }
-        public DbSet<User> Users { get; set; }
+        //public DbSet<User> Users { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
