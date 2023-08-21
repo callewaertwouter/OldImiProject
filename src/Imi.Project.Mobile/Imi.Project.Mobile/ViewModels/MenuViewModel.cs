@@ -1,7 +1,4 @@
 ﻿using FreshMvvm;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -32,6 +29,20 @@ namespace Imi.Project.Mobile.ViewModels
             async () =>
             {
                 await CoreMethods.PushPageModel<QuizViewModel>(true);
+            }
+            );        
+        
+        public ICommand OpenSkiaSharpPageCommand => new Command(
+            async () =>
+            {
+                await CoreMethods.PushPageModel<SkiaSharpViewModel>(true);
+            }
+            );        
+        
+        public ICommand OpenRecipesExternalPageCommand => new Command(
+            async () =>
+            {
+                await CoreMethods.PushPageModel<RecipesExternalViewModel>(true);
             }
             );
     }
