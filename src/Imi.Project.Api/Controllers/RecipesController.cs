@@ -29,18 +29,22 @@ namespace Imi.Project.Api.Controllers
             var recipes = await _recipeRepository.ListAllAsync();
             var recipesDto = recipes.Select(r => new RecipeResponseDto
             {
+                Id = r.Id,
                 Title = r.Title,
                 Description = r.Description,
                 Ingedrients = r.Ingedrients.Select(i => new IngedrientResponseDto
                 {
+                    Id = i.Id,
                     Name = i.Name,
                     MeasureUnit = new UnitOfMeasureResponseDto
                     {
+                        Id = _unitOfMeasureRepository.GetByIdAsync(i.UnitOfMeasureId).Result.Id,
                         MeasureUnit = _unitOfMeasureRepository.GetByIdAsync(i.UnitOfMeasureId).Result.MeasureUnit
                     }
                 }).ToList(),
                 CreatedByUser = new UserResponseDto
                 {
+                    Id = r.Id,
                     Email = r.User.Email
                 }
             });
