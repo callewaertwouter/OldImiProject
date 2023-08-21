@@ -1,74 +1,222 @@
 ﻿@{
-	ViewData["Title"] = "Ingedrients with Vue";
+    ViewData["Title"] = "Ingedrients with Vue";
 }
 
 <div class="text-center">
-	<h1 class="display-3">Ingedrients</h1>
+    <h1 class="display-3">Ingedrients</h1>
 </div>
 
-<div id="app" class="row">
-	<div class="col-md-3">
-		<ul>
-			<li v-for="ingedrient in ingedrients" v-on:click="getIngedrientDetails(ingedrient)">
-				{{ingedrient.name}}
-			</li>
-		</ul>
-	</div>
+<div id="app">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="search-wrapper">
+                <input type="text" v-model="search" placeholder="Search ingredient.." />
+            </div>
+            <div class="wrapper">
+                <div class="col-md-3" v-for="ingedrient in filteredList" v-on:click="getIngedrientDetails(ingedrient)">
+                    {{ ingedrient.name }}
+                </div>
+            </div>
+            <button type="button" class="btn btn-success mt-3" v-on:click="toggleCreateDiv">Create</button>
+            <div class="create-div mt-3" v-if="showCreateDiv">
+                <h5>Create New Ingredient</h5>
+                <form>
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" v-model="newIngedrient" />
+                    </div>
+                    <div class="form-group">
+                        <label>Measure Unit</label>
+                        <select class="form-control" v-model="newIngedrientMeasureUnit">
+                            <option v-for="unit in measureUnits" :value="unit.id">{{ unit.measureUnit }}</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-success" v-on:click="createIngedrient">Create</button>
+                </form>
+            </div>
 
-	<div class="col-md-3">
-		<div v-if="currentIngedrient">
-			<div class="form-group">
-				<label>ID</label>
-				<input class="form-control" v-model="currentIngedrient.id" readonly="readonly" />
-			</div>
-			<div class="form-group">
-				<label>Name</label>
-				<input class="form-control" v-model="currentIngedrient.name" readonly="readonly" />
-			</div>			
-			<div class="form-group">
-				<label>Unit of measurement</label>
-				<input class="form-control" v-model="currentIngedrient.measureUnit.measureUnit" readonly="readonly" />
-			</div>
-		</div>
-	</div>
+        </div>
+        <div class="col-md-6">
+            <div v-if="currentIngedrient">
+                <p><strong>ID:</strong> {{ currentIngedrient.id }}</p>
+                <div class="form-group">
+                    <label><strong>Naam:</strong></label>
+                    <input class="form-control" v-model="currentIngedrient.name" :readonly="!isUpdating" />
+                </div>
+                <div class="form-group">
+                    <label><strong>Maateenheid:</strong></label>
+                    <template v-if="!isUpdating">
+                        <span>{{ currentIngedrient.measureUnit.measureUnit }}</span>
+                    </template>
+                    <template v-else>
+                        <input class="form-control" :value="currentIngedrient.measureUnit.measureUnit" readonly />
+                    </template>
+                </div>
+
+
+
+                <div class="btn-group mb-5" role="group" aria-label="Basic example">
+                    <button class="btn btn-primary" v-on:click="toggleEdit">Edit</button>
+                    <button class="btn btn-danger" v-on:click="deleteIngedrient">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts{
-	<script src="~/lib/vue/vue.js"></script>
-	<script src="~/lib/axios/axios.min.js"></script>
+    <script src="~/lib/vue/vue.js"></script>
+    <script src="~/lib/axios/axios.min.js"></script>
 
-	<script>
-		const baseUrl = "https://localhost:5001/api/ingedrients";
-		var app = new Vue({
-			el: "#app",
-			data: {
-				ingedrients: [],
-				currentIngedrient: null
-			},
+    <script>
+        const baseUrl = "https://localhost:5001/api/ingedrients";
+        var app = new Vue({
+            el: "#app",
+            data: {
+                ingedrients: [],
+                currentIngedrient: null,
+                editedIngedrient: "",
+                isUpdating: false,
+                newIngedrient: "",
+                newIngedrientMeasureUnit: null,
+                search: "",
+                showCreateDiv: false,
+                measureUnits: [
+                    { id: "00000000-0000-0000-0000-000000000001", measureUnit: "gram" },
+                    { id: "00000000-0000-0000-0000-000000000002", measureUnit: "liter" },
+                    { id: "00000000-0000-0000-0000-000000000003", measureUnit: "blik(ken)" },
+                    { id: "00000000-0000-0000-0000-000000000004", measureUnit: "tak(ken)" },
+                    { id: "00000000-0000-0000-0000-000000000005", measureUnit: "blaadje(s)" },
+                    { id: "00000000-0000-0000-0000-000000000006", measureUnit: "deciliter" },
+                    { id: "00000000-0000-0000-0000-000000000007", measureUnit: "centiliter" },
+                    { id: "00000000-0000-0000-0000-000000000008", measureUnit: "bakje(s)" },
+                    { id: "00000000-0000-0000-0000-000000000009", measureUnit: "vrij naar keuze" },
+                    { id: "00000000-0000-0000-0000-000000000010", measureUnit: "geen" },
+                    { id: "00000000-0000-0000-0000-000000000011", measureUnit: " " },
+                ],
+                editedIngedrientUnit: null
+            },
 
-			created: function () {
-				var self = this;
-				self.fetchIngedrients();
-			},
+            computed: {
+                filteredList() {
+                    return this.ingedrients.filter(ingedrient => {
+                        return ingedrient.name.toLowerCase().includes(this.search.toLowerCase())
+                    })
+                }
+            },
 
-			methods: {
-				fetchIngedrients: function () {
-					var self = this;
-					axios.get(`${baseUrl}`)
-						.then(function (response) {
-							self.ingedrients = response.data;
-							console.log(self.ingedrients);
-						})
-						.catch(function (error) {
-							console.error(error);
-						});
-				},
+            created: function () {
+                var self = this;
+                self.fetchIngedrients();
+            },
 
-				getIngedrientDetails: function (ingedrient) {
-					var self = this;
-					self.currentIngedrient = ingedrient;
-				}
-			}
-		});
-	</script>
+            methods: {
+                fetchIngedrients: function () {
+                    var self = this;
+                    axios.get(`${baseUrl}`)
+                        .then(function (response) {
+                            self.ingedrients = response.data;
+                            console.log(self.ingedrients);
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                },
+
+                getIngedrientDetails: function (ingedrient) {
+                    var self = this;
+                    self.currentIngedrient = ingedrient;
+                },
+
+                createIngedrient: function () {
+                    if (this.newIngedrient.trim() === "" || !this.newIngedrientMeasureUnit) {
+                        alert("Naam en maateenheid zijn verplicht!");
+                        return;
+                    }
+
+                    const newIngedrient = {
+                        name: this.newIngedrient,
+                        measureunit: this.newIngedrientMeasureUnit
+                    };
+
+                    axios.post(`${baseUrl}`, newIngedrient)
+                        .then((response) => {
+                            this.ingedrients.unshift(response.data);
+                            this.newIngedrient = "";
+                            this.newIngedrientMeasureUnit = null;
+                            this.currentIngedrient = null;
+                            this.showCreateDiv = false;
+                        })
+                        .catch((error) => {
+                            console.error(error);
+                        });
+                },
+
+
+                updateIngedrient: function () {
+                    if (this.isUpdating) {
+                        this.isUpdating = false;
+                        this.currentIngedrient.name = this.editedIngedrient;
+
+                        axios.put(`${baseUrl}/${this.currentIngedrient.id}`, {
+                            name: this.editedIngedrient,
+                            measureUnitId: this.currentIngedrient.measureUnit.id
+                        })
+                            .then((response) => {
+                                this.fetchIngedrients();
+                            })
+                            .catch((error) => {
+                                console.error(error);
+                            });
+                    }
+                },
+
+                deleteIngedrient: function () {
+                    if (confirm("Ben je zeker?")) {
+                        axios.delete(`${baseUrl}/${this.currentIngedrient.id}`)
+                            .then((response) => {
+                                this.currentIngedrient = null;
+
+                                this.fetchIngedrients();
+                            })
+                            .catch((error) => {
+                                console.error(error);
+                            });
+                    }
+                },
+
+                toggleEdit: function () {
+                    if (this.isUpdating) {
+                        const selectedUnit = this.measureUnits.find(unit => unit.id === this.editedIngedrientUnit.id);
+
+                        axios.put(`${baseUrl}/${this.currentIngedrient.id}`, {
+                            name: this.currentIngedrient.name,
+                            measureUnitId: selectedUnit.id
+                        })
+                            .then((response) => {
+                                this.isUpdating = false;
+                                this.fetchIngedrients();
+                            })
+                            .catch((error) => {
+                                console.error(error);
+                            });
+                    } else {
+                        this.isUpdating = true;
+                        this.editedIngedrient = this.currentIngedrient.name;
+                        this.editedIngedrientUnit = this.measureUnits.find(unit => unit.id === this.currentIngedrient.measureUnit.id);
+                    }
+                },
+
+                exitEditMode: function () {
+                    this.isUpdating = false;
+                    this.editedIngedrient = '';
+                    this.editedIngedrientUnit = this.measureUnits.find(unit => unit.id === this.currentIngedrient.measureUnit.id);
+                },
+
+                toggleCreateDiv: function () {
+                    this.showCreateDiv = !this.showCreateDiv;
+                }
+            }
+        });
+    </script>
 }
