@@ -6,8 +6,8 @@
 	<thead>
 		<tr>
 			<th></th>
-			<th>Id</th>
 			<th>Title</th>
+			<th>Ingedrients</th>
 			<th>Description</th>
 			<th></th>
 		</tr>
@@ -20,10 +20,13 @@
 					<button class="btn btn-warning" @onclick="e => OnEdit.InvokeAsync(recipe)">Edit</button>
 				</td>
 				<td>
-					@recipe.Id
+					@recipe.Title
 				</td>
 				<td>
-					@recipe.Title
+					@foreach(var ingedrient in recipe.Ingedrients)
+					{
+						@recipe.Ingedrients.ToList()
+					}
 				</td>
 				<td>
 					@recipe.Description
@@ -39,6 +42,9 @@
 @code {
 	[Parameter]
 	public Recipe[]? Recipes { get; set; }
+
+	[Parameter]
+	public Ingedrient[]? Ingedrients { get; set; }
 
 	[Parameter]
 	public EventCallback OnAdd { get; set; }
