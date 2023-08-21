@@ -90,6 +90,11 @@ namespace Imi.Project.Api.Controllers
 
             string serializedToken = new JwtSecurityTokenHandler().WriteToken(token);
 
+            Console.WriteLine("Token generated:");
+            Console.WriteLine(new JwtSecurityTokenHandler().WriteToken(token));
+            Console.WriteLine("Serialized token:");
+            Console.WriteLine(serializedToken);
+
             return Ok(new LoginUserResponseDto()
             {
                 Token = serializedToken
@@ -130,7 +135,7 @@ namespace Imi.Project.Api.Controllers
             var token = new JwtSecurityToken
                 (
                     issuer: _configuration.GetValue<string>("JWTConfiguration:Issuer"),
-                    audience: _configuration.GetValue<string>("JWTConfigration:Audience"),
+                    audience: _configuration.GetValue<string>("JWTConfiguration:Audience"),
                     claims: claims,
                     expires: DateTime.UtcNow.Add(TimeSpan.FromDays(expirationDays)),
                     notBefore: DateTime.UtcNow,
@@ -143,6 +148,13 @@ namespace Imi.Project.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
+            var headers = Request.Headers;
+            Console.WriteLine("Request Headers:");
+            foreach (var header in headers)
+            {
+                Console.WriteLine($"{header.Key}: {header.Value}");
+            }
+
             var users = await _userRepository.ListAllAsync();
             var usersDto = users.Select(r => new UserResponseDto
             {
