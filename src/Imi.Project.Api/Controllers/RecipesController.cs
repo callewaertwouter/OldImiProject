@@ -36,11 +36,7 @@ namespace Imi.Project.Api.Controllers
                 {
                     Id = i.Id,
                     Name = i.Name,
-                    MeasureUnit = new UnitOfMeasureResponseDto
-                    {
-                        Id = _unitOfMeasureRepository.GetByIdAsync(i.UnitOfMeasureId).Result.Id,
-                        MeasureUnit = _unitOfMeasureRepository.GetByIdAsync(i.UnitOfMeasureId).Result.MeasureUnit
-                    }
+                    MeasureUnit = i.UnitOfMeasure
                 }).ToList(),
                 CreatedByUser = new UserResponseDto
                 {
@@ -78,6 +74,7 @@ namespace Imi.Project.Api.Controllers
 
         [Authorize(Policy = "Over15Only")]
         [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Add(RecipeRequestDto recipeDto)
         {
             if (!ModelState.IsValid)
@@ -89,7 +86,11 @@ namespace Imi.Project.Api.Controllers
             {
                 Title = recipeDto.Title,
                 Description = recipeDto.Description,
-                Ingedrients = (ICollection<Ingedrient>)recipeDto.Ingedrients.ToList(),
+                Ingedrients = recipeDto.Ingedrients.Select(i => new Ingedrient
+                {
+                    Name = i.Name,
+                    UnitOfMeasure = i.UnitOfMeasure
+                }).ToList(),
                 UserId = recipeDto.CreatedBy.Id.ToString()
             };
 
@@ -115,12 +116,22 @@ namespace Imi.Project.Api.Controllers
 
             recipeEntity.Title = recipeDto.Title;
             recipeEntity.Description = recipeDto.Description;
-            recipeEntity.Ingedrients = (ICollection<Ingedrient>)recipeDto.Ingedrients.ToList();
+
+            // Update the ingedrients.
+            recipeEntity.Ingedrients = recipeDto.Ingedrients.Select(i => new Ingedrient
+            {
+                Name = i.Name,
+                UnitOfMeasure = i.UnitOfMeasure
+            }).ToList();
+
+            // Update the createdByUser.
+            recipeEntity.UserId = recipeDto.CreatedBy.Id.ToString();
 
             await _recipeRepository.UpdateAsync(recipeEntity);
 
             return Ok();
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)

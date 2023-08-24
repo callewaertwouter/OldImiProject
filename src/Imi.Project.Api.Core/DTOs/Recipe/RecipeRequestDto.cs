@@ -9,8 +9,12 @@ namespace Imi.Project.Api.Core.DTOs.Recipe
     {
         [Required(ErrorMessage = "{0} is required!")]
         public string Title { get; set; }
+
+        [Required(ErrorMessage = "{0} is required!")]
         public string Description { get; set; }
-        public ICollection<IngedrientResponseDto> Ingedrients { get; set; }
-        public UserResponseDto CreatedBy { get; set; }
+
+        public ICollection<IngedrientRequestDto> Ingedrients { get; set; }
+
+        public UserRequestDto CreatedBy { get; set; }
     }
 }
