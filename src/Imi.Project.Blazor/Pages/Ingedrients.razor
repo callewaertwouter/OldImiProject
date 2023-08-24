@@ -61,16 +61,23 @@
     {
         try
         {
-            if (currentIngedrient.Id.Equals(Guid.Empty)) await service.Create(currentIngedrient);
-            else await service.Update(currentIngedrient);
+            if (currentIngedrient.Id.Equals(Guid.Empty))
+            {
+                await service.Create(currentIngedrient);
+            }
+            else
+            {
+                await service.Update(currentIngedrient);
+            }
 
-            await this.RefreshIngedrients();
+            await RefreshIngedrients();
         }
         catch (Exception ex)
         {
             this.error = ex.Message;
         }
     }
+
 
     public async Task DeleteIngedrient(MockIngedrient item)
     {
