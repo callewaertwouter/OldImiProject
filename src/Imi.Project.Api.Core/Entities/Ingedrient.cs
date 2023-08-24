@@ -9,8 +9,8 @@ namespace Imi.Project.Api.Core.Entities
         [Required]
         public string Name { get; set; }
 
-        public Guid UnitOfMeasureId { get; set; }
-        public UnitOfMeasure UnitOfMeasure { get; set; }
+        //public Guid UnitOfMeasureId { get; set; }
+        public string UnitOfMeasure { get; set; }
 
         // Many ingedrients can be used in many recipes
         public ICollection<Recipe> Recipes { get; set; }

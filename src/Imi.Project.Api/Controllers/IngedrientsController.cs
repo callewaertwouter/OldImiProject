@@ -31,11 +31,7 @@ namespace Imi.Project.Api.Controllers
             {
                 Id = i.Id,
                 Name = i.Name,
-                MeasureUnit = new UnitOfMeasureResponseDto
-                {
-                    Id = i.UnitOfMeasure.Id,
-                    MeasureUnit = i.UnitOfMeasure.MeasureUnit
-                }
+                MeasureUnit = i.UnitOfMeasure
             });
 
             return Ok(ingedrientsDto);
@@ -55,11 +51,7 @@ namespace Imi.Project.Api.Controllers
             {
                 Id = ingedrient.Id,
                 Name = ingedrient.Name,
-                MeasureUnit = new UnitOfMeasureResponseDto
-                {
-                    Id = ingedrient.UnitOfMeasure.Id,
-                    MeasureUnit = ingedrient.UnitOfMeasure.MeasureUnit
-                }
+                MeasureUnit = ingedrient.UnitOfMeasure
             };
 
             return Ok(ingedrientDto);

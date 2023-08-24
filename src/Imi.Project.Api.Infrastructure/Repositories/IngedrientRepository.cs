@@ -17,11 +17,6 @@ namespace Imi.Project.Api.Infrastructure.Repositories
             
         }
 
-        public override IQueryable<Ingedrient> GetAll()
-        {
-            return _dbContext.Ingedrients.Include(i => i.UnitOfMeasure);
-        }
-
         public async override Task<IEnumerable<Ingedrient>> ListAllAsync()
         {
             var ingedrients = await GetAll().ToListAsync();

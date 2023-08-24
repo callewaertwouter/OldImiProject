@@ -6,5 +6,6 @@ namespace Imi.Project.Api.Core.DTOs.Ingedrient
     {
         [Required(ErrorMessage = "{0} is required!")]
         public string Name { get; set; }
+        public string UnitOfMeasure { get; set; }
     }
 }
