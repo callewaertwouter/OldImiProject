@@ -15,15 +15,14 @@ namespace Imi.Project.Mobile.Domain.Services.Mocking
             new Recipe{ Id=Guid.Parse("00000000-0000-0000-0000-000000000003"), Title="Testrecept", Description="Test, test en nog eens test.", UserId=Guid.Parse("00000000-0000-0000-0000-000000000002") }
         };
 
-
-        public Recipe GetRecipe(Guid id)
+        public async Task<Recipe> GetRecipe(Guid id)
         {
-            return recipes.FirstOrDefault(r => r.Id == id);
+            return await Task.FromResult(recipes.FirstOrDefault(r => r.Id == id));
         }
 
-        public IEnumerable<Recipe> GetRecipes()
+        public async Task<IEnumerable<Recipe>> GetRecipes()
         {
-            return recipes;
+            return await Task.FromResult(recipes);
         }
 
         public async Task<Recipe> AddRecipe(Recipe recipe)
