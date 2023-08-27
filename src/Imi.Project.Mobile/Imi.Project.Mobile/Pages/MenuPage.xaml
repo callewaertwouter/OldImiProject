@@ -10,9 +10,9 @@
         <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
             <Button x:Name="btnAddRecipe" Text="Maak een nieuw recept" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenRecipeCreationPageCommand}" />
             <Button x:Name="btnViewRecipes" Text="Bekijk alle recepten" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenRecipesPageCommand}" />
-            <Button x:Name="btnViewRecipesExternal" Text="Recepten van ex" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenRecipesExternalPageCommand}" />
+            <Button x:Name="btnViewRecipesExternal" Text="TheMealDb" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenRecipesExternalPageCommand}" />
             <Button x:Name="btnQuiz" Text="Speel de quiz" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenQuizPageCommand}" />
-            <Button x:Name="btnSkiaSharp" Text="SkiaSharp" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenSkiaSharpPageCommand}" />
+            <Button x:Name="btnSkiaSharp" Text="SkiaSharp Logo" Style="{StaticResource StandardButtonStyle}" Command="{Binding OpenSkiaSharpPageCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

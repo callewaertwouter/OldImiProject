@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Imi.Project.Mobile.Pages.SkiaSharpPage"
-             Style="{StaticResource ContentPageStyle}">
-
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="Imi.Project.Mobile.Pages.SkiaSharpPage">
     <StackLayout>
-        <!--<SKCanvasView x:Name="skiaCanvas" WidthRequest="300" HeightRequest="100"
-                      PaintSurface="OnPaintSurface"/>-->
+        <skia:SKCanvasView x:Name="canvasView" PaintSurface="OnPaintSurface" />
     </StackLayout>
 </ContentPage>

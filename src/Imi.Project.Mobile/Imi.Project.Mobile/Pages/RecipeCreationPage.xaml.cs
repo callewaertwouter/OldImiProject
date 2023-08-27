@@ -127,6 +127,3 @@ namespace Imi.Project.Mobile.Pages
 }
 
 // https://medium.com/@dev.aritradas/xamarin-forms-speech-recognition-c16f07cdf164
-//TODO: MVVM toepassen op SpeechToText
-//TODO: SpeechToText output moet in txtDescription komen, hoe doe ik dit (kan niet uitmaken uit documentatie hoe dit te doen)
-//TODO: MVVM toepassen op cameragebruik en uitvogelen hoe ik best het gebruik van camera toepast

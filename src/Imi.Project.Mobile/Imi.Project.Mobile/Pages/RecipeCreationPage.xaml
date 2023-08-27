@@ -22,32 +22,16 @@
                 <TableSection>
                     <ViewCell>
                         <ListView x:Name="lvIngedrients" 
-                                  WidthRequest="150" 
-                                  HeightRequest="200"
-                                  HasUnevenRows="True"
-                                  SeparatorVisibility="None"
-                                  Style="{StaticResource ListViewStyle}">
-                            <ListView.Header>
-                                <Frame>
-                                    <Grid Margin="0" Padding="0" RowSpacing="0">
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="200" />
-                                            <ColumnDefinition Width="100" />
-                                            <ColumnDefinition Width="150" />
-                                        </Grid.ColumnDefinitions>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="20" />
-                                        </Grid.RowDefinitions>
-                                        <Label Grid.Row="0" Grid.Column="0" Text="Ingedriënt" />
-                                        <Label Grid.Row="0" Grid.Column="1" Text="Hoeveelheid" />
-                                        <Label Grid.Row="0" Grid.Column="2" Text="Maateenheid" />
-                                    </Grid>
-                                </Frame>
-                            </ListView.Header>
-                        </ListView>
-                    </ViewCell>
+                            WidthRequest="150" 
+                            HeightRequest="200"
+                            HasUnevenRows="True"
+                            SeparatorVisibility="None"
+                            Style="{StaticResource ListViewStyle}">
+                        </ListView>                            
+                    </ViewCell>                        
+                    <EntryCell Placeholder="Ingredient Name" Text="{Binding IngredientName}" />
                     <ViewCell>
-                        <Button x:Name="btnAddIngedrient" Text="Ingedriënt toevoegen" Style="{StaticResource StandardButtonStyle}" />
+                        <Button x:Name="btnAddIngredient" Text="Ingredient toevoegen" Style="{StaticResource StandardButtonStyle}" Command="{Binding AddIngredientCommand}" />
                     </ViewCell>
                     <ViewCell>
                         <Button x:Name="btnSpeechToText" Text="Gebruik Speech-To-Text" Style="{StaticResource StandardButtonStyle}" Clicked="btnSpeechToText_Clicked" />
