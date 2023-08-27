@@ -24,12 +24,21 @@ namespace Imi.Project.Mobile.Pages
 		{
 			SKSurface surface = e.Surface;
 			SKCanvas canvas = surface.Canvas;
+			SKPaint backgroundPaint = new SKPaint
+			{
+				Shader = SKShader.CreateLinearGradient(
+					new SKPoint(0, 0), new SKPoint(0, e.Info.Height),
+					new SKColor[] { SKColors.Blue, SKColors.Purple },
+					new float[] { 0, 1 },
+					SKShaderTileMode.Clamp
+				)
+			};
 
-			canvas.Clear(SKColors.White);
+			canvas.DrawRect(new SKRect(0, 0, e.Info.Width, e.Info.Height), backgroundPaint);
 
 			SKPaint textPaint = new SKPaint
 			{
-				Color = SKColors.Black,
+				Color = SKColors.White,
 				TextSize = 24
 			};
 
