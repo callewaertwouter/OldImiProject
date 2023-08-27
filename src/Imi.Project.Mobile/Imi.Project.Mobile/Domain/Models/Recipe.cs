@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Imi.Project.Mobile.Domain.Models
 {
@@ -12,6 +13,6 @@ namespace Imi.Project.Mobile.Domain.Models
         public Guid UserId { get; set; }
         public User CreatedByUser { get; set; }
 
-        //TODO: Add list of ingedrients which is borrowed from the database (API connection required)
-    }
+		public List<Ingredient> Ingredients { get; set; }
+	}
 }
