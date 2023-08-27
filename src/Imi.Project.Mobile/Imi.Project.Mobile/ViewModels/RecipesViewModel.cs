@@ -19,9 +19,9 @@ namespace Imi.Project.Mobile.ViewModels
             _recipeService = recipeService;
         }
 
-        protected override void ViewIsAppearing(object sender, EventArgs e)
+        protected override async void ViewIsAppearing(object sender, EventArgs e)
         {
-            var recipes = _recipeService.GetRecipes();
+            var recipes = await _recipeService.GetRecipes();
 
             Recipes = new ObservableCollection<Recipe>(recipes);
         }

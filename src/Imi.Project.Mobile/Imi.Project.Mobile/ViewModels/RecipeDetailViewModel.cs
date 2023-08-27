@@ -22,8 +22,8 @@ namespace Imi.Project.Mobile.ViewModels
                 Guid recipeId = (Guid)initData;
                 var recipe = _recipeService.GetRecipe(recipeId);
 
-                RecipeTitle = recipe.Title;
-                RecipeDescription = recipe.Description;
+                RecipeTitle = recipe.Result.Title;
+                RecipeDescription = recipe.Result.Description;
             }
         }
 

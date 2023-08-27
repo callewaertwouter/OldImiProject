@@ -1,33 +1,33 @@
 ﻿using FreshMvvm;
-using SkiaSharp;
-using SkiaSharp.Views.Forms;
 
 namespace Imi.Project.Mobile.ViewModels
 {
-    public class SkiaSharpViewModel : FreshBasePageModel
-    {
-        public SkiaSharpViewModel()
-        {
-            
-        }
+	public class SkiaSharpViewModel : FreshBasePageModel
+	{
+		public SkiaSharpViewModel()
+		{
 
-        private void OnPaintSurface(object sender, SKPaintSurfaceEventArgs e)
-        {
-            SKSurface surface = e.Surface;
-            SKCanvas canvas = surface.Canvas;
+		}
 
-            canvas.Clear(SKColors.White);
+		private string textToDraw = "Creative Recipes App Platform";
+		public string TextToDraw
+		{
+			get { return textToDraw; }
+			set { textToDraw = value; RaisePropertyChanged(); }
+		}
 
-            SKPaint textPaint = new SKPaint
-            {
-                Color = SKColors.Black,
-                TextSize = 24
-            };
+		private float xPosition = 20;
+		public float XPosition
+		{
+			get { return xPosition; }
+			set { xPosition = value; RaisePropertyChanged(); }
+		}
 
-            float x = 20;
-            float y = 50;
-
-            canvas.DrawText("Creative Recipes App Platform", x, y, textPaint);
-        }
-    }
+		private float yPosition = 20;
+		public float YPosition
+		{
+			get { return yPosition; }
+			set { yPosition = value; RaisePropertyChanged(); }
+		}
+	}
 }

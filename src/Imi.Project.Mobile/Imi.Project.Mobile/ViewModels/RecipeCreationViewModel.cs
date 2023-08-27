@@ -4,6 +4,7 @@ using Imi.Project.Mobile.Domain.Models;
 using Imi.Project.Mobile.Domain.Services;
 using Imi.Project.Mobile.Validators;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -55,7 +56,21 @@ namespace Imi.Project.Mobile.ViewModels
             }
         }
 
-        private string recipeDescriptionError;
+		private string ingredientName;
+		public string IngredientName
+		{
+			get 
+            { 
+                return ingredientName; 
+            }
+			set
+			{
+				ingredientName = value;
+				RaisePropertyChanged(nameof(IngredientName));
+			}
+		}
+
+		private string recipeDescriptionError;
         public string RecipeDescriptionError 
         {
             get
@@ -88,8 +103,6 @@ namespace Imi.Project.Mobile.ViewModels
             currentRecipe.Title = RecipeTitle;
             currentRecipe.Description = RecipeDescription;
             _recipeService.AddRecipe(currentRecipe);
-
-            //TODO: Add image, list of ingedrients (required) and which user created it (requires login which requires API connection)
         }
 
         private bool Validate(Recipe recipe)
@@ -106,10 +119,37 @@ namespace Imi.Project.Mobile.ViewModels
 
             return validationResult.IsValid;
         }
-        #endregion
+		#endregion
 
-        #region Commands
-        public ICommand SaveRecipeCommand => new Command(
+		#region Commands
+		public ICommand AddIngredientCommand => new Command(
+			async () =>
+			{
+				try
+				{
+					if (!string.IsNullOrWhiteSpace(IngredientName))
+					{
+						if (currentRecipe.Ingredients == null)
+						{
+							currentRecipe.Ingredients = new List<Ingredient>();
+						}
+
+						var ingredient = new Ingredient { Name = IngredientName };
+						currentRecipe.Ingredients.Add(ingredient);
+						IngredientName = string.Empty;
+					}
+				}
+				catch (Exception ex)
+				{
+					Debug.WriteLine(ex.Message);
+
+					await CoreMethods.DisplayAlert("Error", "Sorry, ingedrienten kunnen niet geladen worden.", "OK");
+				}
+			});
+
+
+
+		public ICommand SaveRecipeCommand => new Command(
             async () =>
             {
                 try

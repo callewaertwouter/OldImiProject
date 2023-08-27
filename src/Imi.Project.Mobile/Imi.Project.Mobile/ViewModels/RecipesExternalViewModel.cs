@@ -1,50 +1,66 @@
-﻿using FreshMvvm;
-using Imi.Project.Mobile.Domain.Models;
-using Imi.Project.Mobile.Domain.Services.Api;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Net.Http;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using System.Diagnostics;
+using FreshMvvm;
+using Imi.Project.Mobile.Domain.Services.Api;
+using System.Net.Http;
 
 namespace Imi.Project.Mobile.ViewModels
 {
-    class RecipesExternalViewModel : FreshBasePageModel
-    {
-        public ObservableCollection<TheMealDbRecipe> Recipes { get; set; } = new ObservableCollection<TheMealDbRecipe>();
+	public class RecipesExternalViewModel : FreshBasePageModel, INotifyPropertyChanged
+	{
+		private ObservableCollection<TheMealDbRecipe> recipes;
+		public ObservableCollection<TheMealDbRecipe> Recipes
+		{
+			get { return recipes; }
+			set
+			{
+				recipes = value;
+				OnPropertyChanged(nameof(Recipes));
+				OnPropertyChanged(nameof(LoadedRecipesCount));
+			}
+		}
 
-        public async Task LoadRecipesAsync()
-        {
-            try
-            {
-                string apiUrl = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
+		public int LoadedRecipesCount
+		{
+			get { return Recipes?.Count ?? 0; }
+		}
 
-                using (HttpClient client = new HttpClient())
-                {
-                    string response = await client.GetStringAsync(apiUrl);
-                    var result = JsonConvert.DeserializeObject<RecipeApiResponse>(response);
+		public async Task LoadRecipesAsync()
+		{
+			try
+			{
+				var httpClient = new HttpClient();
+				var response = await httpClient.GetStringAsync("https://www.themealdb.com/api/json/v1/1/search.php?s=a");
 
-                    Recipes.Clear();
-                    foreach (var recipe in result.Meals)
-                    {
-                        Recipes.Add(recipe);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
+				var apiResponse = JsonConvert.DeserializeObject<RecipeApiResponse>(response);
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-    }
+				if (apiResponse?.Meals != null)
+				{
+					Recipes = new ObservableCollection<TheMealDbRecipe>(apiResponse.Meals);
+				}
+				else
+				{
+					Debug.WriteLine("No recipes found.");
+				}
+			}
+			catch (Exception ex)
+			{
+				Debug.WriteLine($"Error loading recipes: {ex.Message}");
+			}
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
+
+		protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+		{
+			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
 }
