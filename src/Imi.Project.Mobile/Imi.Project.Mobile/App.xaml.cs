@@ -13,6 +13,7 @@ namespace Imi.Project.Mobile
         {
             InitializeComponent();
 
+            FreshIOC.Container.Register<IRecipeService, ApiRecipesService>().AsSingleton();
             FreshIOC.Container.Register<IRecipeService>(new MockRecipeService());
             FreshIOC.Container.Register<IUserService>(new MockUserService());
             FreshIOC.Container.Register<IWebApiClient, WebApiClient>().AsSingleton();
